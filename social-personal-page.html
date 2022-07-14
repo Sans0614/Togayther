@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>個人主頁 - Togayther</title>
+    <meta name="description" content="我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台">
+    <meta property="og:image" content="./img/ogimage.jpg">
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="./img/ogimage.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-social.css">
+  </head>
+  <body class="social">
+    <div id="social-personal-page" data-bs-backdrop="static">
+      <!--20220429 新增.position-relative-->
+      <div class="social-post-om-block m-tb-0 position-relative">
+        <!--20220429 新增從首頁進入個人主頁的返回按鈕-->
+        <div class="button btn-social-back t-8px cursor-pointer"><img src="./img/back_outline_white.svg" alt=""></div>
+        <!--大螢幕 - 個人簡介頁-->
+        <div class="social-personal-page-block d-none d-tb-block" style="max-width: 800px;  margin: auto;">
+          <div class="social-personal-page-user-traffic-block">
+            <!--顯示該用戶使用者大頭照--><img class="social-post-report-account-user-img social-personal-page-user-img" src="./img/navbar/MemberLoginIcon.svg">
+            <div class="social-personal-page-interaction-block mt-16px flex-column w-100">
+              <div class="social-personal-page-user-data-block">
+                <!--顯示該用戶使用者名稱-->
+                <div class="social-personal-page-user-name">SANDERS</div>
+                <div class="social-personal-page-interaction-section d-flex">
+                  <div class="social-personal-page-interaction-block">
+                    <!--追蹤與已追蹤按鈕依照個使用者的狀態顯示-->
+                    <div class="btn social-post-unfollow btn-social-release btn-social-personal-page-interaction position-relative">追蹤</div>
+                    <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative">已追蹤</div>
+                    <!--贈送點數功能按鈕-->
+                    <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-gift-points">贈送點數</div>
+                    <!--等私訊功能開發再進行串接-->
+                    <!--20220518開啟私訊按鈕-->
+                    <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative">傳送訊息</div>
+                  </div>
+                  <!--第三人稱視角 - 封鎖後互動區按鈕-->
+                  <div class="social-personal-page-interaction-block">
+                    <!--解除封鎖按鈕-->
+                    <div class="btn btn-social-release btn-social-personal-page-interaction position-relative">解除封鎖</div>
+                    <!--等私訊功能開發再進行串接-->
+                    <!--20220518開啟私訊按鈕-->
+                    <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative">傳送訊息</div>
+                  </div>
+                  <!--點擊此按鈕顯示 .edit-social-personal-page-user-data-block 隱藏 .edit-social-personal-page-user-data-hidden-->
+                  <div class="social-personal-page-interaction-block">
+                    <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative">編輯個人檔案</div>
+                  </div>
+                  <!--個人視角 - 詳情頁-->
+                  <div class="btn social-post-more social-personal-page-more" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-first-person-more">...</div>
+                  <!--第三人稱視角 - 詳情頁-->
+                  <div class="btn social-post-more social-personal-page-more" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-third-person-more">...</div>
+                </div>
+              </div>
+              <div class="social-personal-page-user-traffic">
+                <div class="social-personal-page-traffic-number-block">
+                  <!--顯示該用戶所有文章按讚數總和-->
+                  <div class="social-personal-page-traffic-number-block">12<span class="social-personal-page-traffic-name">獲讚</span></div>
+                </div>
+                <!--點擊可以查看追蹤該用戶的使用者清單-->
+                <div class="social-personal-page-traffic-number-block" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-fans">
+                  <!--顯示追蹤該用戶的使用者人數總和-->
+                  <div class="social-personal-page-traffic-number-block">1.1
+                    <!--顯示追蹤該用戶的使用者人數單位 萬/億--><span class="social-personal-page-traffic-unit">萬</span><span class="social-personal-page-traffic-name">粉絲</span>
+                  </div>
+                </div>
+                <!--點擊可以查看該用戶追蹤的清單-->
+                <div class="social-personal-page-traffic-number-block" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-followers">
+                  <!--顯示該用戶追蹤中的總人數總和-->
+                  <div class="social-personal-page-traffic-number-block">1,234<span class="social-personal-page-traffic-name">追蹤中</span></div>
+                </div>
+              </div>
+              <!--顯示該用戶使用者介紹-->
+              <div class="social-personal-page-user-intro edit-social-personal-page-user-data-hidden">在多次受傷之後，我們數度懷疑自己是否失去了愛人的能力，殊不知我們真正失去的，是重新認識與接納自己的勇氣。</div>
+              <!--當"編輯個人檔案"按鈕按下時，顯示此區塊並隱藏.edit-social-personal-page-user-data-hidden-->
+              <div class="edit-social-personal-page-user-data-block">
+                <!--20220517 新增placeholder-->
+                <input class="edit-social-personal-page-name w-100" type="text" value="SANDERS" placeholder="請輸入您的暱稱">
+                <!--20220517 新增編輯用戶名稱，需要限制只能使用小寫英文/數字/底線/英文句點-->
+                <input class="edit-social-personal-page-name edit-social-personal-page-name-id w-100" type="text" value="sanders08420" placeholder="請輸入您的用戶名稱">
+                <!--20220518 填寫完後點選儲存按鈕時，用戶名稱已被使用顯示-->
+                <div class="red mt-8px fz-14">此用戶名稱已被使用</div>
+                <!--20220518 填寫完後點選儲存按鈕時，用戶名稱使用其他特殊符號顯示-->
+                <div class="red mt-8px fz-14">用戶名稱只限定"英文小寫"、"數字"、"底線"、"英文句點"</div>
+                <!--20220517 新增placeholder-->
+                <textarea class="edit-social-personal-page-intro w-100" type="text" rows="3" placeholder="請輸入您的個人簡介">在多次受傷之後，我們數度懷疑自己是否失去了愛人的能力，殊不知我們真正失去的，是重新認識與接納自己的勇氣。</textarea>
+                <label class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative w-100">儲存
+                  <input type="submit">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--大螢幕 - 查無使用者顯示-->
+        <div class="social-personal-page-block d-none d-tb-block" style="max-width: 800px;  margin: auto;">
+          <div class="social-personal-page-user-traffic-block">
+            <!--查無使用者就顯示這張圖片就好--><img class="social-post-report-account-user-img social-personal-page-user-img" src="./img/navbar/MemberLoginIcon.svg">
+            <div class="social-personal-page-interaction-block mt-16px flex-column w-100">
+              <div class="social-personal-page-user-data-block">
+                <div class="social-personal-page-user-name">查無使用者</div>
+              </div>
+              <div class="social-personal-page-user-traffic">
+                <div class="social-personal-page-traffic-number-block">
+                  <div class="social-personal-page-traffic-number-block">0<span class="social-personal-page-traffic-name">獲讚</span></div>
+                </div>
+                <div class="social-personal-page-traffic-number-block">
+                  <div class="social-personal-page-traffic-number-block">0<span class="social-personal-page-traffic-name">粉絲</span></div>
+                </div>
+                <div class="social-personal-page-traffic-number-block">
+                  <div class="social-personal-page-traffic-number-block">0<span class="social-personal-page-traffic-name">追蹤中</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--中小螢幕標頭 - 一般正常顯示-->
+        <div class="social-post-om-header bg-dark-gray position-relative d-flex d-tb-none align-items-center">
+          <!-- 返回按鈕 - 從哪一頁進入就返回到上一頁-->
+          <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-post"><img src="./img/back_outline_white.svg" alt=""></button>
+          <!--顯示該用戶使用者名稱-->
+          <h4 class="social-post-om-title text-center w-100 white mx-32px">SANDERS</h4>
+          <!--個人視角 - 詳情頁-->
+          <div class="btn social-post-more social-personal-page-more" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-first-person-more">...</div>
+          <!--第三人稱視角 - 詳情頁-->
+          <div class="btn social-post-more social-personal-page-more" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-third-person-more">...</div>
+        </div>
+        <!--中小螢幕標頭 - 查無使用者顯示-->
+        <div class="social-post-om-header bg-dark-gray position-relative d-flex d-tb-none align-items-center"> 
+          <!-- 返回按鈕 - 從哪一頁進入就返回到上一頁-->
+          <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-post"><img src="./img/back_outline_white.svg" alt=""></button>
+          <h4 class="social-post-om-title text-center w-100 white mx-32px">查無使用者</h4>
+        </div>
+        <!--中小螢幕 - 個人簡介頁-->
+        <div class="social-personal-page-block d-block d-tb-none">
+          <div class="social-personal-page-user-traffic-block">
+            <!--顯示該用戶使用者大頭照--><img class="social-post-report-account-user-img" src="./img/navbar/MemberLoginIcon.svg">
+            <div class="social-personal-page-user-traffic">
+              <div class="social-personal-page-traffic-number-block">
+                <!--顯示該用戶所有文章按讚數總和-->
+                <div class="social-personal-page-traffic-number-block">12</div>
+                <div class="social-personal-page-traffic-name">獲讚</div>
+              </div>
+              <!--點擊可以查看追蹤該用戶的使用者清單-->
+              <div class="social-personal-page-traffic-number-block" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-fans">
+                <!--顯示追蹤該用戶的使用者人數總和-->
+                <div class="social-personal-page-traffic-number-block">1.1
+                  <!--顯示追蹤該用戶的使用者人數單位 萬/億--><span class="social-personal-page-traffic-unit">萬</span>
+                </div>
+                <div class="social-personal-page-traffic-name">粉絲</div>
+              </div>
+              <!--點擊可以查看該用戶追蹤的清單-->
+              <div class="social-personal-page-traffic-number-block" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-followers">
+                <!--顯示該用戶追蹤中的總人數總和-->
+                <div class="social-personal-page-traffic-number-block">1,234</div>
+                <div class="social-personal-page-traffic-name">追蹤中</div>
+              </div>
+            </div>
+          </div>
+          <div class="social-personal-page-user-data-block edit-social-personal-page-user-data-hidden">
+            <!--顯示該用戶使用者名稱-->
+            <div class="social-personal-page-user-name">SANDERS</div>
+            <!--顯示該用戶使用者介紹-->
+            <div class="social-personal-page-user-intro">在多次受傷之後，我們數度懷疑自己是否失去了愛人的能力，殊不知我們真正失去的，是重新認識與接納自己的勇氣。</div>
+          </div>
+          <!--當"編輯個人檔案"按鈕按下時，顯示此區塊，並隱藏.edit-social-personal-page-user-data-hidden-->
+          <div class="edit-social-personal-page-user-data-block">
+            <!--20220517 新增placeholder-->
+            <input class="edit-social-personal-page-name w-100" type="text" value="SANDERS" placeholder="請輸入您的暱稱">
+            <!--20220517 新增編輯用戶名稱，需要限制只能使用小寫英文/數字/底線/英文句點-->
+            <input class="edit-social-personal-page-name edit-social-personal-page-name-id w-100" type="text" value="sanders08420" placeholder="請輸入您的用戶名稱">
+            <!--20220518 填寫完後點選儲存按鈕時，用戶名稱已被使用顯示-->
+            <div class="red mt-8px fz-14">此用戶名稱已被使用</div>
+            <!--20220518 填寫完後點選儲存按鈕時，用戶名稱使用其他特殊符號顯示-->
+            <div class="red mt-8px fz-14">用戶名稱只限定"英文小寫"、"數字"、"底線"、"英文句點"</div>
+            <!--20220517 新增placeholder-->
+            <textarea class="edit-social-personal-page-intro w-100" type="text" rows="3" placeholder="請輸入您的個人簡介">在多次受傷之後，我們數度懷疑自己是否失去了愛人的能力，殊不知我們真正失去的，是重新認識與接納自己的勇氣。</textarea>
+            <label class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative w-100">儲存
+              <input type="submit">
+            </label>
+          </div>
+          <div class="social-personal-page-interaction-block">
+            <!--追蹤與已追蹤按鈕依照個使用者的狀態顯示-->
+            <div class="btn social-post-unfollow btn-social-release btn-social-personal-page-interaction position-relative">追蹤</div>
+            <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative">已追蹤</div>
+            <!--贈送點數功能按鈕-->
+            <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-gift-points">贈送點數</div>
+            <!--等私訊功能開發再進行串接-->
+            <!--20220518開啟私訊按鈕-->
+            <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative">傳送訊息</div>
+          </div>
+          <!--第三人稱視角 - 封鎖後互動區按鈕-->
+          <div class="social-personal-page-interaction-block">
+            <!--解除封鎖功能按鈕-->
+            <!--20220518 w-100 更改成 w-50-->
+            <div class="btn btn-social-release btn-social-personal-page-interaction position-relative w-50">解除封鎖</div>
+            <!--等私訊功能開發再進行串接-->
+            <!--20220518開啟私訊按鈕-->
+            <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative w-50">傳送訊息</div>
+          </div>
+          <!--第一人稱視角 - 互動區按鈕-->
+          <!--點擊此按鈕顯示 .edit-social-personal-page-user-data-block 隱藏 .edit-social-personal-page-user-data-hidden-->
+          <div class="social-personal-page-interaction-block">
+            <div class="btn social-post-follow btn-social-release btn-social-personal-page-interaction position-relative w-100">編輯個人檔案</div>
+          </div>
+        </div>
+        <!--中小螢幕 - 查無使用者顯示-->
+        <div class="social-personal-page-block d-block d-tb-none">
+          <div class="social-personal-page-user-traffic-block">
+            <!--查無使用者放這張圖片就好--><img class="social-post-report-account-user-img" src="./img/navbar/MemberLoginIcon.svg">
+            <div class="social-personal-page-user-traffic">
+              <div class="social-personal-page-traffic-number-block">
+                <div class="social-personal-page-traffic-number-block">0</div>
+                <div class="social-personal-page-traffic-name">獲讚</div>
+              </div>
+              <div class="social-personal-page-traffic-number-block">
+                <div class="social-personal-page-traffic-number-block">0</div>
+                <div class="social-personal-page-traffic-name">粉絲</div>
+              </div>
+              <div class="social-personal-page-traffic-number-block">
+                <div class="social-personal-page-traffic-number-block">0</div>
+                <div class="social-personal-page-traffic-name">追蹤中</div>
+              </div>
+            </div>
+          </div>
+          <div class="social-personal-page-user-data-block">
+            <div class="social-personal-page-user-name">查無使用者</div>
+          </div>
+        </div>
+        <!--封鎖他人後 ，被封鎖者的文章區塊呈現-->
+        <div class="social-personal-page-block social-personal-page-no-articles-block flex-center"><img src="./img/post_upload_image.svg"></div>
+        <!--被封鎖者如果用連結的方式進入封鎖者的個人頁面，文章區塊呈現-->
+        <div class="social-personal-page-block social-personal-page-no-articles-block flex-center"><img src="./img/post_upload_image.svg">
+          <div class="btn btn-social-release btn-social-personal-page-interaction position-relative mt-16px w-auto">回到動態主頁</div>
+          <div class="btn white">返回</div>
+        </div>
+        <!--沒有貼文時顯示-->
+        <div class="social-personal-page-block social-personal-page-no-articles-block flex-center"><img src="./img/post_upload_image.svg">
+          <div class="white mt-16px">尚無貼文</div>
+        </div>
+        <!--此區塊跟social.html的瀑布流方式一樣-->
+        <div class="social-personal-page-block">
+          <div class="social-index-grid">
+            <div class="social-index-grid-item">
+              <div class="social-post-card">
+                <div class="social-post-card-media"><img class="social-post-card-image" src="https://i.pinimg.com/236x/7f/24/8c/7f248c9e18abe79de0d6c79617e03361.jpg" alt=""></div>
+                <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉，我們喝的不只酒、我們看的都是肉！</a>
+                  <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href="">
+                      <!--抓取該篇動態文章作者的會員大頭像--><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt="">
+                      <!--抓取該篇動態文章作者的會員名稱--><span class="social-post-card-author">SANDERS Cheng Granger</span></a>
+                    <!--此處為讓使用者按喜歡與收回喜歡區塊-->
+                    <div class="social-post-card-like">
+                      <!--此class為按喜歡後顯示-->
+                      <div class="social-post-card-like-btn bg-basic"></div>
+                      <!--此class為尚未按喜歡前顯示-->
+                      <div class="social-post-card-unlike-btn bg-basic"></div>
+                      <!--此數字為共有多少其他使用者按過喜歡--><span class="social-post-card-like-count">99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="social-index-grid-item">
+              <div class="social-post-card">
+                <div class="social-post-card-media">
+                  <!--當該篇動態文章的圖片超過兩張時會顯示此圖示--><img class="social-post-card-image-plural" src="./img/image_plural_fill_black_white.svg" alt=""><img class="social-post-card-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg" alt="">
+                </div>
+                <div class="socail-post-card-content">
+                  <!--為第二階段開發追蹤功能後開始顯示，當使用者有追蹤該篇動態文章的作者時，會顯示我的追蹤，並放上使用者的圖片與名稱-->
+                  <div class="social-post-card-follow-block"><img class="social-post-card-follow-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-follow">你的追蹤</span></div><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉！</a>
+                  <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href=""><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-author">SANDERS</span></a>
+                    <div class="social-post-card-like">
+                      <!--此class為按喜歡後顯示-->
+                      <div class="social-post-card-like-btn bg-basic"></div>
+                      <!--此class為尚未按喜歡前顯示-->
+                      <div class="social-post-card-unlike-btn bg-basic"></div><span class="social-post-card-like-count">99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="social-index-grid-item">
+              <div class="social-post-card">
+                <div class="social-post-card-media"><img class="social-post-card-image" src="https://i.pinimg.com/236x/7f/24/8c/7f248c9e18abe79de0d6c79617e03361.jpg" alt=""></div>
+                <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉，我們喝的不只酒、我們看的都是肉！</a>
+                  <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href="">
+                      <!--抓取該篇動態文章作者的會員大頭像--><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt="">
+                      <!--抓取該篇動態文章作者的會員名稱--><span class="social-post-card-author">SANDERS Cheng Granger</span></a>
+                    <!--此處為讓使用者按喜歡與收回喜歡區塊-->
+                    <div class="social-post-card-like">
+                      <!--此class為按喜歡後顯示-->
+                      <div class="social-post-card-like-btn bg-basic"></div>
+                      <!--此class為尚未按喜歡前顯示-->
+                      <div class="social-post-card-unlike-btn bg-basic"></div>
+                      <!--此數字為共有多少其他使用者按過喜歡--><span class="social-post-card-like-count">99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--第三人視角 - 個人頁面詳情頁-->
+    <div class="social-modal-personal-page modal p-0 fade" id="social-personal-page-third-person-more" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-personal-page-third-person-more"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">設定</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-options-section social-modal-user-options-section">
+              <div class="social-post-report-options-block">
+                <!--串接檢舉帳號彈跳視窗-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-post-report-reason-fill-in">
+                  <div class="social-post-report-title">檢舉</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--點擊後可以封鎖該使用者-->
+                <div class="social-post-report-options">
+                  <div class="social-post-report-title">封鎖</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--如果該使用者是我的粉絲，則顯示此按鈕，並且點擊後可以把該使用者從我的粉絲中移除-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-remove-followers-alert">
+                  <div class="social-post-report-title">移除粉絲</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--複製該帳戶連結-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-post-copy-link-feedback">
+                  <div class="social-post-report-title">複製商業檔案網址</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--分享該帳戶-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-post-share">
+                  <div class="social-post-report-title">分享這個商業檔案</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--贈送點數功能-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-gift-points">
+                  <div class="social-post-report-title">贈送點數</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--私訊功能開啟之後再進行串接-->
+                <!--20220518開啟私訊按鈕-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-post-report-reason-fill-in">
+                  <div class="social-post-report-title">傳送訊息</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+              </div>
+              <div class="social-post-report-last-hr"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--第一人視角 - 個人頁面詳情頁-->
+    <div class="social-modal-personal-page modal p-0 fade" id="social-personal-page-first-person-more" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-personal-page-first-person-more"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">設定</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-options-section social-modal-user-options-section">
+              <div class="social-post-report-options-block">
+                <!--複製我的帳戶連結-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-post-copy-link-feedback">
+                  <div class="social-post-report-title">複製個人頁面網址</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--分享我的帳戶-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-post-share">
+                  <div class="social-post-report-title">分享個人頁面</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+                <!--查看我封鎖過的帳號-->
+                <div class="social-post-report-options" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-block-user">
+                  <div class="social-post-report-title">已封鎖帳號</div>
+                  <div class="btn-social-post-report-next">></div>
+                </div>
+              </div>
+              <div class="social-post-report-last-hr mb-0"></div>
+              <div class="social-post-report-options-block">
+                <div class="social-post-report-options">
+                  <!--使用者登出-->
+                  <div class="social-post-report-title">登出</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--追蹤中的使用者清單 - 彈跳視窗-->
+    <div class="social-modal-personal-page modal p-0 fade" id="social-personal-page-followers" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-personal-page-followers"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">追蹤中</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-options-section social-modal-user-options-section">
+              <div class="social-post-report-options-block">
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該帳戶的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該帳戶的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者尚未追蹤該帳戶-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative r-0">追蹤</div>
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該帳戶的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該帳戶的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者尚未追蹤該帳戶-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative r-0">追蹤</div>
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該帳戶的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該帳戶的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者尚未追蹤該帳戶-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative r-0">追蹤</div>
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--粉絲 - 彈跳視窗-->
+    <div class="social-modal-personal-page modal p-0 fade" id="social-personal-page-fans" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-personal-page-fans"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">粉絲</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-options-section social-modal-user-options-section">
+              <div class="social-post-report-options-block">
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該粉絲的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該粉絲的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該粉絲的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該粉絲的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該粉絲的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該粉絲的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--已封鎖帳號 - 彈跳視窗-->
+    <div class="social-modal-personal-page modal p-0 fade" id="social-personal-page-block-user" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-personal-page-block-user"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">已封鎖帳號</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-options-section social-modal-user-options-section">
+              <div class="social-post-report-options-block">
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--被封鎖帳號的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--被封鎖帳號的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--解除封鎖按鈕-->
+                    <div class="btn btn-social-release position-relative r-0">解除封鎖</div>
+                    <!--封鎖按鈕-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">封鎖</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--被封鎖帳號的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--被封鎖帳號的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--解除封鎖按鈕-->
+                    <div class="btn btn-social-release position-relative r-0">解除封鎖</div>
+                    <!--封鎖按鈕-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">封鎖</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--被封鎖帳號的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--被封鎖帳號的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--解除封鎖按鈕-->
+                    <div class="btn btn-social-release position-relative r-0">解除封鎖</div>
+                    <!--封鎖按鈕-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">封鎖</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--彈跳視窗 - 分享使用者帳號-->
+    <div class="shareModal social-modal modal fade" id="social-post-share" tabindex="-1" aria-labelledby="socialPostShareLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content social-post-share-modal-cotent">
+          <div class="modal-body bg-dark-gray flex-center">
+            <!--分享自己的帳號標題文字-->
+            <h2 class="modal-title social-post-share-modal-title fz-24">分享個人頁面</h2>
+            <!--分享他人的帳號標題文字-->
+            <h2 class="modal-title social-post-share-modal-title fz-24">分享這個商業檔案</h2>
+            <button class="btn-close close btn-social-post-share-close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="./img/close_outline_white.svg" alt=""></button>
+          </div>
+          <div class="modal-body">
+            <div class="social-post-share-modal-sub-title">分享到社群平台</div>
+            <!--20220427 新增私訊分享按鈕-->
+            <div class="facebookShareBtn social-message-share-btn"></div><a class="facebookShareBtn ml-8px" href="##"></a>
+            <!--分享自己的帳號標題文字-->
+            <div class="social-post-share-modal-sub-title">複製個人頁面網址</div>
+            <!--分享他人的帳號標題文字-->
+            <div class="social-post-share-modal-sub-title">複製這個商業檔案連結</div>
+            <div class="field d-flex align-items-center justify-content-between"></div>
+            <input class="social-post-share-copy-link" type="text" value="https://togayther.com/post/607">
+            <button class="btn-social-release position-relative btn-social-post-share-copy-link" type="button" data-bs-toggle="modal" data-bs-target="#social-post-copy-link-feedback">複製</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--連結複製反饋-->
+    <div class="social-modal modal fade" id="social-post-copy-link-feedback" tabindex="-1" aria-labelledby="socialPostCopyLinkFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center social-modal-complete"><img class="social-modal-complete-img" src="./img/complete_outline_white.svg" alt="">
+            <div class="social-modal-complete-text">連結已複製</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--贈送點數-->
+    <div class="social-modal-personal-page modal p-0 fade" id="social-personal-page-gift-points" tabindex="-1" aria-labelledby="socialPersonalPageGiftPointsLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-personal-page-gift-points"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">贈送點數</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block" style="border: none;">
+              <div class="social-post-report-title">贈送點數說明</div>
+              <div class="social-post-report-content">每日可分送<span class="social-personal-page-gift-points-count">3</span>次免費點數給好友!</div>
+            </div>
+            <div class="btn-social-post-report-block">
+              <!--贈送點數按鈕-->
+              <!--20220428 .btn.btn-social-release.position-relative.r-0.w-100 更改成 button.btn-social-post-report.text-center-->
+              <button class="btn-social-post-report" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-gift-points-alert">贈送</button>
+              <!--當日已贈送點數過給該使用者時顯示-->
+              <!--20220428 .btn.btn-social-release.position-relative.r-0.w-100 更改成 btn-social-post-report.btn-social-post-report-un-fill-in-->
+              <button class="btn-social-post-report btn-social-post-report-un-fill-in" type="button" disabled="disabled">贈送</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--彈跳視窗 - 提醒是否要贈送點數-->
+    <div class="social-modal modal fade" id="social-personal-page-gift-points-alert" tabindex="-1" aria-labelledby="socialPersonalPageGiftPointsAlertLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center">
+            <h4 class="modal-title text-center w-100 white">確定要贈送點數嗎?</h4>
+            <p class="white text-center">點數贈送後將無法取回</p>
+          </div>
+          <button class="btn-social-action-sheets-content w-100" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-gift-points-feedback">確定</button>
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--點數贈送反饋-->
+    <div class="social-modal modal fade" id="social-personal-page-gift-points-feedback" tabindex="-1" aria-labelledby="socialPersonalPageGiftPointsFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center social-modal-complete"><img class="social-modal-complete-img" src="./img/complete_outline_white.svg" alt="">
+            <div class="social-modal-complete-text">點數已贈送</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--彈跳視窗 - 提醒是否要移除粉絲-->
+    <div class="social-modal modal fade" id="social-personal-page-remove-followers-alert" tabindex="-1" aria-labelledby="socialPersonalPageGiftPointsAlertLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center">
+            <h4 class="modal-title text-center w-100 white">確定要移除粉絲嗎?</h4>
+            <p class="white text-center">移除後該使用者將不再追蹤你</p>
+          </div>
+          <button class="btn-social-action-sheets-content w-100" type="button" data-bs-toggle="modal" data-bs-target="#social-personal-page-remove-followers-feedback">確定</button>
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--移除粉絲反饋-->
+    <div class="social-modal modal fade" id="social-personal-page-remove-followers-feedback" tabindex="-1" aria-labelledby="socialPersonalPageGiftPointsFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center social-modal-complete"><img class="social-modal-complete-img" src="./img/complete_outline_white.svg" alt="">
+            <div class="social-modal-complete-text">粉絲已移除</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="./js/social.js"></script>
+  </body>
+</html>

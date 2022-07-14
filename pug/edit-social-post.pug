@@ -1,0 +1,330 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 編輯器 - Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(name='viewport' content='width=devi2;3ce-width, initial-scale=1, shrink-to-fit=no')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='stylesheet' href='./css/style-social.css')
+  body.social
+    button(type='button' data-bs-toggle='modal' data-bs-target='#edit-social-release') 圖文編輯器
+
+    #edit-social-release.edit-social-post-modal.modal.fade.p-0(tabindex='-1' aria-labelledby='editSocialUploadLabel' aria-hidden='true' )
+
+      button.btn-edit-social-close.close.d-none.d-lg-block(type='button' data-bs-toggle='modal' data-bs-target='#edit-social-post-draft')
+        img(src="./img/close_outline_white.svg", alt="")
+        span.edit-social-close-icon(aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          //20220330 更改.modal-header.bg-dark-gray.position-relative -> .modal-header.modal-header-fixed-top.bg-dark-gray
+          .modal-header.modal-header-fixed-top.bg-dark-gray
+
+            // 返回按鈕 - 返回到編輯器上傳檔案頁面，等草稿功能完成，會先跳出是否儲存成草稿彈跳視窗
+            button.btn-social-back(type='button' data-bs-toggle='modal' data-bs-target='#edit-social-post-draft')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 建立貼文
+
+            //從文章內頁編輯文章進入時的標頭文字顯示
+            //h4.modal-title.text-center.w-100.white 編輯貼文
+            //label.btn-social-release 儲存
+
+            label.btn-social-release 發佈
+              input(type='submit')
+
+          //彈跳視窗-內部
+          //20220330更改 .modal-body.bg-dark-gray.flex-center.flex-xl-row.flex-1100-row.flex-column.p-0 ->
+          .modal-body.modal-body-fixed-top.bg-dark-gray.flex-center.flex-xl-row.flex-1100-row.flex-column.p-0
+
+            //彈跳視窗-影片預覽
+            //.video-social-preview-block
+              .video-social-preview.flex-center
+                video.video-social-preview-sizing.object-fit-cover(controls='' poster='https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg')
+                  source(src='http://s1.mi.com/zt/14072201/sh-v-4.mp4' type='video/mp4')
+                  source(src='http://s1.mi.com/zt/14072201/sh-v-4.webm' type='video/webm')
+                  | Sorry, your browser doesn't support embedded videos.
+
+            //彈跳視窗-圖片預覽
+            .img-social-preview-block
+
+              //當使用者上傳第一張圖片時，偵測該圖片的長寬比，然後決定要加上甚麼stlye並套用到後續上傳的圖片
+
+              .img-social-preview.flex-center.swiper.img-social-preview-swiper
+                .swiper-wrapper
+                  .swiper-slide
+
+                    //
+                      - 裝置寬度 >= 400px
+                      當第一張圖片 寬>高，style加上width:100%;
+                      當第一張圖片 高>寬 或 高=寬， style加上height: 100%;
+                      aspect-ratio:放置第一張圖片比例
+
+                      - 裝置寬度 < 400px
+                      當第一張圖片 高=寬，style加上width:100%;
+                      其餘不變
+
+                    .bg-basic(style="background-image: url( https://www.w3schools.com/howto/img_nature_wide.jpg);   width:100%; aspect-ratio: 20 / 7;")
+                  .swiper-slide
+                    .bg-basic(style="background-image: url(https://www.w3schools.com/howto/img_snow_wide.jpg); width:100%; aspect-ratio: 20 / 7")
+                  .swiper-slide
+                    .bg-basic(style="background-image: url(https://www.w3schools.com/howto/img_lights_wide.jpg); width:100%; aspect-ratio: 20 / 7")
+
+              .img-social-preview-bar-swiper.flex-center.flex-row.swiper(thumbsslider='')
+                .swiper-wrapper.d-flex.align-items-center.flex-row.justify-content-start
+                  .swiper-slide
+                    img.img-social-preview-bar-image(src='https://www.w3schools.com/howto/img_nature_wide.jpg')
+                    .btn-delete-social-image
+                  .swiper-slide
+                    img.img-social-preview-bar-image(src='https://www.w3schools.com/howto/img_snow_wide.jpg' )
+                    .btn-delete-social-image
+                  .swiper-slide
+                    img.img-social-preview-bar-image(src='https://www.w3schools.com/howto/img_lights_wide.jpg')
+                    .btn-delete-social-image
+
+                  //當圖片已上傳十張的時候，隱藏此按鈕；上傳之後幻燈片能否設定停留在最後上傳的那張圖上，方便使用者繼續新增
+                  .swiper-slide
+                    img.img-social-preview-add(src='./img/add_image_outline_808080.svg' alt='')
+                    input.img-social-preview-add(type='file')
+            //彈跳視窗-文字編輯
+            .edit-social-block
+              input.edit-social-title.w-100(type="text" placeholder="填寫標題")
+              textarea.edit-social-content.w-100( placeholder="加上解說..." rows="10") #Hashtag @Sanders
+
+              //20220510 新增Hashtag選擇彈跳視窗
+              .social-tag-block.edit-social-tag-block
+                .social-tag-list #Togayther
+                .social-tag-list #Togayther123
+                .social-tag-list #TogaytherActivity
+
+              //20220510 新增@選擇彈跳視窗
+              .social-tag-block.edit-social-tag-block
+                .social-tag-list
+                  img.social-tag-list-user-image(src="./img/navbar/MemberLoginIcon.svg")
+                  //20220517新增 .d-flex.flex-column，並把.social-tag-list-user-name 推進去
+                  .d-flex.flex-column
+                    .social-tag-list-user-name Richard
+
+                    //20220517 新增用戶名稱放置(唯一的名稱)
+                    .social-tag-list-user-name-id @richard
+                .social-tag-list
+                  img.social-tag-list-user-image(src="./img/navbar/MemberLoginIcon.svg")
+                  .d-flex.flex-column
+                    .social-tag-list-user-name Sanders
+                    .social-tag-list-user-name-id @sanders08926
+                .social-tag-list
+                  img.social-tag-list-user-image(src="./img/navbar/MemberLoginIcon.svg")
+                  .d-flex.flex-column
+                    .social-tag-list-user-name Martin
+                    .social-tag-list-user-name-id @martin123
+
+              //標註朋友與打卡會於下一階段完成並開放
+              //20220510 開啟打卡與標註朋友功能
+
+              //尚未選擇朋友前樣式
+              .edit-social-friend(type="button" data-bs-toggle='modal' data-bs-target='#edit-social-tag-friend') 標註朋友
+                img(src="./img/back_outline_white.svg")
+
+              //已選擇朋友時樣式
+              .edit-social-friend
+                .edit-social-friend-select-block
+                  .social-message-select-user Sanders
+                img(src="./img/back_outline_white.svg" type="button" data-bs-toggle='modal' data-bs-target='#edit-social-tag-friend')
+
+              //尚未選擇打卡景點前樣式
+              .edit-social-check-in(type="button" data-bs-toggle='modal' data-bs-target='#edit-social-check-in') 打卡
+                img(src="./img/back_outline_white.svg")
+
+              .edit-social-check-in-suggest-block
+
+                //放上系統內打卡最多文章前三名的打卡景點
+                .edit-social-check-in-suggest 打卡地點推薦
+                .edit-social-check-in-suggest 打卡地點推薦
+                .edit-social-check-in-suggest 打卡地點推薦
+
+              //已選擇打卡景點時樣式
+              .edit-social-check-in
+                .social-message-select-user.edit-social-check-in-select-block
+
+                  //串接已選擇的打卡景點名稱
+                  .social-search-check-in-name 給力信息科技有限公司
+
+                  //串接已選擇的打卡景點地址
+                  .social-search-check-in-address 臺北市信義區基隆路1段206號14樓
+
+                img(src="./img/back_outline_white.svg" type="button" data-bs-toggle='modal' data-bs-target='#edit-social-check-in')
+
+    //彈跳視窗 - 上傳超過一張圖片失敗
+    #edit-social-upload-fail.social-modal.modal.fade(tabindex='-1' aria-labelledby='editSocialUploadFailLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content
+          .modal-body.bg-dark-gray.flex-center
+            h4.modal-title.text-center.w-100.white 上傳檔案時發生錯誤
+            p.white.text-center 請確認檔案是否為圖片格式，或是檔案大小超過限制。<br>
+              span.fz-14 *圖片大小限制10MB
+
+          //刪除 .btn-edit-social-close-bottom.btn-social-close-bottom
+          //改成 .btn-social-close-alerts
+          button.btn-social-close-alerts.w-100(type='button' data-bs-dismiss='modal' aria-label='Close') 我知道了
+
+    //全部更新
+    //彈跳視窗 - 是否儲存成草稿
+    #edit-social-post-draft.social-modal.modal.fade(tabindex='-1' aria-labelledby='editSocialPostDraftLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content
+          .modal-body.bg-dark-gray.flex-center
+            h4.modal-title.text-center.w-100.white 將這則貼文儲存為草稿 ?
+            p.white.text-center 捨棄之後系統將不會儲存這則貼文。
+
+          button.btn-social-action-sheets-content.w-100(type='button' data-bs-dismiss='modal' aria-label='Close') 儲存草稿
+
+          button.btn-social-action-sheets-content.w-100.mt-0.red(type='button' data-bs-dismiss='modal' aria-label='Close') 捨棄貼文
+
+        button.btn-social-close-action-sheets.w-100.w-mb-80vw(type='button' data-bs-dismiss='modal' aria-label='Close') 取消
+
+    //20220324新增 - 發文後loading特效，上傳成功後隱藏此區塊
+    #edit-social-post-uploading.social-modal.modal.fade(tabindex='-1' aria-labelledby='editSocialPostLeaveLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content
+          .progress(style='height: 2px; background-color: #808080;')
+            .progress-bar.edit-social-post-progress-bar(role='progressbar' aria-valuenow="100" aria-valuemin='0' aria-valuemax='100' style='width: 0; background-color: #FFDC00;')
+          .modal-body.bg-dark-gray.flex-center.h-200px.h-mb-250px
+            .edit-social-post-uploading-animation
+              div
+            h4.modal-title.text-center.w-100.white 上傳中，請稍後
+
+
+
+    //20220511 新增標註朋友彈跳視窗
+    #edit-social-tag-friend.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='editSocialTagFriendLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(type='button' data-bs-dismiss='modal' aria-label='Close')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 標註朋友
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block.social-message-search-block
+
+              //使用此欄位搜尋要標註的帳號
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋朋友")
+
+            //此區塊為選擇使用者時會顯示相對應的方框，點擊後可取消選取該使用者
+            .social-message-select-user-block
+              .social-message-select-user Sanders
+              .social-message-select-user Sanders
+              .social-message-select-user Sanders
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section
+              .social-post-report-options-block
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+
+                    //串接使用者大頭照
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+
+                    //串接使用者名稱
+                    .social-post-report-user-name Sanders
+
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+              .social-post-report-last-hr
+
+              //當查無搜尋結果時顯示此文字
+              .social-message-list-search-not 查無搜尋結果
+
+            .btn-social-post-report-block
+
+              //當使用者尚未選擇帳號時顯示此按鈕樣式，並且禁止送出
+              input.btn-social-post-report.btn-social-post-report-un-fill-in(type="button" disabled="disabled" value="選擇")
+
+              //當使用者已選擇帳號時顯示此按鈕樣式
+              input.btn-social-post-report.btn-social-post-report-fill-in(type="button" value="選擇" data-bs-dismiss='modal' aria-label='Close')
+
+
+    //20220511 新增選擇打卡景點彈跳視窗
+    #edit-social-check-in.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='editSocialCheckInLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(type='button' data-bs-dismiss='modal' aria-label='Close')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 選擇地點
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block
+              //使用此欄位搜尋假冒的使用者名稱
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋地點")
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section.edit-social-post-check-in-options-section
+              .social-post-report-options-block
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.flex-column
+
+                    //串接Google景點名稱
+                    .social-search-check-in-name 給力信息科技有限公司
+
+                    //串接Google景點地址
+                    .social-search-check-in-address 臺北市信義區基隆路1段206號14樓
+
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.flex-column
+                    .social-search-check-in-name 給力信息科技有限公司
+                    .social-search-check-in-address 臺北市信義區基隆路1段206號14樓
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.flex-column
+                    .social-search-check-in-name 給力信息科技有限公司
+                    .social-search-check-in-address 臺北市信義區基隆路1段206號14樓
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.flex-column
+                    .social-search-check-in-name 給力信息科技有限公司
+                    .social-search-check-in-address 臺北市信義區基隆路1段206號14樓
+
+              .social-post-report-last-hr
+
+              //當查無搜尋結果時顯示此文字
+              .social-message-list-search-not 查無搜尋結果
+
+
+    script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js' integrity='sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ' crossorigin='anonymous')
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='./js/social.js')

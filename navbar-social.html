@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/member.css">
+    <link rel="stylesheet" href="./css/style-social.css">
+  </head>
+  <body class="social">
+    <!--置頂導覽列-->
+    <div class="bg-gray" id="navbar">
+      <div class="container navbarcontainer">
+        <div class="row">
+          <!--20220617 把col-9 更改成 col-7-->
+          <div class="col-md-6 col-7 d-flex align-items-center">
+            <div class="ml-mb-0" id="navbarBrandLogo"><a href="/">
+                <!--20220622 更換圖片路徑 ./img/LogoWhite.svg 更改成 ./img/navbar/logo_social_test_white.svg--><img src="./img/navbar/logo_social_test_white.svg"></a></div>
+          </div>
+          <!--20220617 把col-3 更改成 col-5-->
+          <div class="col-md-6 col-5 iconBlock d-flex align-items-center">
+            <!-- 回到自媒體文章網站--><a class="icon" href="/"><img src="./img/navbar/media_web_fill_white.svg"></a>
+            <!-- 首頁 - 點擊後回到社群首頁頂端與重整頁面--><a class="icon d-none d-lg-block" id="homebtn" href=""><img src="./img/navbar/home_outline_white.svg"></a>
+            <!-- 202205070 開啟搜尋功能--><img class="icon d-none d-lg-block" id="searchbtn" src="./img/navbar/search_outline_white.svg" type="button" data-bs-toggle="modal" data-bs-target="#social-search">
+            <!-- 訊息 - 社群第三階段開放-->
+            <!-- 20220428開啟私訊功能 #messagebtn.icon(src='./img/navbar/message_outline_white.svg' alt='') 更改成下方樣式-->
+            <div class="icon position-relative">
+              <!-- 新的私訊數在9則(包含)以內-->
+              <div class="social-notify-count social-message-count">9</div>
+              <!--新的私訊數超過9則-->
+              <div class="social-notify-count social-notify-more social-message-count social-message-count-more">9+</div><img id="messagebtn" src="./img/navbar/message_outline_white.svg" alt="">
+            </div>
+            <!--發文 - 開啟上傳檔案視窗--><a class="icon d-none d-lg-block"><img src="./img/navbar/post_outline_white.svg" @click="$refs.socialUploadModal.show()"></a>
+            <!--通知-->
+            <!--20220405 更改-->
+            <div class="icon d-none d-lg-block position-relative" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-modal">
+              <!--新的通知數在9則(包含)以內-->
+              <div class="social-notify-count">9</div>
+              <!--新的通知數超過9則-->
+              <div class="social-notify-count social-notify-more">9+</div><img id="notifybtn" src="./img/navbar/notify_outline_white.svg">
+            </div>
+            <!--登入前會員頭像 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示--><a class="member d-none d-lg-block mr-16px" href=""><img src="./img/navbar/member_outline_white.svg" alt=""></a>
+            <!--登入後會員頭像 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示--><a class="member memberlogin d-none d-lg-block" href="/account"><img src="./img/navbar/MemberLoginIcon.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--置尾導覽列-lg以下顯示-->
+    <div class="bg-gray d-flex d-lg-none align-items-center position-fixed w-100 bottom-0" id="navbar-lg-social">
+      <!--首頁 - 點擊後回到社群首頁頂端與重整頁面-->
+      <div class="navbar-lg-icon d-flex justify-content-center align-items-center"><a id="homebtn" href=""><img class="icon" src="./img/navbar/home_outline_white.svg"></a></div>
+      <!--搜尋-->
+      <!--20220507 串接搜尋彈跳視窗-->
+      <div class="navbar-lg-icon d-flex justify-content-center align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#social-search"><img id="searchbtn" src="./img/navbar/search_outline_white.svg"></div>
+      <!--發文 - 開啟上傳檔案視窗-->
+      <div class="navbar-lg-icon h-40px d-flex justify-content-center align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#edit-social-upload"><img class="h-40px icon" id="postbtn" src="./img/navbar/post_outline_white.svg"></div>
+      <!--通知-->
+      <!--20220405 更改-->
+      <div class="navbar-lg-icon d-flex justify-content-center align-items-center position-relative" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-modal">
+        <!--新的通知數在9則(包含)以內-->
+        <div class="social-notify-count">9</div>
+        <!--新的通知數超過9則-->
+        <div class="social-notify-count social-notify-more">9+</div><img class="icon" id="notifybtn" src="./img/navbar/notify_outline_white.svg" alt="">
+      </div>
+      <!--會員 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示-->
+      <div class="navbar-lg-icon d-flex justify-content-center align-items-center">
+        <!--登入前會員頭像--><a class="member" href=""><img class="h-25px" src="./img/navbar/member_outline_white.svg" alt=""></a>
+        <!--登入後會員頭像--><a class="member memberlogin" href=""><img class="h-25px" src="./img/navbar/MemberLoginIcon.svg" alt=""></a>
+      </div>
+    </div>
+    <!--發文 - 上傳檔案-->
+    <div class="edit-social-post-modal modal fade" id="edit-social-upload" tabindex="-1" aria-labelledby="editSocialUploadLabel" aria-hidden="true">
+      <button class="btn-edit-social-close close d-none d-lg-block" type="button" data-bs-dismiss="modal" aria-label="Close"> <span class="edit-social-close-icon" aria-hidden="true"><img src="./img/close_outline_white.svg" alt=""></span></button>
+      <div class="modal-dialog modal-dialog-centered modal-block flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-header bg-dark-gray position-relative">
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#edit-social-upload"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">建立貼文</h4>
+          </div>
+          <div class="modal-body bg-dark-gray flex-center"><img class="mb-16px" src="./img/post_upload_image.svg" alt="">
+            <p class="white text-center">請上傳圖片或影片檔案格式<br><span class="fz-14">*圖片大小限制10MB<br></span><span class="fz-14">*影片長度限制15秒內，大小限制50MB</span></p>
+            <label class="btn-social-upload">上傳檔案
+              <input type="file">
+            </label>
+          </div>
+        </div>
+        <!--刪除.btn-social-close-bottom-->
+        <button class="btn-edit-social-close-bottom d-block d-lg-none w-100" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--彈跳視窗 - 上傳檔案失敗-->
+    <div class="social-modal modal fade" id="edit-social-upload-fail" tabindex="-1" aria-labelledby="editSocialUploadFailLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center">
+            <h4 class="modal-title text-center w-100 white">上傳檔案時發生錯誤</h4>
+            <p class="white text-center">請確認檔案是否為圖片或影片格式，或是檔案大小超過限制。</p>
+          </div>
+          <!--刪除.btn-edit-social-close-bottom.btn-social-close-bottom-->
+          <!--更改成 .btn-social-close-alerts-->
+          <button class="btn-social-close-alerts w-100" type="button" data-bs-dismiss="modal" aria-label="Close">我知道了</button>
+        </div>
+      </div>
+    </div>
+    <!--20220404 新增通知彈跳視窗-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-notify-modal" tabindex="-1" aria-labelledby="socialPostReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative d-block d-tb-none">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-notify-modal"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">通知</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-notify-list-section">
+              <div class="social-notify-list-block">
+                <!--一位使用者對你的文章按讚--><a class="social-notify-list" href="">
+                  <!--最新按讚的使用者大頭照--><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sander </span>對您的文章按讚</div>
+                      <div class="social-notify-time">30秒鐘前</div>
+                    </div>
+                    <!--被按攢的貼文縮圖--><img class="social-notify-post-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg">
+                  </div></a>
+                <!--兩位使用者對你的文章按讚--><a class="social-notify-list" href=""><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sanders </span>與<span class="social-notify-user-name"> Sam </span>對您的文章按讚</div>
+                      <div class="social-notify-time">30秒鐘前</div>
+                    </div><img class="social-notify-post-image" src="https://i.pinimg.com/236x/7f/24/8c/7f248c9e18abe79de0d6c79617e03361.jpg">
+                  </div></a>
+                <!--多位使用者對你的文章按讚--><a class="social-notify-list" href=""><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sanders </span>與<span class="social-notify-user-name"> Sam </span>還有其他24人對您的文章按讚</div>
+                      <div class="social-notify-time">30秒鐘前</div>
+                    </div><img class="social-notify-post-image" src="https://www.w3schools.com/howto/img_nature_wide.jpg">
+                  </div></a>
+                <!--使用者回覆你的文章按讚--><a class="social-notify-list" href="">
+                  <!--回覆貼文的使用者大頭照--><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sander </span>回覆了您了文章</div>
+                      <div class="social-notify-time">1分鐘前</div>
+                    </div>
+                    <!--被回覆留言的貼文縮圖--><img class="social-notify-post-image" src="https://www.w3schools.com/howto/img_snow_wide.jpg">
+                  </div></a>
+                <!--使用者在留言中標註你 - 等該功能完成再串接--><a class="social-notify-list" href="">
+                  <!--標註你的使用者--><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sander </span>在一則留言中標註了您</div>
+                      <div class="social-notify-time">59分鐘前</div>
+                    </div>
+                    <!--備標註的貼文縮圖--><img class="social-notify-post-image" src="https://www.w3schools.com/howto/img_lights_wide.jpg">
+                  </div></a>
+                <!--使用者回覆了你的留言--><a class="social-notify-list" href="">
+                  <!--回覆你留言的使用者大頭照--><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sander </span>回覆了您的留言</div>
+                      <div class="social-notify-time">59分鐘前</div>
+                    </div>
+                    <!--該篇留言的貼文縮圖--><img class="social-notify-post-image" src="https://www.w3schools.com/howto/img_lights_wide.jpg">
+                  </div></a>
+                <!--使用者追蹤你--><a class="social-notify-list" href="">
+                  <!--追蹤你的使用者大頭照--><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sander </span>已追蹤您</div>
+                      <div class="social-notify-time">1小時前</div>
+                    </div>
+                    <!--可於此處追蹤與取消追蹤-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative social-notify-button">追蹤</div>
+                    <div class="btn social-post-follow btn-social-release position-relative social-notify-button">已追蹤</div>
+                  </div></a>
+                <!--使用者在文章中標註你 - 等該功能完成再串接--><a class="social-notify-list" href=""><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sander </span>在他的文章中標註了您</div>
+                      <div class="social-notify-time">3天前</div>
+                    </div><img class="social-notify-post-image" src="https://www.w3schools.com/howto/img_nature_wide.jpg">
+                  </div></a>
+                <!--使用者贈送你點數 - 等該功能完成再串接--><a class="social-notify-list" href="">
+                  <!--贈送你點數的使用者大頭照--><img class="social-index-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text"><span class="social-notify-user-name"> Sander </span> 贈送您 <span class="social-notify-coupon-count"> 50 </span>點會員點數</div>
+                      <div class="social-notify-time">7天前</div>
+                    </div>
+                    <!--可於此處追蹤與取消追蹤-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative social-notify-button">追蹤</div>
+                    <div class="btn social-post-follow btn-social-release position-relative social-notify-button">已追蹤</div>
+                  </div></a>
+                <!--你的動態貼文被檢舉，審核後檢舉無效-->
+                <div class="social-notify-list"><img class="social-index-user-img" src="./img/notify_report_full_white.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text">您的<span class="social-notify-report-item">發文內容</span>遭檢舉，經審查後判定 <span class="social-notify-report-punish">檢舉無效</span></div>
+                      <div class="social-notify-time">02.25</div>
+                    </div>
+                    <div class="btn social-post-unfollow btn-social-release position-relative social-notify-button" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-report-article">詳情瞭解</div>
+                  </div>
+                </div>
+                <!--你的留言被檢舉，審核後給予警告-->
+                <div class="social-notify-list"><img class="social-index-user-img" src="./img/notify_report_full_white.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text">您的<span class="social-notify-report-item">留言內容</span>遭檢舉，經審查後判定 <span class="social-notify-report-punish">給予警告</span></div>
+                      <div class="social-notify-time">02.25</div>
+                    </div>
+                    <div class="btn social-post-unfollow btn-social-release position-relative social-notify-button" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-report-comment">詳情瞭解</div>
+                  </div>
+                </div>
+                <!--你的留言被檢舉，審核後給予警告、刪除留言-->
+                <div class="social-notify-list"><img class="social-index-user-img" src="./img/notify_report_full_white.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text">您的<span class="social-notify-report-item">留言內容</span>遭檢舉，經審查後判定 <span class="social-notify-report-punish">給予警告</span>、<span class="social-notify-report-punish">刪除留言</span></div>
+                      <div class="social-notify-time">02.25</div>
+                    </div>
+                    <div class="btn social-post-unfollow btn-social-release position-relative social-notify-button" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-report-comment">詳情瞭解</div>
+                  </div>
+                </div>
+                <!--你的帳號被檢舉，審核後停權999天-->
+                <div class="social-notify-list"><img class="social-index-user-img" src="./img/notify_report_full_white.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text">您的<span class="social-notify-report-item">帳號</span>遭檢舉，經審查後判定 <span class="social-notify-report-punish">停權999天</span></div>
+                      <div class="social-notify-time">01.10</div>
+                    </div>
+                    <div class="btn social-post-unfollow btn-social-release position-relative social-notify-button" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-report-account">詳情瞭解</div>
+                  </div>
+                </div>
+                <!--你的帳號因不當檢舉，審核後停權3天-->
+                <div class="social-notify-list"><img class="social-index-user-img" src="./img/notify_report_full_white.svg">
+                  <div class="social-notify-content">
+                    <div class="social-notify-text-block">
+                      <div class="social-notify-text">您的<span class="social-notify-report-item">帳號</span>因不當檢舉，經審查後判定 <span class="social-notify-report-punish">停權3天</span></div>
+                      <div class="social-notify-time">01.10</div>
+                    </div>
+                    <div class="btn social-post-unfollow btn-social-release position-relative social-notify-button" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-report-falsely">詳情瞭解</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220405新增 - 被檢舉文章通知審核結果彈跳視窗-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-notify-report-article" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-notify-report-article"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">詳情瞭解</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">審查結果</div>
+              <!--20220504 更新條款連結-->
+              <div class="social-post-report-content white">您的發文內容因涉及違反  <a class="btn-social-post-report-term" href="service.html"  target="_blank">"網站使用條款"</a>  而遭檢舉，經審查後判定 <span class="social-notify-report-punish">檢舉無效</span></div>
+            </div>
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">管理員訊息</div>
+              <div class="social-post-report-content white">檢舉無效</div>
+            </div>
+            <div class="social-notify-report-content-block">
+              <div class="social-post-report-title">文章內容</div><a class="social-post-report-content linkblue" href="">文章連結</a>
+              <div class="bg-dark-gray flex-center">
+                <!--文章內頁 - 影片-->
+                <!--.video-social-preview-block.social-notify-report-video-block
+                .social-notify-report-video.flex-center
+                
+                  //影片預覽poster，截取使用者影片一開始的畫面當做影片預覽圖，圖片尺寸需同影片尺寸
+                  video.video-social-preview-sizing.object-fit-cover(controls='' poster='https://i.imgur.com/onZ4fV6.jpg')
+                    source(src='http://s1.mi.com/zt/14072201/sh-v-4.mp4' type='video/mp4')
+                    source(src='http://s1.mi.com/zt/14072201/sh-v-4.webm' type='video/webm')
+                    | Sorry, your browser doesn't support embedded videos.
+                
+                -->
+                <!--文章內頁 - 圖片-->
+                <div class="social-notify-report-img-block">
+                  <div class="social-notify-report-img social-notify-report-article-img-swiper flex-center swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <!--
+                        width: 100%;
+                        aspect-ratio:放置第一張圖片比例
+                        -->
+                        <div class="bg-basic d-block" style="background-image: url( https://www.w3schools.com/howto/img_nature_wide.jpg); width:100%; height:auto; aspect-ratio: 20 / 7;"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bg-basic d-block" style="background-image: url(https://www.w3schools.com/howto/img_snow_wide.jpg); width:100%; height:auto; aspect-ratio: 20 / 7"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bg-basic d-block" style="background-image: url(https://www.w3schools.com/howto/img_lights_wide.jpg); width:100%; height:auto; aspect-ratio: 20 / 7"></div>
+                      </div>
+                    </div>
+                    <div class="social-notify-report-article-swiper-pagination"></div>
+                  </div>
+                </div>
+                <!--動態文章標題-->
+                <div class="social-post-title w-100 px-0">我們喝的不只酒、我們看的都是肉！</div>
+                <!--動態文章內容-->
+                <div class="social-post-content w-100 px-0">抱門山歡斤買六首丁家道牠「追從飽長」旦內植隻穴斗。珠念只合唱成玉送，細合相七打地連帶士品草筆候紅泉故他。<br>泉何口大只合兔男多沒給走再害王明帶都。首女光把物占士行起學想目快，登兩林自紅棵旦辛種牠面多說鴨？</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220405新增 - 被檢舉留言通知審核結果彈跳視窗-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-notify-report-comment" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-notify-report-article"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">詳情瞭解</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">審查結果</div>
+              <!--20220504 更新條款連結-->
+              <div class="social-post-report-content white">您的留言內容因涉及違反  <a class="btn-social-post-report-term" href="service.html"  target="_blank">"網站使用條款"</a>  而遭檢舉，經審查後判定檢舉成立並<span class="social-notify-report-punish">給予警告</span>、<span class="social-notify-report-punish">刪除留言</span></div>
+            </div>
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">管理員訊息</div>
+              <div class="social-post-report-content white">裸露/性行為</div>
+            </div>
+            <div class="social-notify-report-content-block">
+              <div class="social-post-report-title">留言內容</div><a class="social-post-report-content linkblue" href="">文章連結</a>
+              <div class="social-post-report-content white">這一巴掌好讚，也太讚了吧</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220405新增 - 被檢舉帳號通知審核結果彈跳視窗-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-notify-report-account" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-notify-report-article"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">詳情瞭解</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">審查結果</div>
+              <!--20220504 更新條款連結-->
+              <div class="social-post-report-content white">您的留言內容因涉及違反  <a class="btn-social-post-report-term" href="service.html"  target="_blank">"網站使用條款"</a>  而遭檢舉，經審查後判定檢舉成立並<span class="social-notify-report-punish">給予警告</span>、<span class="social-notify-report-punish">刪除留言</span></div>
+            </div>
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">管理員訊息</div>
+              <div class="social-post-report-content white">裸露/性行為</div>
+            </div>
+            <div class="social-notify-report-content-block">
+              <div class="social-post-report-title">帳號內容</div><a class="social-post-report-content linkblue" href="">帳號連結</a><img class="social-post-report-account-user-img" src="./img/navbar/MemberLoginIcon.svg">
+              <div class="social-post-report-account-user-name">SANDERS</div>
+              <div class="social-post-report-account-user-intro">在多次受傷之後，我們數度懷疑自己是否失去了愛人的能力，殊不知我們真正失去的，是重新認識與接納自己的勇氣。 </div>
+              <!--最多只需要顯示4篇該帳號內的最新文章-->
+              <div class="social-index-grid">
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media"><img class="social-post-card-image" src="https://i.pinimg.com/236x/7f/24/8c/7f248c9e18abe79de0d6c79617e03361.jpg" alt=""></div>
+                    <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉，我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href="">
+                          <!--抓取該篇動態文章作者的會員大頭像--><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt="">
+                          <!--抓取該篇動態文章作者的會員名稱--><span class="social-post-card-author">SANDERS Cheng Granger</span></a>
+                        <!--此處為讓使用者按喜歡與收回喜歡區塊-->
+                        <div class="social-post-card-like">
+                          <!--此class為尚未按喜歡前顯示-->
+                          <div class="social-post-card-unlike-btn bg-basic"></div>
+                          <!--此數字為共有多少其他使用者按過喜歡--><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media">
+                      <!--當該篇動態文章的圖片超過兩張時會顯示此圖示--><img class="social-post-card-image-plural" src="./img/image_plural_fill_black_white.svg" alt=""><img class="social-post-card-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg" alt="">
+                    </div>
+                    <div class="socail-post-card-content">
+                      <!--為第二階段開發追蹤功能後開始顯示，當使用者有追蹤該篇動態文章的作者時，會顯示我的追蹤，並放上使用者的圖片與名稱-->
+                      <div class="social-post-card-follow-block"><img class="social-post-card-follow-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-follow">你的追蹤</span></div><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href=""><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-author">SANDERS</span></a>
+                        <div class="social-post-card-like">
+                          <div class="social-post-card-like-btn bg-basic"></div><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media">
+                      <!--當該篇動態文章是影片的話會顯示此圖片--><img class="video_play_fill_black_white" src="./img/video_play_fill_black_white.svg" alt="">
+                      <!--2022/03/18新增此圖片，而顯示圖片為使用者上傳的影片預覽圖--><img class="social-post-card-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg" alt="">
+                    </div>
+                    <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href=""><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-author">SANDERS</span></a>
+                        <div class="social-post-card-like">
+                          <div class="social-post-card-like-btn bg-basic"></div><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media"><img class="social-post-card-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg" alt=""></div>
+                    <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href=""><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-author">SANDERS</span></a>
+                        <div class="social-post-card-like">
+                          <div class="social-post-card-like-btn bg-basic"></div><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220405新增 - 惡意檢舉通知審核結果彈跳視窗 - 檢舉留言-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-notify-report-falsely" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-notify-report-article"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">詳情瞭解</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">審查結果</div>
+              <!--20220419更改文字-->
+              <div class="social-post-report-content white">您的帳號因不當檢舉涉及違反 <a class="btn-social-post-report-term" href="service.html"  target="_blank">"網站使用條款"</a> ，經審查後判定檢舉成立並<span class="social-notify-report-punish">給予警告</span>、<span class="social-notify-report-punish">停權5天</span></div>
+            </div>
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">管理員訊息</div>
+              <div class="social-post-report-content white">惡意檢舉</div>
+            </div>
+            <!--檢舉內容-->
+            <div class="social-notify-report-content-block">
+              <div class="social-post-report-title">檢舉內容</div><a class="social-post-report-content linkblue" href="">文章連結</a>
+              <div class="social-post-report-content white">這一巴掌好讚，也太讚了吧</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220405新增 - 惡意檢舉通知審核結果彈跳視窗 - 檢舉貼文-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-notify-report-falsely" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-notify-report-article"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">詳情瞭解</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">審查結果</div>
+              <div class="social-post-report-content white">您的帳號因涉及違反  <a class="btn-social-post-report-term" href="service.html"  target="_blank">"網站使用條款"</a>  而遭檢舉，經審查後判定檢舉成立並<span class="social-notify-report-punish">給予警告</span>、<span class="social-notify-report-punish">停權5天</span></div>
+            </div>
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">管理員訊息</div>
+              <div class="social-post-report-content white">惡意檢舉</div>
+            </div>
+            <div class="social-notify-report-content-block">
+              <div class="social-post-report-title">檢舉內容</div><a class="social-post-report-content linkblue" href="">文章連結</a>
+              <div class="bg-dark-gray flex-center">
+                <!--文章內頁 - 影片-->
+                <!--.video-social-preview-block.social-notify-report-video-block
+                .social-notify-report-video.flex-center
+                
+                  //影片預覽poster，截取使用者影片一開始的畫面當做影片預覽圖，圖片尺寸需同影片尺寸
+                  video.video-social-preview-sizing.object-fit-cover(controls='' poster='https://i.imgur.com/onZ4fV6.jpg')
+                    source(src='http://s1.mi.com/zt/14072201/sh-v-4.mp4' type='video/mp4')
+                    source(src='http://s1.mi.com/zt/14072201/sh-v-4.webm' type='video/webm')
+                    | Sorry, your browser doesn't support embedded videos.
+                
+                -->
+                <!--文章內頁 - 圖片-->
+                <div class="social-notify-report-img-block">
+                  <div class="social-notify-report-img social-notify-report-article-img-swiper flex-center swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <!--
+                        width: 100%;
+                        aspect-ratio:放置第一張圖片比例
+                        -->
+                        <div class="bg-basic d-block" style="background-image: url( https://www.w3schools.com/howto/img_nature_wide.jpg); width:100%; height:auto; aspect-ratio: 20 / 7;"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bg-basic d-block" style="background-image: url(https://www.w3schools.com/howto/img_snow_wide.jpg); width:100%; height:auto; aspect-ratio: 20 / 7"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bg-basic d-block" style="background-image: url(https://www.w3schools.com/howto/img_lights_wide.jpg); width:100%; height:auto; aspect-ratio: 20 / 7"></div>
+                      </div>
+                    </div>
+                    <div class="social-notify-report-article-swiper-pagination"></div>
+                  </div>
+                </div>
+                <!--動態文章標題-->
+                <div class="social-post-title w-100 px-0">我們喝的不只酒、我們看的都是肉！</div>
+                <!--動態文章內容-->
+                <div class="social-post-content w-100 px-0">抱門山歡斤買六首丁家道牠「追從飽長」旦內植隻穴斗。珠念只合唱成玉送，細合相七打地連帶士品草筆候紅泉故他。<br>泉何口大只合兔男多沒給走再害王明帶都。首女光把物占士行起學想目快，登兩林自紅棵旦辛種牠面多說鴨？</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220405新增 - 惡意檢舉通知審核結果彈跳視窗 - 檢舉帳號-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-notify-report-falsely" tabindex="-1" aria-labelledby="socialNotifyReportLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-notify-report-article"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">詳情瞭解</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">審查結果</div>
+              <!--20220504 更新條款連結-->
+              <div class="social-post-report-content white">您的留言內容因涉及違反  <a class="btn-social-post-report-term" href="service.html"  target="_blank">"網站使用條款"</a>  而遭檢舉，經審查後判定檢舉成立並<span class="social-notify-report-punish">給予警告</span>、<span class="social-notify-report-punish">刪除留言</span></div>
+            </div>
+            <div class="social-post-report-declare-block">
+              <div class="social-post-report-title">管理員訊息</div>
+              <div class="social-post-report-content white">裸露/性行為</div>
+            </div>
+            <div class="social-notify-report-content-block">
+              <div class="social-post-report-title">檢舉內容</div><a class="social-post-report-content linkblue" href="">帳號連結</a><img class="social-post-report-account-user-img" src="./img/navbar/MemberLoginIcon.svg">
+              <div class="social-post-report-account-user-name">SANDERS</div>
+              <div class="social-post-report-account-user-intro">在多次受傷之後，我們數度懷疑自己是否失去了愛人的能力，殊不知我們真正失去的，是重新認識與接納自己的勇氣。</div>
+              <!--最多只需要顯示4篇該帳號內的最新文章-->
+              <div class="social-index-grid">
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media"><img class="social-post-card-image" src="https://i.pinimg.com/236x/7f/24/8c/7f248c9e18abe79de0d6c79617e03361.jpg" alt=""></div>
+                    <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉，我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href="">
+                          <!--抓取該篇動態文章作者的會員大頭像--><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt="">
+                          <!--抓取該篇動態文章作者的會員名稱--><span class="social-post-card-author">SANDERS Cheng Granger</span></a>
+                        <!--此處為讓使用者按喜歡與收回喜歡區塊-->
+                        <div class="social-post-card-like">
+                          <!--此class為尚未按喜歡前顯示-->
+                          <div class="social-post-card-unlike-btn bg-basic"></div>
+                          <!--此數字為共有多少其他使用者按過喜歡--><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media">
+                      <!--當該篇動態文章的圖片超過兩張時會顯示此圖示--><img class="social-post-card-image-plural" src="./img/image_plural_fill_black_white.svg" alt=""><img class="social-post-card-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg" alt="">
+                    </div>
+                    <div class="socail-post-card-content">
+                      <!--為第二階段開發追蹤功能後開始顯示，當使用者有追蹤該篇動態文章的作者時，會顯示我的追蹤，並放上使用者的圖片與名稱-->
+                      <div class="social-post-card-follow-block"><img class="social-post-card-follow-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-follow">你的追蹤</span></div><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href=""><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-author">SANDERS</span></a>
+                        <div class="social-post-card-like">
+                          <div class="social-post-card-like-btn bg-basic"></div><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media">
+                      <!--當該篇動態文章是影片的話會顯示此圖片--><img class="video_play_fill_black_white" src="./img/video_play_fill_black_white.svg" alt="">
+                      <!--2022/03/18新增此圖片，而顯示圖片為使用者上傳的影片預覽圖--><img class="social-post-card-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg" alt="">
+                    </div>
+                    <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href=""><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-author">SANDERS</span></a>
+                        <div class="social-post-card-like">
+                          <div class="social-post-card-like-btn bg-basic"></div><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-index-grid-item social-post-report-grid-item">
+                  <div class="social-post-card">
+                    <div class="social-post-card-media"><img class="social-post-card-image" src="https://i.pinimg.com/236x/a6/cd/0a/a6cd0a15d5b2909539dd7944201127d2.jpg" alt=""></div>
+                    <div class="socail-post-card-content"><a class="social-post-card-title" href="">我們喝的不只酒、我們看的都是肉！</a>
+                      <div class="social-post-card-meta-section"><a class="social-post-card-author-block" href=""><img class="social-post-card-author-pic" src="./img/navbar/MemberLoginIcon.svg" alt=""><span class="social-post-card-author">SANDERS</span></a>
+                        <div class="social-post-card-like">
+                          <div class="social-post-card-like-btn bg-basic"></div><span class="social-post-card-like-count">99</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220506 新增搜尋彈跳視窗-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-search" tabindex="-1" aria-labelledby="socialSearchLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">搜尋</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block social-message-search-block">
+              <!--使用此欄位搜尋要私訊的對象-->
+              <input class="social-post-report-user-search w-100" type="text" placeholder="搜尋">
+            </div>
+            <!--沒有搜尋紀錄時隱藏-->
+            <div class="social-search-list-block">
+              <div class="social-search-list-title white">最近</div>
+              <div class="btn social-search-clear-btn red p-0" data-bs-toggle="modal" data-bs-target="#social-search-clear-alert">全部清除</div>
+            </div>
+            <!--根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現-->
+            <!--沒有搜尋紀錄時隱藏-->
+            <div class="social-post-report-options-section social-search-options-section">
+              <div class="social-post-report-options-block">
+                <div class="social-post-report-options">
+                  <div class="social-post-report-user-data d-flex align-items-center"><img class="social-post-report-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                    <div class="social-post-report-user-name">Sanders</div>
+                  </div>
+                  <div class="btn social-search-list-delete-btn bg-basic"></div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-post-report-user-data d-flex align-items-center"><img class="social-post-report-user-img" src="./img/hashtag_fill_white_black_circle.svg">
+                    <div class="social-search-hashtag-name">#Togayther</div>
+                  </div>
+                  <div class="btn social-search-list-delete-btn bg-basic"></div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-post-report-user-data d-flex align-items-center"><img class="social-post-report-user-img" src="./img/navbar/MemberLoginIcon.svg">
+                    <div class="social-post-report-user-name">Sanders</div>
+                  </div>
+                  <div class="btn social-search-list-delete-btn bg-basic"></div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-post-report-user-data d-flex align-items-center"><img class="social-post-report-user-img" src="./img/check_in_fill_white_black_circle.svg">
+                    <div class="social-search-check-in-block">
+                      <div class="social-search-check-in-name">台北市政府前廣場</div>
+                      <div class="social-search-check-in-address">台北市信義區市府路1號</div>
+                    </div>
+                  </div>
+                  <div class="btn social-search-list-delete-btn bg-basic"></div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-post-report-user-data d-flex align-items-center"><img class="social-post-report-user-img" src="./img/check_in_fill_white_black_circle.svg">
+                    <div class="social-search-check-in-block">
+                      <div class="social-search-check-in-name">台北市政府前廣場</div>
+                    </div>
+                  </div>
+                  <div class="btn social-search-list-delete-btn bg-basic"></div>
+                </div>
+              </div>
+              <div class="social-post-report-last-hr"></div>
+              <!--當查無搜尋結果時顯示此文字-->
+              <div class="social-message-list-search-not">查無搜尋結果</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--清除搜尋紀錄警示視窗-->
+    <div class="social-modal modal fade" id="social-search-clear-alert" tabindex="-1" aria-labelledby="socialSearchClearAlertLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center">
+            <h4 class="modal-title text-center w-100 white">清除搜尋紀錄 ?</h4>
+            <p class="white text-center">清除後搜尋紀錄將無法復原</p>
+          </div>
+          <button class="btn-social-action-sheets-content w-100 mt-0 red" data-bs-toggle="modal" data-bs-target="#social-search-clear-feedback">全部清除</button>
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--清除搜尋紀錄反饋-->
+    <div class="social-modal modal fade" id="social-search-clear-feedback" tabindex="-1" aria-labelledby="socialSearchClearFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center social-modal-complete"><img class="social-modal-complete-img" src="./img/complete_outline_white.svg" alt="">
+            <div class="social-modal-complete-text">搜尋記錄已清除</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220518 新增第一次進入社群頁面填寫用戶名稱彈跳視窗-->
+    <div class="social-modal-min-full modal p-0 fade" id="social-user-name-id-set" tabindex="-1" aria-labelledby="socialUserNameIdSetLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <h4 class="modal-title text-center w-100 white">歡迎使用 Togayther官方社群平台</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-declare-block social-message-search-block">
+              <div class="social-post-report-title">設定用戶名稱</div>
+              <div class="social-post-report-content">請輸入您的用戶名稱，後續則<span class="red">不可</span>進行更改</div>
+              <!--輸入用戶名稱-->
+              <input class="social-post-report-user-search w-100" type="text" placeholder="用戶名稱">
+              <!--用戶名稱已被使用時顯示-->
+              <div class="red mt-8px fz-14">此用戶名稱已被使用</div>
+              <!--用戶名稱使用提他特殊符號時顯示-->
+              <div class="red mt-8px fz-14">用戶名稱只限定"英文小寫"、"數字"、"底線"、"英文句點"</div>
+            </div>
+            <div class="btn-social-post-report-block">
+              <!--當使用者尚未輸入帳號時顯示此按鈕樣式，並且禁止送出-->
+              <input class="btn-social-post-report btn-social-post-report-un-fill-in" type="button" disabled="disabled" value="確認">
+              <!--當使用者已輸入帳號時顯示此按鈕樣式-->
+              <input class="btn-social-post-report btn-social-post-report-fill-in" type="button" value="確認" data-bs-dismiss="modal" aria-label="Close">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/social.js"></script>
+  </body>
+</html>

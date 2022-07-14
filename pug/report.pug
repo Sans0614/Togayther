@@ -1,0 +1,339 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 檢舉功能 - Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='stylesheet' href='./css/style-social.css')
+  body.social.modal-open
+
+    button(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-article') 檢舉文章
+    button(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-comment') 檢舉留言
+    button(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-account') 檢舉帳號
+
+    //檢舉文章功能
+    #social-post-report-article.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post-report-article')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 檢舉
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block
+              //20220401 更改.social-post-report-title&.social-post-report-content 文字
+              .social-post-report-title 您檢舉本篇貼文的原因為何 ?
+              .social-post-report-content 檢舉將以匿名方式辦理 (部分特殊情況例外,請參考Togayther社群使用條款)
+
+            //20220401更改檢舉原因
+            .social-post-report-options-section
+              .social-post-report-options-block
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 裸露/性行為
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 霸凌/騷擾
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 誤導/詐騙
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 違法內容
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 其他
+                  .btn-social-post-report-next >
+              .social-post-report-last-hr
+
+    //檢舉留言功能
+    #social-post-report-comment.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post-report')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 檢舉
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block
+              //20220401 更改.social-post-report-title&.social-post-report-content 文字
+              .social-post-report-title 您檢舉本則留言的原因為何 ?
+              .social-post-report-content 檢舉將以匿名方式辦理 (部分特殊情況例外,請參考Togayther社群使用條款)
+
+            //20220401更改檢舉原因
+            .social-post-report-options-section
+              .social-post-report-options-block
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 裸露/性行為
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 霸凌/騷擾
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 誤導/詐騙
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 違法內容
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 其他
+                  .btn-social-post-report-next >
+              .social-post-report-last-hr
+
+    //檢舉帳號功能
+    #social-post-report-account.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post-report-account')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 檢舉
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block
+              //20220401 更改.social-post-report-title&.social-post-report-content 文字
+              .social-post-report-title 您檢舉本帳號的原因為何 ?
+              .social-post-report-content 檢舉將以匿名方式辦理 (部分特殊情況例外,請參考Togayther社群使用條款)
+            .social-post-report-options-section
+              .social-post-report-options-block
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-account-one')
+                  .social-post-report-title 發佈不應該出現在Togayther的內容
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-account-two')
+                  .social-post-report-title 假冒他人
+                  .btn-social-post-report-next >
+              .social-post-report-last-hr
+
+    //檢舉帳號功能 - 發佈不應該出現在Togayther的內容
+    #social-post-report-account-one.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post-report-account-one')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 檢舉
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block
+              //20220401 更改.social-post-report-title&.social-post-report-content 文字
+              .social-post-report-title 您檢舉本帳號的原因為何 ?
+              .social-post-report-content 檢舉將以匿名方式辦理 (部分特殊情況例外,請參考Togayther社群使用條款)
+            //20220401更改檢舉原因
+            .social-post-report-options-section
+              .social-post-report-options-block
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 裸露/性行為
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 霸凌/騷擾
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 誤導/詐騙
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 違法內容
+                  .btn-social-post-report-next >
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+                  .social-post-report-title 其他
+                  .btn-social-post-report-next >
+              .social-post-report-last-hr
+
+    //檢舉帳號功能 - 假冒他人
+    #social-post-report-account-two.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post-report-account-two')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 檢舉
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block
+              .social-post-report-title 這個假冒帳號的對象是誰 ?
+            .social-post-report-options-section
+              .social-post-report-options-block
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-account-fill-in')
+                  .social-post-report-title 我
+                  input.social-post-report-radio(type='radio' name='options' value='one')
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-account-fill-in')
+                  .social-post-report-title 我認識的人
+                  input.social-post-report-radio(type='radio' name='options' value='two')
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-account-fill-in')
+                  .social-post-report-title 名人或公眾人物
+                  input.social-post-report-radio(type='radio' name='options' value='three')
+                .social-post-report-options(type='button' data-bs-toggle='modal' data-bs-target='#social-post-report-account-fill-in')
+                  .social-post-report-title 商家或組織
+                  input.social-post-report-radio(type='radio' name='options' value='four')
+              .social-post-report-last-hr
+
+    //檢舉帳號功能 - 選擇假冒帳號
+    #social-post-report-account-fill-in.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post-report-account-fill-in')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 檢舉
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block
+              .social-post-report-title 這個假冒帳號的對象是誰 ?
+              .social-post-report-content 選擇他們假冒的用戶或商家。
+
+              //使用此欄位搜尋假冒的使用者名稱
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋")
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section
+              .social-post-report-options-block
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='radio' name='options')
+              .social-post-report-last-hr
+            .btn-social-post-report-block
+
+              //當使用者尚未選擇帳號時顯示此按鈕樣式，並且禁止送出
+              input.btn-social-post-report.btn-social-post-report-un-fill-in(type="button" disabled="disabled" value="提交")
+
+              //當使用者已選擇帳號時顯示此按鈕樣式
+              input.btn-social-post-report.btn-social-post-report-fill-in(type="button" value="提交" data-bs-toggle='modal' data-bs-target='#social-post-report-feedback')
+
+    //檢舉原因填寫
+    #social-post-report-reason-fill-in.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post-report-reason-fill-in')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 檢舉
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block(style="border: none;")
+
+              //這邊的.social-post-report-title放上一階段選擇的原因
+              .social-post-report-title 裸露/性行為
+              .social-post-report-content 請描述您檢舉的原因，以利我們調查並加速審核。
+            .social-post-report-options-section
+              .social-post-report-options-block
+                textarea.social-post-report-form.edit-social-content.w-100( placeholder="因為....." rows="5")
+
+            .btn-social-post-report-block
+              //當使用者textarea還沒輸入文字時顯示此按鈕樣式，並且禁止送出
+              input.btn-social-post-report.btn-social-post-report-un-fill-in(type="button" disabled="disabled" value="提交")
+
+              //當使用者textarea已輸入文字時顯示此按鈕樣式
+              input.btn-social-post-report.btn-social-post-report-fill-in(type="button" value="提交" data-bs-toggle='modal' data-bs-target='#social-post-report-feedback')
+
+    //檢舉送出反饋
+    #social-post-report-feedback.social-modal-min-full.p-0.modal.fade(tabindex='-1' aria-labelledby='socialPostReportLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content.flex-center
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative.w-100
+            h4.modal-title.text-center.w-100.white 已提交
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-center.flex-column.text-center.py-40px
+            img.social-modal-complete-img(src="./img/complete_outline_white.svg", alt="")
+            .social-modal-complete-text 謝謝我們將會盡快審查
+
+
+    script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js' integrity='sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ' crossorigin='anonymous')
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='./js/social.js')

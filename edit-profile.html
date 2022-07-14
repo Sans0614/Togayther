@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>變更資料 - Togayther</title>
+    <meta name="description" content="我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台">
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+    <meta property="og:image" content="./img/ogimage.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- partial:index.partial.html-->
+    <div class="formBlock">
+      <div class="container formContent profileEditContent">
+        <div class="dropdown mbmenu"><a class="btn dropdown-toggle btnLightGray" id="dropdownProfileMenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">變更資料</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">變更密碼</a></li>
+            <li><a class="dropdown-item" href="#">我的帳戶</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-2 profileEditMenu">
+            <ul class="pcmenu">
+              <li class="active pdt0">變更資料</li>
+              <li><a href=""> 變更密碼</a></li>
+              <li><a href=""> 我的帳戶</a></li>
+            </ul>
+          </div>
+          <div class="col-md-10">
+            <h2 class="categoryTitle">變更資料</h2><span class="categorySubTitle">EDIT PROFILE</span>
+            <div class="registerBlock">
+              <form class="g-3 needs-validation" novalidate="" oninput="passwordConfirm.setCustomValidity(passwordConfirm.value != password.value ? '密碼不一致' : '')">
+                <div class="form-row">
+                  <div class="mb100 col-md-12 profileImagesUpload">
+                    <div class="profileBanner">
+                      <div class="profileBannerEdit"></div>
+                      <div class="uploadBannerBlock">
+                        <input class="uploadImg" type="file">
+                      </div>
+                    </div>
+                    <div class="profileImg">
+                      <div class="profileImgEdit"></div>
+                      <div class="uploadImgBlock">
+                        <input class="uploadImg" type="file">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <label class="form-label" for="InputUsername UsernameValidation">暱稱<span class="text-danger">*</span></label>
+                    <input class="form-control" id="inputUsername" type="text" placeholder="請輸入您的暱稱" aria-label="使用者名稱" required="required">
+                    <div class="invalid-feedback">此題為必填</div>
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <label class="form-label" for="SelectGender GenderValidation">性別<span class="text-danger">*</span></label>
+                    <select class="form-select form-control" aria-label="性別" required="required">
+                      <option selected="">男生</option>
+                      <option value="1">女生</option>
+                      <option value="2">不指定</option>
+                      <option value="3">不透漏</option>
+                    </select>
+                    <div class="invalid-feedback">此題為必填</div>
+                  </div>
+                  <div class="mb-3 col-md-12">
+                    <label class="form-label" for="InputAccount AccountValidation">信箱<span class="text-danger">*</span></label>
+                    <input class="form-control" id="inputMail" type="email" aria-label="信箱" placeholder="請輸入您的信箱" required="required">
+                    <div class="invalid-feedback">信箱格式錯誤</div>
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <label class="form-label" for="InputBirthday">生日</label>
+                    <input class="form-control" id="inputBirthday" type="date" aria-label="生日" placeholder="請輸入您的電子生日">
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <label class="form-label" for="InputPhone">聯絡電話</label>
+                    <input class="form-control" id="inputPhone" type="tel" placeholder="請輸入您的聯絡電話" aria-label="電話" maxlength="10">
+                  </div>
+                  <div class="mb-3 col-md-3">
+                    <label class="form-label" for="SelectGender GenderValidation">居住地區</label>
+                    <select class="form-select form-control" aria-label="性別" required="required">
+                      <option selected="">台北市</option>
+                      <option value="1">基隆市</option>
+                      <option value="2">新北市</option>
+                      <option value="3">桃園市</option>
+                      <option value="3">新竹市 </option>
+                      <option value="4">新竹縣</option>
+                      <option value="5">苗栗縣</option>
+                      <option value="6">台中市</option>
+                      <option value="7">彰化縣</option>
+                      <option value="8">南投縣 </option>
+                      <option value="9">雲林縣</option>
+                      <option value="10">嘉義市</option>
+                      <option value="11">嘉義縣</option>
+                      <option value="12">臺南市</option>
+                      <option value="13">高雄市</option>
+                      <option value="14">屏東縣  </option>
+                      <option value="15">宜蘭縣</option>
+                      <option value="16">花蓮縣</option>
+                      <option value="17"> 臺東縣 </option>
+                      <option value="18">澎湖縣</option>
+                      <option value="19"> 金門縣</option>
+                      <option value="20">連江縣</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 col-md-9">
+                    <label class="form-label" for="InputAddress">地址</label>
+                    <input class="form-control" id="inputAddress" type="text" placeholder="請輸入您的地址" aria-label="地址">
+                  </div>
+                  <div class="mb-3 col-md-12">
+                    <button class="btn btn-dark" type="submit">確定修改</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="advertiseBlock mt0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 adv02"><a href=""><img src="./img/adv02.jpg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+    <!-- partial-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

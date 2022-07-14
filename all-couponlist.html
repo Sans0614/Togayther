@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Togayther-全站優惠券</title>
+  <meta name="description" content="我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台">
+  <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+  <meta property="og:image" content="./img/ogimage.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/member.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+  <div class="container mycontainer ">
+    <div class="row ">
+      <div class="col-12 col-md-6 ">
+        <h2 class="categoryTitle">全站優惠券</h2>
+        <span class="categorySubTitle">ALL COUPONS</span>
+      </div>
+      <div class="col-6 col-md-3 col-lg-3  d-xl-3 px-md-0 filter-btn pr-1 text-right">
+        <button type="button" class="btn btn-outline mybutton" data-toggle="canvas" data-target="#bs-canvas-left"
+          aria-expanded="false" aria-controls="bs-canvas-left"><img src="img/filter-icon.svg" style="width:16px"
+            class="img-fluid mr-2" />篩選與折扣碼</button>
+      </div>
+      <div class="col-6 col-md-3 col-lg-3 col-xl-3 text-right pl-1 filter-select">
+        <div class="dropdown d-block d-md-inline-block d-lg-inline-block">
+          <button class="btn  dropdown-toggle myselect" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+            <span>最新上架</span>
+            <img src="./img/arrow.svg" alt="" >
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">最多人兌換</a>
+            <a class="dropdown-item" href="#">點數從低至高</a>
+            <a class="dropdown-item" href="#">點數從高至低</a>
+            <a class="dropdown-item" href="#">兌換期限從近到遠</a>
+            <a class="dropdown-item" href="#">兌換期限從遠到近</a>
+          </div>
+        </div>
+        <!-- <select class="form-control myselect " id="inputGroupSelect02">
+          <option selected>最新上架</option>
+          <option value="1">最多人兌換</option>
+          <option value="2">點數從低至高</option>
+          <option value="3">點數從高至低</option>
+          <option value="4">兌換期限從近到遠</option>
+          <option value="5">兌換期限從遠到近</option>
+        </select> -->
+      </div>
+    </div>
+
+    <!--篩選結果-->
+    <div class="search-result mt-2 ">
+      <div class="row">
+        <div class="col">
+          已選擇篩選條件
+          <div class="search-item rounded py-1 ml-2 mb-1">中部地區  </div>
+          <div class="search-item rounded py-1 ml-2 mb-1">北部地區  </div>
+          <div class="search-item rounded py-1  ml-2 mb-1">0-500 </div>
+          <a class="btn btn-link p-0 ml-2 clear-allitem">清除所有篩選</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!--優惠券列表-->
+    <div class="collections-list mt-3">
+
+
+      <!--start篩選區塊-->
+      <div class="filter-section d-none d-xl-block ">
+        <!--兌換-->
+        <div class="input-group search-bar mb-2">
+          <input class="form-control my-0  border-0" type="text" placeholder="輸入序號" aria-label="Search">
+          <button class="btn btn-getcoupon px-2 py-0 m-1" data-toggle="modal" data-target="#staticBackdrop">兌換</button>
+        </div>
+        <div class="mb-2"> <span class="ok">兌換成功</span>    <span class="failure">此折扣碼無效</span> </div>
+        <!--end兌換-->
+        <!--搜尋-->
+        <div class="input-group search-bar mb-2">
+          <input class="form-control my-0  border-0" type="text" placeholder="搜尋" aria-label="Search">
+          <div class="search-icon"></div>
+        </div>
+        <!--end搜尋-->
+        <!--條件搜尋-->
+        <div class="filter-header my-2">
+          <a class="btn  btn-block text-left p-0 " data-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">點數面額 <img src="img/arrow.svg"  alt=""
+              ></a>
+        </div>
+        <div class="collapse multi-collapse show " id="multiCollapseExample1">
+          <div class="card card-body border-0 p-0 ">
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4"
+                checked>
+              <label class="form-check-label" for="exampleRadios4">
+                0 - 500
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
+              <label class="form-check-label" for="exampleRadios5">
+                500 - 1000
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="option6"
+                checked>
+              <label class="form-check-label" for="exampleRadios6">
+                1000 - 1500
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios7" value="option7">
+              <label class="form-check-label" for="exampleRadios7">
+                1500 - 2000
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios8" value="option8">
+              <label class="form-check-label" for="exampleRadios8">
+                2000以上
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr class="my-1">
+        <div class="filter-header my-2">
+          <a class="btn  btn-block text-left p-0" data-toggle="collapse" href="#multiCollapseExample2" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample2">店家區域 <img src="img/arrow.svg" alt=""
+              ></a>
+        </div>
+        <div class="collapse multi-collapse border-0 show " id="multiCollapseExample2">
+          <div class="card card-body p-0 border-0">
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label " for="inlineCheckbox1">北部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label " for="inlineCheckbox2">中部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+              <label class="form-check-label " for="inlineCheckbox3">南部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox4" value="option4">
+              <label class="form-check-label " for="inlineCheckbox4">東部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+              <label class="form-check-label " for="inlineCheckbox5">離島地區</label>
+            </div>
+          </div>
+        </div>
+        <hr class="my-1">
+        <div class="filter-header my-2">
+          <a class="btn  btn-block text-left p-0" data-toggle="collapse" href="#multiCollapseExample3" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample3">優惠券分類 <img src="img/arrow.svg" alt=""
+              ></a>
+        </div>
+        <div class="collapse multi-collapse show" id="multiCollapseExample3">
+          <div class="card card-body border-0 p-0">
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox6" value="option6">
+              <label class="form-check-label " for="inlineCheckbox6">分類1</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+              <label class="form-check-label " for="inlineCheckbox7">分類2</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+              <label class="form-check-label " for="inlineCheckbox8">分類3</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox9" value="option9">
+              <label class="form-check-label " for="inlineCheckbox9">分類4</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
+              <label class="form-check-label " for="inlineCheckbox10">分類5</label>
+            </div>
+          </div>
+        </div>
+        <!--end條件搜尋-->
+      </div>
+      <!--end篩選區塊-->
+    
+    
+
+    <!--優惠券-->
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img src="https://storage.googleapis.com/kfcoosfs/OLO-BN-Coupon-1202.jpg" alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="point"> <span class="point-num">250</span> 點 </div>
+            <button class="btn btn-getcoupon py-1" onclick='location.href="coupon-detail.html"'>立即兌換</button>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH88l-vUPDVXlZwMMwnNKBun7QEQVhhPBQQMJcFgkf7ZXHFJSdxxB9wW3CBUw74O_TL0o&usqp=CAU"
+              alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="point"> <span class="point-num">250</span> 點 </div>
+            <button class="btn btn-getcoupon py-1" onclick='location.href="coupon-detail.html"'>立即兌換</button>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img src="https://coupon.guam.com.tw/images/coupon/mb2-1.jpg" alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="point"> <span class="point-num">250</span> 點 </div>
+
+            <!--20220327 新增btn-coupon-not-enough，按鈕文字更改成 點數不足-->
+            <button class="btn btn-getcoupon btn-coupon-not-enough py-1" onclick='location.href="coupon-detail.html"'>點數不足</button>
+          </div>
+        </section>
+      </div>
+      <!--20220327新增折扣碼兌換優惠券，刪除"立即使用" button-->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img src="https://coupon.guam.com.tw/images/coupon/mb2-1.jpg" alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="coupon-code">請輸入則扣碼序號進行兌換</div>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img src="https://coupon.guam.com.tw/images/coupon/mb2-1.jpg" alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="point"> <span class="point-num">250</span> 點 </div>
+            <button class="btn btn-getcoupon py-1" onclick='location.href="coupon-detail.html"'>立即兌換</button>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img src="https://coupon.guam.com.tw/images/coupon/mb2-1.jpg" alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="point"> <span class="point-num">250</span> 點 </div>
+            <button class="btn btn-getcoupon py-1" onclick='location.href="coupon-detail.html"'>立即兌換</button>
+          </div>
+        </section>
+      </div>
+      <div class="col-md-4 pdlr10">
+        <div class="postAdvertiseBlock adv04"><a href="">
+            <div class="postAdvertise postCard couponAdvertise" style="background-image:url(./img/adv04.jpg)"></div></a></div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img src="https://coupon.guam.com.tw/images/coupon/mb2-1.jpg" alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="point"> <span class="point-num">250</span> 點 </div>
+            <button class="btn btn-getcoupon py-1" onclick='location.href="coupon-detail.html"'>立即兌換</button>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <section class="coupon-list-collection shadow2 rounded pb-2 mb-3">
+          <div class="coupon-detail">
+            <div class="status pr-2">
+              <div class="mark px-3">已被兌換5次</div>
+              <div class="mark px-3">分類一</div>
+            </div>
+            <img src="https://coupon.guam.com.tw/images/coupon/mb2-1.jpg" alt="">
+            <div class="coupon-title pt-2 px-2">麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送一麥當勞松露蘋果派買一送</div>
+            <div class="coupon-description px-2 pt-2">麥當勞 | 台灣麥當勞門市</div>
+            <div class="coupon-time px-2 pb-2">兌換期限 2021/11/30</div>
+          </div>
+          <div class="get-coupon px-2">
+            <div class="point"> <span class="point-num">250</span> 點 </div>
+            <button class="btn btn-getcoupon py-1" onclick='location.href="coupon-detail.html"'>立即兌換</button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!--end優惠券-->
+  </div>
+  <!--end優惠券列表-->
+
+  </div>
+
+
+
+
+
+
+  <!-- Off-canvas sidebar markup, left/right or both. -->
+  <div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed  h-100  ">
+    <div class="p-3">
+      <div style="font-size:20px"><img src="img/filter-icon.svg" style="width:20px" class="img-fluid mr-2" />
+        篩選與折扣碼</div>
+    </div>
+    <div class="bs-canvas-content px-3 ">
+        <!--兌換-->
+        <div class="input-group search-bar mb-2">
+          <input class="form-control my-0  border-0" type="text" placeholder="輸入序號" aria-label="Search">
+          <button class="btn btn-getcoupon px-2 py-0 m-1" >兌換</button>
+        </div>
+        <div class="mb-2"> <span class="ok">兌換成功</span>    <span class="failure">此折扣碼無效</span> </div>
+        <!--end兌換-->
+        <!--搜尋-->
+        <div class="input-group search-bar mb-2">
+          <input class="form-control my-0  border-0" type="text" placeholder="搜尋" aria-label="Search">
+          <div class="search-icon"></div>
+        </div>
+        <!--end搜尋-->
+        <!--條件搜尋-->
+        <div class="filter-header my-2">
+          <a class="btn  btn-block text-left p-0 " data-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">點數面額 <img src="img/arrow.svg" class="mr-2" alt=""
+              ></a>
+        </div>
+        <div class="collapse multi-collapse show " id="multiCollapseExample1">
+          <div class="card card-body border-0 p-0 ">
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                checked>
+              <label class="form-check-label" for="exampleRadios1">
+                0 - 500
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                500 - 1000
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"
+                checked>
+              <label class="form-check-label" for="exampleRadios3">
+                1000 - 1500
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+              <label class="form-check-label" for="exampleRadios4">
+                1500 - 2000
+              </label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
+              <label class="form-check-label" for="exampleRadios5">
+                2000以上
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr class="my-1">
+        <div class="filter-header my-2">
+          <a class="btn  btn-block text-left p-0" data-toggle="collapse" href="#multiCollapseExample2" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample2">店家區域 <img src="img/arrow.svg" class="mr-2" alt=""
+              ></a>
+        </div>
+        <div class="collapse multi-collapse border-0 show " id="multiCollapseExample2">
+          <div class="card card-body p-0 border-0">
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox11" value="option11">
+              <label class="form-check-label " for="inlineCheckbox11">北部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12">
+              <label class="form-check-label " for="inlineCheckbox12">中部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="option13">
+              <label class="form-check-label " for="inlineCheckbox13">南部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox14" value="option14">
+              <label class="form-check-label " for="inlineCheckbox14">東部地區</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox15" value="option15">
+              <label class="form-check-label " for="inlineCheckbox15">離島地區</label>
+            </div>
+          </div>
+        </div>
+        <hr class="my-1">
+        <div class="filter-header my-2">
+          <a class="btn  btn-block text-left p-0" data-toggle="collapse" href="#multiCollapseExample3" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample3">優惠券分類 <img src="img/arrow.svg" class="mr-2" alt=""
+              ></a>
+        </div>
+        <div class="collapse multi-collapse show" id="multiCollapseExample3">
+          <div class="card card-body border-0 p-0">
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox16" value="option16">
+              <label class="form-check-label " for="inlineCheckbox16">分類1</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox17" value="option17">
+              <label class="form-check-label " for="inlineCheckbox17">分類2</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox18" value="option18">
+              <label class="form-check-label " for="inlineCheckbox18">分類3</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input " type="checkbox" id="inlineCheckbox19" value="option19">
+              <label class="form-check-label " for="inlineCheckbox19">分類4</label>
+            </div>
+            <div class="form-check mb-2 search-by-type-checkbox">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox20" value="option20">
+              <label class="form-check-label " for="inlineCheckbox20">分類5</label>
+            </div>
+          </div>
+        </div>
+        <!--end條件搜尋-->
+    </div>
+  </div>
+  <div class="bg-black " aria-label="Close"></div>
+  </div>
+
+
+
+
+  <div class="advertiseBlock">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 adv02"><a href=""><img src="./img/adv02.jpg" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+  <!-- partial-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+  <!--左邊展開選單-->
+  <script src="js/offcanvas.js"></script>
+
+  <!--篩選操作-->
+  <script>
+    $(function(){
+      $('.clear-allitem').on('click',()=>{
+        $('.search-result').hide();
+        $('.search-item').remove()
+      })
+      /*篩選條件數量*/
+      let num = $('.search-item').length;
+      /*刪除單一篩選條件*/
+      $('.search-item').on('click',function(){
+        num=num-1;
+        if(num>0){
+          $(this)[0].remove()
+        }else{
+          $('.search-result').hide();
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>

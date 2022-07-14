@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Togayther-會員卡片</title>
+    <meta name="description" content="我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台">
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+    <meta property="og:image" content="./img/ogimage.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+</head>
+
+<body>
+    <div>
+        <section class="member-area">
+            <div class="member-card">
+                <div class="member-card-cover px-4 pb-1 pt-3">
+                    <div class="member-card-cover-title">
+                        MEMBER CARD
+                        <div class="card-number">0000126</div>
+                    </div>
+                    <img src="./img/LogoWhite.svg" alt="" style="width: 400px">
+                    <div class="member-card-invite">邀請碼 <span class="member-card-invite-code">CA8051</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<style>
+*{
+ box-sizing: border-box;
+ font-family: "Rubik", "Noto Sans TC", "微軟正黑體", sans-serif;
+ word-break: break-word;
+}
+
+.member-area {
+    display: grid;
+    grid-template-columns: 1200px;
+}
+
+.member-card {
+    font-weight: 300;
+}
+
+.member-card-cover {
+    border-radius: 3px;
+    color: #fff;
+    min-height: 630px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./img/memberCard.jpg); 
+}
+
+.member-card-cover-title {
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+}
+
+.member-card-cover-title .card-number {
+    margin-left: auto;
+    font-size: 36px;
+}
+
+.member-card-invite{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 300;  
+}
+.member-card-invite-code{
+    font-size: 60px;
+}
+
+</style>
+
+</html>

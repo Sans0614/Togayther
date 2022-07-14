@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>文章內頁 - Togayther</title>
+    <meta name="description" content="我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台">
+    <meta property="og:image" content="./img/ogimage.jpg">
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="./img/ogimage.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-social.css">
+  </head>
+  <body class="social">
+    <!--20220325 - 刪除modal-->
+    <!--#social-post是我這邊用來測試彈跳視窗用的-->
+    <div class="social-post" id="social-post" data-bs-backdrop="static">
+      <!--20220325 - 刪除modal-dialog，把.mt-74px改成.mt-24px，把.modal-block改成.social-post-om-block-->
+      <div class="social-post-om-block mt-24px m-tb-0">
+        <!--20220325 - 刪除modal-content，並把原本在modal-content內的區塊都往前推-->
+        <!--文章內頁 - 貼文標頭-->
+        <!--20220325 - 把modal-header改成.social-post-om-header-->
+        <div class="social-post-om-header bg-dark-gray position-relative">
+          <!-- 返回按鈕 - 從哪一頁進入就返回到上一頁-->
+          <button class="btn-social-back" data-bs-toggle="modal" data-bs-target="#social-post"><img src="./img/back_outline_white.svg" alt=""></button>
+          <!--20220325 - 把modal-title改成.social-post-om-title-->
+          <h4 class="social-post-om-title text-center w-100 white">貼文</h4>
+        </div>
+        <!--文章內頁 - 中小螢幕標頭-->
+        <!--20220325 - 把modal-header改成.social-post-om-header-->
+        <!--20220331 - 把.d-block -> .d-flex-->
+        <div class="social-post-om-header bg-dark-gray position-relative d-flex d-tb-none social-post-header">
+          <!--等個人主頁開發完成 - 點擊進入該作者的個人主頁-->
+          <!--20220511 新增.d-flex.align-items-center 並把 .social-post-author-block 推進去-->
+          <div class="d-flex align-items-center"><a class="social-post-author-block" href="">
+              <!--該篇動態文章作者的大頭照--><img class="social-post-author-img h-35px" src="./img/navbar/MemberLoginIcon.svg">
+              <!--20220511 新增 .d-flex.flex-column 區塊，並把 .social-post-author-name 推進去-->
+              <div class="d-flex flex-column">
+                <!--20220511 刪除span-->
+                <div class="social-post-author-name">SANDERS</div>
+                <!--20220511 新增打卡景點串接，點擊後進入該打卡景點頁--><a class="social-post-check-in" href="">給力信息科技有限公司</a>
+              </div></a></div>
+          <div class="social-post-other-block">
+            <!--使用者尚未追蹤該篇動態文章作者顯示-->
+            <div class="btn social-post-unfollow btn-social-release position-relative">追蹤</div>
+            <!--使用者已追蹤該篇動態文章作者顯示-->
+            <div class="btn social-post-follow btn-social-release position-relative">已追蹤</div>
+            <div class="btn social-post-more" type="button" data-bs-toggle="modal" data-bs-target="#social-post-first-person-more">...</div>
+          </div>
+        </div>
+        <!--文章內頁 - 內部-->
+        <!--20220325 - 把modal-body改成.social-post-om-body-->
+        <div class="social-post-om-body bg-dark-gray flex-center flex-xl-row flex-1100-row flex-column">
+          <!--文章內頁 - 影片-->
+          <!--.video-social-preview-block.social-post-video-block
+          .video-social-preview.social-post-video.flex-center
+          
+            //影片預覽poster，截取使用者影片一開始的畫面當做影片預覽圖，圖片尺寸需同影片尺寸
+            video.video-social-preview-sizing.object-fit-cover(controls='' poster='https://i.imgur.com/onZ4fV6.jpg')
+              source(src='http://s1.mi.com/zt/14072201/sh-v-4.mp4' type='video/mp4')
+              source(src='http://s1.mi.com/zt/14072201/sh-v-4.webm' type='video/webm')
+              | Sorry, your browser doesn't support embedded videos.
+          
+          -->
+          <!--文章內頁 - 圖片-->
+          <div class="social-post-img-block">
+            <div class="social-post-img social-post-img-swiper flex-center swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!--20220324更新 - 把大螢幕與小螢幕顯的圖片分開-->
+                  <!--大螢幕圖片顯示
+                  當第一張圖片 寬>高，style加上width:100%;
+                  當第一張圖片 高>寬 或 高=寬， style加上height: 100%;
+                  aspect-ratio:放置第一張圖片比例
+                  
+                  -->
+                  <div class="bg-basic d-none d-tb-block" style="background-image: url( https://www.w3schools.com/howto/img_nature_wide.jpg); width:100%; aspect-ratio: 20 / 7;"></div>
+                  <!--小螢幕圖片顯示
+                  width: 100%; height:auto;
+                  aspect-ratio:放置第一張圖片比例
+                  -->
+                  <div class="bg-basic d-block d-tb-none" style="background-image: url( https://www.w3schools.com/howto/img_nature_wide.jpg); width:100%; aspect-ratio: 20 / 7;"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-basic d-none d-tb-block" style="background-image: url(https://www.w3schools.com/howto/img_snow_wide.jpg); width:100%; aspect-ratio: 20 / 7"></div>
+                  <div class="bg-basic d-block d-tb-none" style="background-image: url(https://www.w3schools.com/howto/img_snow_wide.jpg); width:100%; aspect-ratio: 20 / 7"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-basic d-none d-tb-block" style="background-image: url(https://www.w3schools.com/howto/img_lights_wide.jpg); width:100%; aspect-ratio: 20 / 7"></div>
+                  <div class="bg-basic d-block d-tb-none" style="background-image: url(https://www.w3schools.com/howto/img_lights_wide.jpg); width:100%; aspect-ratio: 20 / 7"></div>
+                </div>
+              </div>
+              <div class="social-post-swiper-pagination"></div>
+            </div>
+          </div>
+          <!--文章內頁 - 內容區塊-->
+          <div class="social-post-content-block position-relative">
+            <!--文章內頁 - 大螢幕標頭-->
+            <!--20220511 .d-tb-block 更改成 d-tb-flex-->
+            <div class="social-post-header d-none d-tb-flex">
+              <!--20220511 新增.d-flex.align-items-center 並把 .social-post-author-block 推進去-->
+              <div class="d-flex align-items-center"><a class="social-post-author-block" href=""><img class="social-post-author-img h-35px" src="./img/navbar/MemberLoginIcon.svg" alt="">
+                  <!--20220511 新增 .d-flex.flex-column 區塊，並把 .social-post-author-name 推進去-->
+                  <div class="d-flex flex-column">
+                    <!--20220511 刪除span-->
+                    <div class="social-post-author-name">SANDERS</div>
+                    <!--20220511 新增打卡景點串接，點擊後進入該打卡景點頁--><a class="social-post-check-in" href="">給力信息科技有限公司</a>
+                  </div></a></div>
+              <div class="social-post-other-block">
+                <div class="btn social-post-unfollow btn-social-release position-relative">追蹤</div>
+                <div class="btn social-post-follow btn-social-release position-relative">已追蹤</div>
+                <div class="btn social-post-more" type="button" data-bs-toggle="modal" data-bs-target="#social-post-first-person-more">...</div>
+              </div>
+            </div>
+            <div class="social-post-body">
+              <!--文章內頁 - 小螢幕互動區塊-->
+              <div class="social-post-interaction-block d-block d-tb-none">
+                <div class="social-post-interaction">
+                  <!--此處為讓使用者按讚與收回讚區塊-->
+                  <div class="social-post-card-like social-post-like">
+                    <!--此class為尚未按讚前顯示-->
+                    <div class="social-post-card-unlike-btn social-post-unlike-btn bg-basic"></div>
+                    <!--此class為按讚後顯示-->
+                    <!--.social-post-card-like-btn.social-post-like-btn.bg-basic-->
+                  </div>
+                  <!--動態文章留言 - 點擊後直接讓 "主留言輸入欄 - 小螢幕" 是點擊的狀態可以直接輸入文字-->
+                  <!--20220407 新增 點選小螢幕的留言按鈕可以滑動到小螢幕input--><a class="btn social-post-comment-btn bg-basic" href="#social-post-comment-input-block-tb"></a>
+                  <!--動態文章分享-->
+                  <div class="btn social-post-share-btn bg-basic" type="button" data-bs-toggle="modal" data-bs-target="#social-post-share"></div>
+                  <!--動態文章按讚總數量顯示，沒有讚時隱藏；使用者按讚時數字立即+1-->
+                  <div class="social-post-like-number">83,997個讚</div>
+                </div>
+              </div>
+              <!--20220331 新增.social-post-body-user 區塊-->
+              <div class="social-post-body-user d-flex d-tb-none">
+                <div class="social-post-author-block w-100">
+                  <!--該篇動態文章作者的大頭照--><img class="social-post-author-img h-20px w-20px" src="./img/navbar/MemberLoginIcon.svg" alt="">
+                  <!--該篇動態文章作者的名稱--><span class="social-post-author-name fz-14">SANDERS</span>
+                </div>
+              </div>
+              <!--動態文章標題-->
+              <div class="social-post-title w-100">我們喝的不只酒、我們看的都是肉！</div>
+              <!--動態文章內容-->
+              <!--20220510 新增Hashtag 跟 @人名 的文字顏色樣式，點擊後可跳轉到該#或@頁面-->
+              <div class="social-post-content w-100">抱門山歡斤買六首丁家道牠「追從飽長」旦內植隻穴斗。珠念只合唱成玉送，細合相七打地連帶士品草筆候紅泉故他。<br>泉何口大只合兔男多沒給走再害王明帶都。首女光把物占士行起學想目快，登兩林自紅棵旦辛種牠面多說鴨？<a class="tag-yellow d-inline-block" href="">#Hashtag 顏色樣式</a><a class="tag-yellow d-inline-block" href="">@Sanders</a>
+                <!--20220623 新增連結樣式--><a class="tag-yellow d-inline-block" href="https://togayther.com/" target="_blank">https://togayther.com/</a>
+              </div>
+              <div class="social-post-meta">
+                <!--動態文章發佈日期顯示 - 時日期間顯示格式如說明文件-->
+                <div class="social-post-date d-inline-block">03/08</div>
+                <!--等編輯器標註人名功能開發完成後再處理-->
+                <!--20220511 打開標註人名功能-->
+                <div class="social-post-tag-friend" type="button" data-bs-toggle="modal" data-bs-target="#social-post-friend">標註好友</div>
+              </div>
+              <!--動態文章留言數量顯示區塊，沒有留言時隱藏-->
+              <div class="social-post-comment-count">共3則留言</div>
+              <div class="social-post-comment-block">
+                <!--20220510 新增.position-relative ，並把 #social-post-comment-input-block 移到此區塊內-->
+                <div class="position-relative">
+                  <!--20220510 新增Hashtag選擇彈跳視窗-->
+                  <!--.social-tag-block.d-tb-none.d-block(style="bottom: 50px; left: 0%;")
+                  .social-tag-list #Togayther
+                  .social-tag-list #Togayther123
+                  
+                  -->
+                  <!--20220510 新增@選擇彈跳視窗-->
+                  <!--.social-tag-block.d-tb-none.d-block(style="bottom: 50px; left: 0%;")
+                  .social-tag-list
+                    img.social-tag-list-user-image(src="./img/navbar/MemberLoginIcon.svg")
+                    //20220517新增 .d-flex.flex-column，並把.social-tag-list-user-name 推進去
+                    .d-flex.flex-column
+                      .social-tag-list-user-name Richard
+                  
+                      //20220517 新增用戶名稱放置(唯一的名稱)
+                      .social-tag-list-user-name-id @richard
+                  .social-tag-list
+                    img.social-tag-list-user-image(src="./img/navbar/MemberLoginIcon.svg")
+                    .d-flex.flex-column
+                      .social-tag-list-user-name Sanders
+                      .social-tag-list-user-name-id @sanders08926
+                  
+                  -->
+                  <!-- 主留言輸入欄 - 小螢幕-->
+                  <!--20220407 新增#social-post-comment-input-block-tb，讓點擊留言按鈕可以滑動到此處-->
+                  <div class="social-post-comment-input-block d-flex d-tb-none" id="social-post-comment-input-block-tb">
+                    <input class="social-post-comment-input" placeholder="留言⋯">
+                    <button class="btn social-post-comment-submit" type="submit">發佈</button>
+                  </div>
+                </div>
+                <!--主留言-->
+                <div class="social-post-comment-all">
+                  <div class="social-post-comment-single">
+                    <div class="d-flex flex-row">
+                      <!--主留言者大頭照-->
+                      <div class="social-post-comment-user-image bg-basic" style="background-image: url(./img/navbar/MemberLoginIcon.svg)"></div>
+                      <div class="social-post-comment-user-block">
+                        <!--主留言者名稱-->
+                        <div class="social-post-comment-user-name">SANDERS
+                          <!--留言詳情頁--><span class="social-post-comment-edit" type="button" data-bs-toggle="modal" data-bs-target="#social-post-comment-first-person-more">...</span>
+                        </div>
+                        <!--主留言者留言內容-->
+                        <!--20220510 新增Hashtag 跟 @人名 的文字顏色樣式，點擊後可以跳轉到該#或@頁面-->
+                        <div class="social-post-comment-user-content">原來是這樣<a class="tag-yellow d-inline-block" href="">#Hashtag 顏色樣式</a><a class="tag-yellow d-inline-block" href="">@Sanders</a></div>
+                        <!--主留言者的留言時間，時日期間顯示格式如說明文件-->
+                        <div class="social-post-comment-time">2021.11.05
+                          <!--其他使用者可針對該則留言，進行留言再留言--><span class="social-post-comment-reply">回覆</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="social-post-comment-single">
+                    <div class="d-flex flex-row">
+                      <div class="social-post-comment-user-image bg-basic" style="background-image: url(./img/navbar/MemberLoginIcon.svg)"></div>
+                      <div class="social-post-comment-user-block">
+                        <div class="social-post-comment-user-name">SANDERS
+                          <!--留言詳情頁--><span class="social-post-comment-edit" type="button" data-bs-toggle="modal" data-bs-target="#social-post-comment-first-person-more">...</span>
+                        </div>
+                        <div class="social-post-comment-user-content">3樓一身平安</div>
+                        <div class="social-post-comment-time">2021.11.05<span class="social-post-comment-reply">回覆</span></div>
+                        <!--子留言-->
+                        <div class="social-post-comment-reply-all">
+                          <div class="social-post-comment-single">
+                            <div class="d-flex flex-row">
+                              <!--子留言者大頭像-->
+                              <div class="social-post-comment-reply-user-image bg-basic" style="background-image: url(./img/navbar/MemberLoginIcon.svg)"></div>
+                              <div class="social-post-comment-reply-user-block">
+                                <!--子留言者名稱-->
+                                <div class="social-post-comment-user-name">SANDERS
+                                  <!--留言詳情頁--><span class="social-post-comment-edit" type="button" data-bs-toggle="modal" data-bs-target="#social-post-comment-first-person-more">...</span>
+                                </div>
+                                <!--子留言者留言內容-->
+                                <!--20220510 新增Hashtag 跟 @人名 的文字顏色樣式，點擊後可以跳轉到該#或@頁面-->
+                                <div class="social-post-comment-user-content">那我呢<a class="tag-yellow d-inline-block" href="">#Hashtag 顏色樣式</a><a class="tag-yellow d-inline-block" href="">@Sanders</a></div>
+                                <!--子留言者的留言時間，時日期間顯示格式如說明文件-->
+                                <div class="social-post-comment-time">2021.11.05</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="social-post-comment-single">
+                            <div class="d-flex flex-row">
+                              <div class="social-post-comment-reply-user-image bg-basic" style="background-image: url(./img/navbar/MemberLoginIcon.svg)"></div>
+                              <div class="social-post-comment-reply-user-block">
+                                <div class="social-post-comment-user-name">SANDERS
+                                  <!--留言詳情頁--><span class="social-post-comment-edit" type="button" data-bs-toggle="modal" data-bs-target="#social-post-comment-first-person-more">...</span>
+                                </div>
+                                <div class="social-post-comment-user-content">好人一身平安</div>
+                                <div class="social-post-comment-time">2021.11.05</div>
+                                <!--20220510 新增.position-relative ，並把 .social-post-comment-input-block 移到此區塊內-->
+                                <div class="position-relative">
+                                  <!--20220510 新增Hashtag選擇彈跳視窗-->
+                                  <div class="social-tag-block" style="bottom: 50px; left: 0%;">
+                                    <div class="social-tag-list">#Togayther</div>
+                                  </div>
+                                  <!--20220510 新增@選擇彈跳視窗-->
+                                  <div class="social-tag-block" style="bottom: 50px; left: 0%;">
+                                    <div class="social-tag-list"><img class="social-tag-list-user-image" src="./img/navbar/MemberLoginIcon.svg">
+                                      <!--20220517新增 .d-flex.flex-column，並把.social-tag-list-user-name 推進去-->
+                                      <div class="d-flex flex-column">
+                                        <div class="social-tag-list-user-name">Richard</div>
+                                        <!--20220517 新增用戶名稱放置(唯一的名稱)-->
+                                        <div class="social-tag-list-user-name-id">@richard</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--編輯子留言的留言表單-->
+                                  <div class="social-post-comment-input-block d-flex">
+                                    <input class="social-post-comment-input" value="好人一身平安">
+                                    <button class="btn social-post-comment-submit" type="submit">儲存</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 查看更多子留言-->
+                        <h4 class="commentbtn social-post-comment-read-more">MORE</h4>
+                        <!--20220510 新增.position-relative ，並把 .social-post-comment-input-block 移到此區塊內-->
+                        <div class="position-relative">
+                          <!--20220510 新增Hashtag選擇彈跳視窗-->
+                          <div class="social-tag-block d-tb-none d-block" style="bottom: 50px; left: 0%;">
+                            <div class="social-tag-list">#Togayther</div>
+                          </div>
+                          <!--20220510 新增@選擇彈跳視窗-->
+                          <div class="social-tag-block d-tb-none d-block" style="bottom: 50px; left: 0%;">
+                            <div class="social-tag-list"><img class="social-tag-list-user-image" src="./img/navbar/MemberLoginIcon.svg">
+                              <!--20220517新增 .d-flex.flex-column，並把.social-tag-list-user-name 推進去-->
+                              <div class="d-flex flex-column">
+                                <div class="social-tag-list-user-name">Richard</div>
+                                <!--20220517 新增用戶名稱放置(唯一的名稱)-->
+                                <div class="social-tag-list-user-name-id">@richard</div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--小螢幕時，回覆主留言的留言表單-->
+                          <div class="social-post-comment-input-block d-flex d-tb-none">
+                            <input class="social-post-comment-input" placeholder="留言⋯">
+                            <button class="btn social-post-comment-submit" type="submit">發佈</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="social-post-comment-single">
+                    <div class="d-flex flex-row">
+                      <div class="social-post-comment-user-image bg-basic" style="background-image: url(./img/navbar/MemberLoginIcon.svg)"></div>
+                      <div class="social-post-comment-user-block">
+                        <div class="social-post-comment-user-name">SANDERS
+                          <!--留言詳情頁--><span class="social-post-comment-edit" type="button" data-bs-toggle="modal" data-bs-target="#social-post-comment-first-person-more">...</span>
+                        </div>
+                        <div class="social-post-comment-user-content">2樓下地獄</div>
+                        <div class="social-post-comment-time">2021.11.05<span class="social-post-comment-reply">回覆</span></div>
+                        <!--20220510 新增.position-relative ，並把 .social-post-comment-input-block 移到此區塊內-->
+                        <div class="position-relative">
+                          <!--20220510 新增Hashtag選擇彈跳視窗-->
+                          <div class="social-tag-block" style="bottom: 50px; left: 0%;">
+                            <div class="social-tag-list">#Togayther</div>
+                          </div>
+                          <!--20220510 新增@選擇彈跳視窗-->
+                          <div class="social-tag-block" style="bottom: 50px; left: 0%;">
+                            <div class="social-tag-list"><img class="social-tag-list-user-image" src="./img/navbar/MemberLoginIcon.svg">
+                              <!--20220517新增 .d-flex.flex-column，並把.social-tag-list-user-name 推進去-->
+                              <div class="d-flex flex-column">
+                                <div class="social-tag-list-user-name">Richard</div>
+                                <!--20220517 新增用戶名稱放置(唯一的名稱)-->
+                                <div class="social-tag-list-user-name-id">@richard</div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--編輯已發佈的主留言表單-->
+                          <div class="social-post-comment-input-block d-flex">
+                            <input class="social-post-comment-input" value="2樓下地獄">
+                            <button class="btn social-post-comment-submit" type="submit">儲存</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--查看更多主留言-->
+                    <h4 class="commentbtn social-post-comment-read-more" style="margin-top: 8px">MORE</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--文章內頁 - 大螢幕互動區塊-->
+            <!--20220331 往內推，推出.social-post-body，變成與.social-post-body是同一階層-->
+            <div class="social-post-interaction-block d-none d-tb-block">
+              <!--20220510 新增.position-relative-->
+              <div class="position-relative">
+                <!--20220510 新增Hashtag選擇彈跳視窗-->
+                <div class="social-tag-block d-tb-block d-none" style="bottom: 0px; left: 0%;">
+                  <div class="social-tag-list">#Togayther</div>
+                  <div class="social-tag-list">#Togayther123</div>
+                </div>
+                <!--20220510 新增@選擇彈跳視窗-->
+                <div class="social-tag-block d-tb-block d-none" style="bottom: 0px; left: 0%;">
+                  <div class="social-tag-list"><img class="social-tag-list-user-image" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--20220517新增 .d-flex.flex-column，並把.social-tag-list-user-name 推進去-->
+                    <div class="d-flex flex-column">
+                      <div class="social-tag-list-user-name">Richard</div>
+                      <!--20220517 新增用戶名稱放置(唯一的名稱)-->
+                      <div class="social-tag-list-user-name-id">@richard</div>
+                    </div>
+                  </div>
+                  <div class="social-tag-list"><img class="social-tag-list-user-image" src="./img/navbar/MemberLoginIcon.svg">
+                    <div class="d-flex flex-column">
+                      <div class="social-tag-list-user-name">Sanders</div>
+                      <div class="social-tag-list-user-name-id">@sanders08926</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--大螢幕時，當使用者回覆其他使用者的留言時，會顯示此區塊，讓使用者知道，他現在的留言是子留言-->
+              <!--SANDERS 放置要回覆的主留言使用者的名稱-->
+              <div class="social-post-comment-reply-remind">您正在回覆<span class="social-post-comment-reply-remind-user">SANDERS</span>的留言
+                <!--當使用者點選此按鈕，則立即取消當前是回覆其他使用者的留言狀態，必且隱藏.social-post-comment-reply-remind--><img class="social-post-comment-reply-remind-close" src="./img/close_outline_white.svg" alt="">
+              </div>
+              <div class="social-post-interaction">
+                <div class="social-post-card-like social-post-like">
+                  <!--此class為尚未按讚前顯示-->
+                  <div class="social-post-card-unlike-btn social-post-unlike-btn bg-basic"></div>
+                  <!--此class為按讚後顯示-->
+                  <!--.social-post-card-like-btn.social-post-like-btn.bg-basic-->
+                </div>
+                <!--動態文章留言 - 點擊後直接讓 "留言輸入欄 - 大螢幕" 是點擊的狀態可以直接輸入文字-->
+                <div class="btn social-post-comment-btn bg-basic"></div>
+                <div class="btn social-post-share-btn bg-basic" type="button" data-bs-toggle="modal" data-bs-target="#social-post-share"></div>
+                <div class="social-post-like-number">83,997個讚</div>
+                <!--留言輸入欄 - 大螢幕，不管是主留言或是子留言，都使用此表單-->
+                <div class="social-post-comment-input-block">
+                  <input class="social-post-comment-input" placeholder="留言⋯">
+                  <button class="btn social-post-comment-submit" type="submit">發佈</button>
+                </div>
+                <!--留言編輯欄 - 大螢幕 ，當使用者是編輯留言時顯示此表單-->
+                <!--.social-post-comment-input-block
+                input.social-post-comment-input(value='2樓下地獄')
+                button.btn.social-post-comment-submit(type='submit') 儲存
+                
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--詳情頁彈跳視窗 - 第三人稱視角-->
+    <div class="social-modal modal fade" id="social-post-third-person-more" tabindex="-1" aria-labelledby="socialPostThirdPersonMoreLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <!--私訊功能完成後再開啟-->
+          <!--button.btn-social-action-sheets-content.w-100(type='button' data-bs-dismiss='modal' aria-label='Close') 私訊-->
+          <!--複製文章連結，點選後顯示複製成功#social-post-copy-link-feedback頁面-->
+          <button class="btn-social-action-sheets-content w-100 mt-0" type="button" data-bs-toggle="modal" data-bs-target="#social-post-copy-link-feedback">複製連結</button>
+          <!--檢舉功能完成後再開啟-->
+          <!--button.btn-social-action-sheets-content.w-100.mt-0.red(type='button' data-bs-dismiss='modal' aria-label='Close') 檢舉-->
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--詳情頁彈跳視窗 - 第一人稱視角-->
+    <div class="social-modal modal fade" id="social-post-first-person-more" tabindex="-1" aria-labelledby="socialPostFirstPersonMoreLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <!--點選後進入編輯文章頁面-->
+          <button class="btn-social-action-sheets-content w-100 mt-0" type="button" data-bs-dismiss="modal" aria-label="Close">編輯</button>
+          <!--點選後跳出刪除文章警示視窗 #social-post-delete-alert-->
+          <button class="btn-social-action-sheets-content w-100 red" type="button" data-bs-toggle="modal" data-bs-target="#social-post-delete-alert">刪除</button>
+          <!--私訊功能完成後再開啟-->
+          <!--button.btn-social-action-sheets-content.w-100.mt-0(type='button' data-bs-dismiss='modal' aria-label='Close') 私訊-->
+          <!--複製文章連結，點選後顯示複製成功#social-post-copy-link-feedback頁面-->
+          <button class="btn-social-action-sheets-content w-100 mt-0" type="button" data-bs-toggle="modal" data-bs-target="#social-post-copy-link-feedback">複製連結</button>
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--刪除文章警示視窗-->
+    <div class="social-modal modal fade" id="social-post-delete-alert" tabindex="-1" aria-labelledby="socialPostDeleteAlertLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center">
+            <h4 class="modal-title text-center w-100 white">刪除貼文 ?</h4>
+            <p class="white text-center">確定要永久刪除此篇貼文 ?</p>
+          </div>
+          <!--刪除後跳出#social-post-delete-feedback反饋-->
+          <button class="btn-social-action-sheets-content w-100 red" type="button" data-bs-toggle="modal" data-bs-target="#social-post-delete-feedback">刪除</button>
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--文章刪除反饋-->
+    <div class="social-modal modal fade" id="social-post-delete-feedback" tabindex="-1" aria-labelledby="socialPostDeleteFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center social-modal-complete"><img class="social-modal-complete-img" src="./img/complete_outline_white.svg" alt="">
+            <div class="social-modal-complete-text">文章已刪除</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--留言詳情頁彈跳視窗 - 第三人稱視角 - 等檢舉功能完成再顯示-->
+    <div class="social-modal modal fade" id="social-post-comment-third-person-more" tabindex="-1" aria-labelledby="socialPostFirstPersonMoreLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <!--檢舉功能完成後再開啟-->
+          <!--button.btn-social-action-sheets-content.w-100.mt-0.red(type='button' data-bs-dismiss='modal' aria-label='Close') 檢舉-->
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--留言詳情頁彈跳視窗 - 第一人稱視角-->
+    <div class="social-modal modal fade" id="social-post-comment-first-person-more" tabindex="-1" aria-labelledby="socialPostFirstPersonMoreLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <!--點選後進入編輯留言-->
+          <button class="btn-social-action-sheets-content w-100 mt-0" type="button" data-bs-dismiss="modal" aria-label="Close">編輯</button>
+          <!--點選後跳出刪除留言警示視窗 #social-post-comment-delete-alert-->
+          <button class="btn-social-action-sheets-content w-100 red" type="button" data-bs-toggle="modal" data-bs-target="#social-post-comment-delete-alert"> 刪除</button>
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--刪除留言警示視窗-->
+    <div class="social-modal modal fade" id="social-post-comment-delete-alert" tabindex="-1" aria-labelledby="socialPostDeleteAlertLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center">
+            <h4 class="modal-title text-center w-100 white">刪除留言 ?</h4>
+            <p class="white text-center">確定要永久刪除此則留言 ?</p>
+          </div>
+          <!--刪除後跳出#social-post-delete-feedback反饋-->
+          <button class="btn-social-action-sheets-content w-100 red" type="button" data-bs-toggle="modal" data-bs-target="#social-post-comment-delete-feedback">刪除</button>
+        </div>
+        <button class="btn-social-close-action-sheets w-100 w-mb-80vw" type="button" data-bs-dismiss="modal" aria-label="Close">取消</button>
+      </div>
+    </div>
+    <!--留言刪除反饋-->
+    <div class="social-modal modal fade" id="social-post-comment-delete-feedback" tabindex="-1" aria-labelledby="socialPostDeleteFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center social-modal-complete"><img class="social-modal-complete-img" src="./img/complete_outline_white.svg" alt="">
+            <div class="social-modal-complete-text">留言已刪除</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--彈跳視窗 - 文章分享-->
+    <div class="shareModal social-modal modal fade" id="social-post-share" tabindex="-1" aria-labelledby="socialPostShareLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content social-post-share-modal-cotent">
+          <div class="modal-body bg-dark-gray flex-center">
+            <h2 class="modal-title social-post-share-modal-title">Share This Post !</h2>
+            <button class="btn-close close btn-social-post-share-close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="./img/close_outline_white.svg" alt=""></button>
+          </div>
+          <div class="modal-body">
+            <div class="social-post-share-modal-sub-title">文章分享</div>
+            <!--20220427 新增私訊分享按鈕-->
+            <div class="facebookShareBtn social-message-share-btn"></div><a class="facebookShareBtn ml-8px" href="##"></a>
+            <div class="social-post-share-modal-sub-title">複製文章連結</div>
+            <div class="field d-flex align-items-center justify-content-between"></div>
+            <input class="social-post-share-copy-link" type="text" value="https://togayther.com/post/607">
+            <button class="btn-social-release position-relative btn-social-post-share-copy-link" type="button" data-bs-toggle="modal" data-bs-target="#social-post-copy-link-feedback">複製</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--連結複製反饋-->
+    <div class="social-modal modal fade" id="social-post-copy-link-feedback" tabindex="-1" aria-labelledby="socialPostCopyLinkFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content">
+          <div class="modal-body bg-dark-gray flex-center social-modal-complete"><img class="social-modal-complete-img" src="./img/complete_outline_white.svg" alt="">
+            <div class="social-modal-complete-text">連結已複製</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--20220511 新增標註朋友彈跳視窗-->
+    <div class="social-modal-personal-page modal p-0 fade" id="social-post-friend" tabindex="-1" aria-labelledby="socialPostFriendLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-block m-tb-0">
+        <div class="modal-content">
+          <!--彈跳視窗-標頭-->
+          <div class="modal-header bg-dark-gray position-relative">
+            <!--返回按鈕-->
+            <button class="btn-social-back" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="./img/back_outline_white.svg" alt=""></button>
+            <h4 class="modal-title text-center w-100 white">標註好友</h4>
+          </div>
+          <!--彈跳視窗-內部-->
+          <div class="modal-body bg-dark-gray flex-column p-0">
+            <div class="social-post-report-options-section social-modal-user-options-section">
+              <div class="social-post-report-options-block">
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該好友的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該好友的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者尚未追蹤該帳戶-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative r-0">追蹤</div>
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該好友的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該好友的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者尚未追蹤該帳戶-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative r-0">追蹤</div>
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+                <div class="social-post-report-options">
+                  <div class="social-modal-user-block">
+                    <!--該好友的使用者大頭照--><img class="social-index-user-img mr-8px" src="./img/navbar/MemberLoginIcon.svg">
+                    <!--該好友的使用者名稱-->
+                    <div class="social-post-report-title">SANDERS</div>
+                  </div>
+                  <div class="social-modal-follow-block">
+                    <!--使用者尚未追蹤該帳戶-->
+                    <div class="btn social-post-unfollow btn-social-release position-relative r-0">追蹤</div>
+                    <!--使用者已追蹤該帳戶-->
+                    <div class="btn social-post-follow btn-social-release position-relative r-0">已追蹤</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/social.js"></script>
+  </body>
+</html>

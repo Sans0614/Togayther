@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 搜尋內容或標籤 搜尋結果 - Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/style.css')
+  body
+    // partial:index.partial.html
+    #searchFail.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.searchTitle 搜尋文字或標籤文字 搜尋結果 :
+          .col-md-12.searchFailBlock
+            h3.searchFailEng Oops!
+            h3.categorySubTitle 找不到您要的搜尋結果
+    .advertiseBlock
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    // partial
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js')
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')

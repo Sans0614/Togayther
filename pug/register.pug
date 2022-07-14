@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 會員註冊 - Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/style.css')
+  body
+    // partial:index.partial.html
+    .formBlock
+      .container.formContent
+        .categoryBlock
+          .container.containerForm
+            .row
+              .col-md-12
+                h2.categoryTitle 會員註冊
+                span.categorySubTitle REGISTER
+        .registerBlock
+          .container.containerForm
+            form.g-3.needs-validation(novalidate='' oninput="passwordConfirm.setCustomValidity(passwordConfirm.value != password.value ? '密碼不一致' : '')")
+              .mb-3
+                label.form-label(for='InputUsername UsernameValidation') 暱稱<span style=" color: #FF0000;">*</span>
+                input#inputUsername.form-control(type='text' placeholder='請輸入您的暱稱' aria-label='使用者名稱' required='required')
+                .invalid-feedback 此題為必填
+              .mb-3
+                label.form-label(for='SelectGender GenderValidation') 性別<span style=" color: #FF0000;">*</span>
+                select.form-select.form-control(aria-label='性別' required='required')
+                  option(selected='') 男生
+                  option(value='1') 女生
+                  option(value='2') 不指定
+                  option(value='3') 不透漏
+                .invalid-feedback 此題為必填
+              .mb-3
+                label.form-label(for='InputAccount AccountValidation') 信箱<span style=" color: #FF0000;">*</span>
+                input#inputMail.form-control(type='email' aria-label='信箱' placeholder='請輸入您的信箱' required='required')
+                .invalid-feedback 信箱格式錯誤
+              .mb-3
+                label.form-label(for='InputPassword PasswordValidation') 密碼<span style=" color: #FF0000;">*</span>
+                input#inputPassword.form-control(type='password' name='password' placeholder='請輸入8-20字的密碼' required='required' aria-label='密碼' minlength='8' maxlength='20')
+                .invalid-feedback 此題為必填
+              .mb-3
+                label.form-label(for='InputPasswordConfirm PasswordConfirmValidation') 確認密碼<span style=" color: #FF0000;">*</span>
+                input#inputPasswordConfirm.form-control(type='password' name='passwordConfirm' placeholder='請再次輸入8-20字的密碼' required='required' aria-label='驗證密碼' minlength='8' maxlength='20')
+                .invalid-feedback 密碼不一致
+              .mb-3
+                label.form-label(for='InputUsername UsernameValidation') 會員邀請碼
+                input#inputInvitationCode.form-control(type='text' placeholder='請輸入您要使用的會員邀請碼' aria-label='會員邀請碼')
+              button.btn.btn-dark(type='submit') 立即註冊
+    .advertiseBlock.mt0
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    // partial
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js')
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='./js/form.js')

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>會員登入 - Togayther</title>
+    <meta name="description" content="我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台">
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
+    <meta property="og:image" content="./img/ogimage.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- partial:index.partial.html-->
+    <div class="formBlock">
+      <div class="container formContent">
+        <div class="categoryBlock">
+          <div class="container containerForm">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="categoryTitle">會員登入</h2><span class="categorySubTitle">SIGN IN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="loginBlock">
+          <div class="container containerForm">
+            <form class="g-3 needs-validation" novalidate="">
+              <div class="mb-3">
+                <label class="form-label" for="InputAccount AccountValidation">帳號</label>
+                <input class="form-control" id="inputAccount" type="email" placeholder="請輸入您的電子信箱帳號" required="required">
+                <div class="invalid-feedback">帳號錯誤</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="InputPassword PasswordValidation">密碼</label>
+                <input class="form-control" id="inputPassword" type="password" placeholder="請輸入您的密碼" required="required">
+                <div class="invalid-feedback">密碼錯誤</div>
+              </div>
+              <div class="form-check KeepLogin">
+                <input class="form-check-input" id="inputCheck" type="checkbox">
+                <label class="form-check-label">保持登入</label>
+              </div>
+              <button class="btn btn-dark" type="submit">登入</button>
+            </form>
+          </div>
+        </div>
+        <div class="socialLogin">
+          <div class="container containerForm"><a class="facebookLoginLink" href="">
+              <!--20220327 更改文字 FACEBOOK 登入 -> 使用Facebook帳號登入-->
+              <div class="facebookLogin">使用Facebook帳號登入</div></a><a class="instagramLoginLink" href="">
+              <div class="instagramLogin">INSTAGRAM 登入</div></a></div>
+        </div>
+        <div class="loginOther">
+          <div class="container containerForm">
+            <div class="row">
+              <div class="col-6"><a class="forgotPassWord" href="">忘記密碼</a></div>
+              <div class="col-6"><a class="register" href="">立即註冊</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="advertiseBlock mt0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 adv02"><a href=""><img src="./img/adv02.jpg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+    <!-- partial-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

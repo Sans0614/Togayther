@@ -1,0 +1,1026 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 私訊頁面 - Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/navbar.css')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='stylesheet' href='./css/style-social.css')
+  body.social
+
+    #social-message
+      .social-post-om-block.mt-24px.m-tb-0
+        .d-flex.mx-0
+          .social-post-om-header.bg-dark-gray.position-relative.d-inline-flex.align-items-center.social-message-header
+
+            // 返回按鈕 - 從哪一頁進入就返回到上一頁
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post')
+              img(src="./img/back_outline_white.svg", alt="")
+
+            //顯示該用戶使用者名稱
+            h4.social-post-om-title.text-center.w-100.white.mx-32px 聊天室
+
+            //私訊 - 撰寫新私訊
+            .btn.social-post-more.social-personal-page-more(type='button' data-bs-toggle='modal' data-bs-target='#social-message-edit-new')
+              img.social-message-edit(src="./img/message_edit_outline_white.svg")
+
+
+          //私訊頁面 - 聊天室窗標頭
+          .social-post-om-header.bg-dark-gray.position-relative.d-tb-inline-flex.d-none.align-items-center.social-message-chat-header
+
+
+      //文章內頁 - 內部
+      .social-post-om-block.social-post-om-body.bg-dark-gray.flex-xl-row.flex-1100-row.flex-column
+        .d-flex.mx-0.h-100
+          //彈跳視窗-內部
+          .social-message-list-page.bg-dark-gray.flex-column.p-0.h-100
+            .social-post-report-declare-block.social-message-search-block
+
+              //使用此欄位搜尋假冒的使用者名稱
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋朋友")
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section.social-message-list-section
+
+              //聊天清單列 - 大螢幕版本
+              //電腦版被選取的聊天對象，會加上.bg-333333這個class
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //行為對應的文字
+                      我方傳送:
+                      文字內容
+                      您傳送了一張圖片
+                      您傳送了一則影片
+                      您傳送了一則個人檔案
+                      您傳送了一則貼文
+
+                      對方傳送:
+                      文字內容
+                      Sanders傳送了一張圖片
+                      Sanders傳送了一則影片
+                      Sanders傳送了一則個人檔案
+                      Sanders傳送了一則貼文
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content 您傳送了一張圖片
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    .social-message-logs-user-name Sanders
+
+                    //未讀取的私訊顯示樣式
+                    .social-message-logs-content.white 好的沒問題
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content Sanders傳送了一則影片
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content 好的沒問題
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-last-hr.d-block.d-tb-none
+
+              //當查無搜尋結果時顯示此文字
+              .social-message-list-search-not 查無搜尋結果
+
+          //大螢幕 - 尚未點選私訊對象時顯示
+          .social-message-chat-block.bg-dark-gray.flex-center.white.d-tb-inline-flex.d-none
+            img.mb-16px.social-no-message(src="./img/no_message_outline_white.svg")
+            .social-post-error-title 你的訊息
+            .social-post-error-text 私下傳送相片、影片和訊息給朋友。
+
+            .btn-social-post-error(type='button' data-bs-toggle='modal' data-bs-target='#social-message-edit-new') 發送訊息
+
+
+      .social-post-om-block.mt-24px.m-tb-0
+        .d-flex.mx-0
+          .social-post-om-header.bg-dark-gray.position-relative.d-tb-inline-flex.d-none.align-items-center.social-message-header
+
+            // 返回按鈕 - 從哪一頁進入就返回到上一頁
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post')
+              img(src="./img/back_outline_white.svg", alt="")
+
+            //顯示該用戶使用者名稱
+            h4.social-post-om-title.text-center.w-100.white.mx-32px 聊天室
+
+            //私訊 - 撰寫新私訊
+            .btn.social-post-more.social-personal-page-more(type='button' data-bs-toggle='modal' data-bs-target='#social-message-edit-new')
+              img.social-message-edit(src="./img/message_edit_outline_white.svg")
+
+
+          //私訊頁面 - 聊天室窗標頭
+          .social-post-om-header.bg-dark-gray.position-relative.d-tb-inline-flex.d-none.align-items-center.social-message-chat-header
+
+            //返回按鈕，大螢幕時隱藏，小螢幕時顯示
+            button.btn-social-back.d-tb-none.d-block(data-bs-toggle='modal' data-bs-target='#social-message-chat-block')
+              img(src="./img/back_outline_white.svg", alt="")
+
+            //大螢幕版本 : 顯示聊天對象的使用者名稱，沒有選取時隱藏
+            h4.social-post-om-title.text-center.w-100.white.mx-32px SANDERS
+
+            //大螢幕版本 : 該聊天對象的詳情頁按鈕，沒有選取時隱藏
+            .btn.social-post-more.social-personal-page-more ...
+
+          //私訊頁面 - 聊天室窗標頭
+          .social-post-om-header.bg-dark-gray.position-absolute.d-tb-none.d-inline-flex.align-items-center.social-message-chat-header.w-100.t-0
+
+            //返回按鈕，大螢幕時隱藏，小螢幕時顯示
+            button.btn-social-back.d-tb-none.d-block(data-bs-toggle='modal' data-bs-target='#social-message-chat-block')
+              img(src="./img/back_outline_white.svg", alt="")
+
+            //大螢幕版本 : 顯示聊天對象的使用者名稱，沒有選取時隱藏
+            h4.social-post-om-title.text-center.w-100.white.mx-32px SANDERS
+
+            //大螢幕版本 : 該聊天對象的詳情頁按鈕，沒有選取時隱藏
+            .btn.social-post-more.social-personal-page-more ...
+
+
+      //文章內頁 - 內部
+      .social-post-om-block.social-post-om-body.bg-dark-gray.flex-xl-row.flex-1100-row.flex-column
+        .d-flex.mx-0.h-100
+          //彈跳視窗-內部
+          .social-message-list-page.bg-dark-gray.flex-column.p-0.h-100
+            .social-post-report-declare-block.social-message-search-block
+
+              //使用此欄位搜尋假冒的使用者名稱
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋朋友")
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section.social-message-list-section
+
+              //聊天清單列 - 大螢幕版本
+              //電腦版被選取的聊天對象，會加上.bg-333333這個class
+              .social-post-report-options.social-message-list.bg-333333
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //行為對應的文字
+                      我方傳送:
+                      文字內容
+                      您傳送了一張圖片
+                      您傳送了一則影片
+                      您傳送了一則個人檔案
+                      您傳送了一則貼文
+
+                      對方傳送:
+                      文字內容
+                      Sanders傳送了一張圖片
+                      Sanders傳送了一則影片
+                      Sanders傳送了一則個人檔案
+                      Sanders傳送了一則貼文
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content 您傳送了一張圖片
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    .social-message-logs-user-name Sanders
+
+                    //未讀取的私訊顯示樣式
+                    .social-message-logs-content.white 好的沒問題
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content Sanders傳送了一則影片
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content 好的沒問題
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-last-hr.d-block.d-tb-none
+
+              //當查無搜尋結果時顯示此文字
+              .social-message-list-search-not 查無搜尋結果
+
+          //私訊聊天頁
+          //20220506新增.bg-tb-gray-1d1d1d
+          .social-message-chat-block.bg-tb-gray-1d1d1d
+            .d-flex.justify-content-between.flex-column.h-100
+
+
+              .social-message-chat-content-block
+
+                //聊天區間
+                .social-message-chat-time 2022年4月15日 22:41
+
+                //對方傳送的文字內容區塊
+                .social-message-chat-user.d-flex.align-items-flex-start
+
+                  //串接對方的使用者大頭照
+                  img.social-message-chat-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                  //對方傳送的文字內容
+                  .social-message-chat-link-block.d-flex.align-items-center
+                    //- 20220507 工程師更改 把.social-message-chat-user-content 更改成  .social-message-chat-content
+                    .social-message-chat-content.p-0
+                      .social-message-chat-content-part
+
+                        //對方傳送的文字
+                        span.social-message-chat-user-content-text 我知道我知道我知道
+
+
+                .social-message-chat-user.d-flex.align-items-flex-start
+                  img.social-message-chat-user-img(src="./img/navbar/MemberLoginIcon.svg")
+                  .social-message-chat-link-block.d-flex.align-items-center
+                    //- 20220507 工程師更改 把.social-message-chat-user-content 更改成  .social-message-chat-content
+                    .social-message-chat-content.p-0
+                      .social-message-chat-content-part
+                        span.social-message-chat-user-content-text 我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道我知道
+
+                //我方傳送文字內容區塊
+                //- 20220507 工程師更改 把.social-message-chat-personal 更改成  .social-message-chat-content
+                //- 20220707 我更改回來，因為上線網站是用.social-message-chat-personal
+                .social-message-chat-personal
+
+                  //我方傳送的文字內容
+                  .social-message-chat-link-block.d-flex.align-items-center
+
+                    //20220506新增.social-message-chat-interaction-block區塊
+                    .social-message-chat-interaction-block
+                      .social-message-chat-space-between-use
+
+                      //已讀顯示
+                      .social-message-chat-read 已讀
+
+                    .social-message-chat-content.p-0
+                      .social-message-chat-content-part
+
+                        //我方傳送的文字
+                        span.social-message-chat-user-content-text 我知道我知道我知道
+
+
+                //對方傳送文字+網址內容區塊
+                .social-message-chat-user.d-flex.align-items-flex-start
+
+                  //串接對方的使用者大頭照
+                  img.social-message-chat-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                  //對方傳送的文字+網址內容
+                  .social-message-chat-link-block.d-flex.align-items-center
+
+                    //- 20220507 工程師更改 把.social-message-chat-user-content 更改成  .social-message-chat-content
+                    .social-message-chat-content.p-0
+                      .social-message-chat-content-part
+
+                        //對方傳送的文字，沒有就隱藏
+                        span.social-message-chat-user-content-text 我知道我知道我知道
+
+                        //對方傳送的網址
+                        a.social-message-chat-user-content-link(href="https://togayther.com/" target="_blank") https://togayther.com/
+
+                        //對方傳送的文字，沒有就隱藏
+                        span.social-message-chat-user-content-text 我知道我知道我知道
+
+                      //串接該篇網址連結
+                      a(href="https://togayther.com/" target="_blank")
+
+                        //串接該篇網址的圖片
+                        img.social-message-chat-content-link-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        .social-message-chat-content-link
+
+                          //串接該篇網址的標題
+                          .social-message-chat-content-link-title Togayther
+
+                          //串接該篇網址的內容
+                          .social-message-chat-content-link-description 2019年5月台灣通過了同性婚姻法 也成為亞洲第一個認可同婚的國家，在同時 「Togayther平台」的構思也開始萌芽 抱持著回饋同志族群的本心 宣傳平權公益的想法，期待與您共同分享您生活中點滴的感動時刻，Togayther Always Be with You
+
+                    //分享私訊內容按鈕
+                    .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+
+                //我方傳送的文字+網址內容區塊
+                //- 20220507 工程師更改 把.social-message-chat-personal 更改成  .social-message-chat-content
+                //- 20220707 我更改回來，因為上線網站是用.social-message-chat-personal
+                .social-message-chat-personal
+
+                  //我方傳送的文字+網址內容
+                  .social-message-chat-link-block.d-flex.align-items-center
+
+                    //20220506新增.social-message-chat-interaction-block區塊，並把.social-message-chat-share-block放在此區塊內
+                    .social-message-chat-interaction-block
+                      .social-message-chat-space-between-use
+
+                      //分享私訊內容按鈕
+                      .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                      //已讀顯示
+                      .social-message-chat-read 已讀
+
+                    .social-message-chat-content.p-0
+                      .social-message-chat-content-part
+
+                        //我方傳送的文字，沒有就隱藏
+                        span.social-message-chat-user-content-text 我知道我知道我知道
+
+                          //我方傳送的網址
+                          a(href="https://togayther.com/" target="_blank") https://togayther.com/
+
+                        //我方傳送的文字，沒有就隱藏
+                        span.social-message-chat-user-content-text 我知道我知道我知道
+
+                      //串接該篇網址連結
+                      a(href="https://togayther.com/" target="_blank")
+
+                        //串接該篇網址的圖片
+                        img.social-message-chat-content-link-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        .social-message-chat-content-link
+
+                          //串接該篇網址的標題
+                          .social-message-chat-content-link-title Togayther
+
+                          //串接該篇網址的內容
+                          .social-message-chat-content-link-description 2019年5月台灣通過了同性婚姻法 也成為亞洲第一個認可同婚的國家，在同時 「Togayther平台」的構思也開始萌芽 抱持著回饋同志族群的本心 宣傳平權公益的想法，期待與您共同分享您生活中點滴的感動時刻，Togayther Always Be with You
+
+
+                .social-message-chat-time 2022年4月15日 22:41
+
+
+                //對方傳送圖片內容區塊
+                .social-message-chat-user.d-flex.align-items-flex-start
+                  img.social-message-chat-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                  //對方傳送圖片內容
+                  //- 20220507 工程師移除 .social-message-chat-img-block
+                  .d-flex.align-items-center
+                    img.social-message-chat-content.social-message-chat-content-img.p-0.cursor-pointer(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg" data-bs-toggle='modal' data-bs-target='#social-message-chat-img-full')
+
+                    //分享私訊內容按鈕
+                    .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                //我方傳送圖片內容區塊
+                //- 20220507 工程師更改 把.social-message-chat-personal 更改成  .social-message-chat-content
+                //- 20220707 我更改回來，因為上線網站是用.social-message-chat-personal
+                .social-message-chat-personal
+                  //- 20220507 工程師移除 .social-message-chat-img-block
+                  .d-flex.align-items-center.justify-content-end
+
+                    //20220506新增.social-message-chat-interaction-block區塊，並把.social-message-chat-share-block放在此區塊內
+                    .social-message-chat-interaction-block
+                      .social-message-chat-space-between-use
+
+                      //分享私訊內容按鈕
+                      .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                      //已讀顯示
+                      .social-message-chat-read 已讀
+
+                    //我方傳送圖片內容
+                    img.social-message-chat-content.social-message-chat-content-img.p-0.cursor-pointer(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg" data-bs-toggle='modal' data-bs-target='#social-message-chat-img-full')
+
+
+                //對方傳送影片內容區塊
+                .social-message-chat-user.d-flex.align-items-flex-start
+                  img.social-message-chat-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                  //對方傳送影片內容
+                  .social-message-chat-video-block.d-flex.align-items-center.cursor-pointer
+
+                    .position-relative
+                      img.social-message-chat-content-video-play(src="./img/video_play_fill_black_white.svg")
+
+                      //對方傳送影片內容縮圖
+                      video.social-message-chat-content.social-message-chat-content-video.p-0.object-fit-cover(controls='' poster='https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg')
+                        source(src='http://s1.mi.com/zt/14072201/sh-v-4.mp4' type='video/mp4')
+                        source(src='http://s1.mi.com/zt/14072201/sh-v-4.webm' type='video/webm')
+                        | Sorry, your browser doesn't support embedded videos.
+
+                    //分享私訊內容按鈕
+                    .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                //我方傳送影片內容區塊
+                //- 20220507 工程師更改 把.social-message-chat-personal 更改成  .social-message-chat-content
+                //- 20220707 我更改回來，因為上線網站是用.social-message-chat-personal
+                .social-message-chat-personal
+                  .social-message-chat-video-block.d-flex.align-items-center.justify-content-end
+
+                    //20220506新增.social-message-chat-interaction-block區塊，並把.social-message-chat-share-block放在此區塊內
+                    .social-message-chat-interaction-block
+                      .social-message-chat-space-between-use
+
+                      //分享私訊內容按鈕
+                      .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                      //已讀顯示
+                      .social-message-chat-read 已讀
+
+                    //我方傳送影片內容
+                    .position-relative.cursor-pointer
+                      img.social-message-chat-content-video-play(src="./img/video_play_fill_black_white.svg")
+
+                      //我方傳送影片內容縮圖
+                      video.social-message-chat-content.social-message-chat-content-video.p-0.object-fit-cover(controls='' poster='https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg')
+                        source(src='http://s1.mi.com/zt/14072201/sh-v-4.mp4' type='video/mp4')
+                        source(src='http://s1.mi.com/zt/14072201/sh-v-4.webm' type='video/webm')
+                        | Sorry, your browser doesn't support embedded videos.
+
+
+                //對方傳送動態貼文內容區塊
+                .social-message-chat-user.d-flex.align-items-flex-start
+                  img.social-message-chat-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                  //對方傳送動態貼文內容
+                  //- 20220507 工程師移除 .social-message-chat-post-block
+                  .d-flex.align-items-center
+                    //- 20220507 工程師更改 把.social-message-chat-user-content 更改成  .social-message-chat-content
+                    .social-message-chat-content.social-message-chat-user-content-post.p-0.cursor-pointer
+                      //- 20220507 工程師把.social-message-chat-content-post-meta 更改成.social-message-chat-content-part.d-flex.align-items-center
+                      .social-message-chat-content-part.d-flex.align-items-center
+
+                        //串接該篇動態貼文的使用者大頭照
+                        img.social-message-chat-content-post-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                        //串接該篇動態貼文的使用者名稱 + "的貼文""
+                        .social-message-chat-content-post-user-name Sanders
+                        |的貼文
+                      .position-relative
+
+                        //當該篇動態貼文為多圖則顯示此圖式，不是的話則隱藏
+                        img.social-post-card-image-plural(src="./img/image_plural_fill_black_white.svg")
+
+                        //當該篇動態貼文為影片則顯示此圖式，不是的話則隱藏
+                        img.video_play_fill_black_white(src="./img/video_play_fill_black_white.svg", alt="")
+
+                        //串接該篇動態貼文的圖片
+                        img.social-message-chat-content-post-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                      //串接該篇動態貼文的標題
+                      //- 20220507 移除 .social-message-chat-content-post-title 更改成 .social-message-chat-content-link >
+                      .social-message-chat-content-link
+                        .social-message-chat-content-link-title 救救我啊我救我
+
+                    //分享私訊內容按鈕
+                    .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                //我方傳送動態貼文內容區塊
+                //- 20220507 工程師更改 把.social-message-chat-personal 更改成  .social-message-chat-content
+                //- 20220707 我更改回來，因為上線網站是用.social-message-chat-personal
+                .social-message-chat-personal
+                  //- 20220507 工程師移除 .social-message-chat-post-block
+                  .d-flex.align-items-center.justify-content-end
+
+                    //20220506新增.social-message-chat-interaction-block區塊，並把.social-message-chat-share-block放在此區塊內
+                    .social-message-chat-interaction-block
+                      .social-message-chat-space-between-use
+
+                      //分享私訊內容按鈕
+                      .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                      //已讀顯示
+                      .social-message-chat-read 已讀
+
+                    //我方傳送動態貼文內容
+                    .social-message-chat-content.p-0.cursor-pointer
+                      //- 20220507 工程師把.social-message-chat-content-post-meta 更改成.social-message-chat-content-part.d-flex.align-items-center
+                      .social-message-chat-content-part.d-flex.align-items-center
+                        img.social-message-chat-content-post-user-img(src="./img/navbar/MemberLoginIcon.svg")
+                        .social-message-chat-content-post-user-name Sanders
+                        |的貼文
+                      .position-relative
+                        img.social-post-card-image-plural(src="./img/image_plural_fill_black_white.svg")
+                        img.video_play_fill_black_white(src="./img/video_play_fill_black_white.svg", alt="")
+                        img.social-message-chat-content-post-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+                      //- 20220507 移除 .social-message-chat-content-post-title 更改成 .social-message-chat-content-link >
+                      .social-message-chat-content-link
+                        .social-message-chat-content-link-title 救救我啊我救我
+
+                //對方傳送個人首頁內容區塊
+                .social-message-chat-user.d-flex.align-items-flex-start
+                  img.social-message-chat-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                  //對方傳送個人首頁內容
+                  .social-message-chat-personal-page-block.d-flex.align-items-center
+                    //- 20220507 工程師更改 把.social-message-chat-user-content 更改成  .social-message-chat-content
+                    .social-message-chat-content.social-message-chat-user-content-personal-page.p-0.cursor-pointer
+                      //- 20220507 工程師把.social-message-chat-content-post-meta 更改成.social-message-chat-content-part.d-flex.align-items-center
+                      .social-message-chat-content-part.d-flex.align-items-center
+
+                        //串接該篇個人首頁的使用者大頭照
+                        img.social-message-chat-content-post-user-img(src="./img/navbar/MemberLoginIcon.svg")
+
+                        //串接該篇個人首頁的使用者名稱 + "的個人檔案""
+                        .social-message-chat-content-post-user-name Sanders
+                        |的個人檔案
+
+                      //串接該篇個人首頁的動態文章圖片或影片縮圖，最多四篇，沒有貼文的話則隱藏
+                      .social-message-chat-content-personal-page-img-block
+
+                        //串接該篇個人首頁的動態文章圖片或影片縮圖
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        //串接該篇個人首頁的動態文章圖片或影片縮圖
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        //串接該篇個人首頁的動態文章圖片或影片縮圖
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        //串接該篇個人首頁的動態文章圖片或影片縮圖
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+
+                    //分享私訊內容按鈕
+                    .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                //我方傳送個人首頁內容區塊
+                //- 20220507 工程師更改 把.social-message-chat-personal 更改成  .social-message-chat-content
+                //- 20220707 我更改回來，因為上線網站是用.social-message-chat-personal
+                .social-message-chat-personal
+                  .social-message-chat-personal-page-block.d-flex.align-items-center.justify-content-end
+
+                    //20220506新增.social-message-chat-interaction-block區塊，並把.social-message-chat-share-block放在此區塊內
+                    .social-message-chat-interaction-block
+                      .social-message-chat-space-between-use
+
+                      //分享私訊內容按鈕
+                      .social-message-chat-share-block(type="button" data-bs-toggle='modal' data-bs-target='#social-message-share')
+
+                      //已讀顯示
+                      .social-message-chat-read 已讀
+
+                    //我方傳送個人首頁內容
+                    .social-message-chat-content.social-message-chat-content-personal-page.p-0.cursor-pointer
+                      //- 20220507 工程師把.social-message-chat-content-post-meta 更改成.social-message-chat-content-part.d-flex.align-items-center
+                      .social-message-chat-content-part.d-flex.align-items-center
+                        img.social-message-chat-content-post-user-img(src="./img/navbar/MemberLoginIcon.svg")
+                        .social-message-chat-content-post-user-name Sanders
+                        |的個人檔案
+
+                      .social-message-chat-content-personal-page-img-block
+
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+                        img.social-message-chat-content-personal-page-img(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+              //私訊聊天輸入框
+              .social-message-chat-input-block
+                .social-message-chat-input-upload.bg-basic(type='button' data-bs-toggle='modal' data-bs-target='#edit-social-upload')
+                .social-post-comment-input-block.mt-0.w-100
+                  input.social-post-comment-input.social-message-chat-input(placeholder='訊息⋯  ')
+                  button.btn.social-post-comment-submit.social-message-chat-submit(type='submit') 發佈
+
+              //被封鎖後輸入框顯示
+              //.social-message-chat-input-block.social-message-chat-input-blockade-block
+                .social-message-chat-input-blockade-state 已封鎖
+                .social-message-chat-input-blockade-btn-block
+                  .btn.social-message-chat-input-blockade-cancel 解除封鎖
+                  .btn.social-message-chat-input-delete.red(data-bs-toggle='modal' data-bs-target='#social-message-chat-delete') 刪除聊天室
+
+      .social-post-om-block.mt-24px.m-tb-0.h-100
+        .d-flex.mx-0
+          .social-post-om-header.bg-dark-gray.position-relative.d-tb-inline-flex.d-none.align-items-center.social-message-header
+
+            // 返回按鈕 - 從哪一頁進入就返回到上一頁
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#social-post')
+              img(src="./img/back_outline_white.svg", alt="")
+
+            //顯示該用戶使用者名稱
+            h4.social-post-om-title.text-center.w-100.white.mx-32px 聊天室
+
+            //私訊 - 撰寫新私訊
+            .btn.social-post-more.social-personal-page-more(type='button' data-bs-toggle='modal' data-bs-target='#social-message-edit-new')
+              img.social-message-edit(src="./img/message_edit_outline_white.svg")
+
+          //私訊頁面 - 詳情頁標頭
+          .social-post-om-header.bg-dark-gray.position-relative.d-inline-flex.align-items-center.social-message-chat-header
+
+            //返回按鈕，大螢幕時隱藏，小螢幕時顯示
+            button.btn-social-back.d-tb-none.d-block(data-bs-toggle='modal' data-bs-target='#social-message-chat-block')
+              img(src="./img/back_outline_white.svg", alt="")
+
+            h4.social-post-om-title.text-center.w-100.white.mx-32px 詳情
+
+            //關閉詳情頁按鈕，大螢幕顯示，小螢幕隱藏
+            .btn.social-post-more.social-personal-page-more.d-none.d-tb-block
+              img.w-20px(src="./img/close_outline_white.svg")
+
+
+      //文章內頁 - 內部
+      .social-post-om-block.social-post-om-body.bg-dark-gray.flex-xl-row.flex-1100-row.flex-column
+        .d-flex.mx-0.h-100
+          //彈跳視窗-內部
+          .social-message-list-page.bg-dark-gray.flex-column.p-0.h-100
+            .social-post-report-declare-block.social-message-search-block
+
+              //使用此欄位搜尋假冒的使用者名稱
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋朋友")
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section.social-message-list-section
+
+              //聊天清單列 - 大螢幕版本
+              //電腦版被選取的聊天對象，會加上.bg-333333這個class
+              .social-post-report-options.social-message-list.bg-333333
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //行為對應的文字
+                      我方傳送:
+                      文字內容
+                      您傳送了一張圖片
+                      您傳送了一則影片
+                      您傳送了一則個人檔案
+                      您傳送了一則貼文
+
+                      對方傳送:
+                      文字內容
+                      Sanders傳送了一張圖片
+                      Sanders傳送了一則影片
+                      Sanders傳送了一則個人檔案
+                      Sanders傳送了一則貼文
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content 您傳送了一張圖片
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    .social-message-logs-user-name Sanders
+
+                    //未讀取的私訊顯示樣式
+                    .social-message-logs-content.white 好的沒問題
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content Sanders傳送了一則影片
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-options.social-message-list
+                .social-post-report-user-data.d-flex.align-items-center
+
+                  //串接聊天對象的大頭照
+                  img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                  .social-message-list-logs-block
+
+                    //串接聊天對象的使用者名稱
+                    .social-message-logs-user-name Sanders
+
+                    //顯示最後一段聊天內容
+                    .social-message-logs-content 好的沒問題
+
+                //私訊詳情頁
+                .social-message-more ⋮
+
+              .social-post-report-last-hr.d-block.d-tb-none
+
+              //當查無搜尋結果時顯示此文字
+              .social-message-list-search-not 查無搜尋結果
+
+          //詳情頁
+          .social-message-chat-block.bg-dark-gray.white.d-tb-inline-flex
+            .social-message-chat-more-block
+              .social-message-chat-more
+                .social-message-chat-more-title 成員
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                .social-message-chat-more-btn-block
+                  .btn.social-message-chat-input-delete.red.pl-0(data-bs-toggle='modal' data-bs-target='#social-message-chat-delete') 刪除聊天室
+                  .btn.social-message-chat-input-blockade.red.pl-0 封鎖
+                  .btn.social-message-chat-input-blockade-cancel.pl-0 解除封鎖
+                  .btn.social-message-chat-input-report.red.pl-0 檢舉
+              .social-post-report-last-hr
+
+
+    //私訊 - 撰寫新私訊
+    #social-message-edit-new.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialMessageEditNewLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(type='button' data-bs-dismiss='modal' aria-label='Close')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 新訊息
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block.social-message-search-block
+
+              //使用此欄位搜尋要私訊的對象
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋")
+
+            //此區塊為選擇使用者時會顯示相對應的方框，點擊後可取消選取該使用者
+            .social-message-select-user-block
+              .social-message-select-user Sanders
+              .social-message-select-user Sanders
+              .social-message-select-user Sanders
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section.social-message-edit-section
+              .social-post-report-options-block
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+              .social-post-report-last-hr
+
+              //當查無搜尋結果時顯示此文字
+              .social-message-list-search-not 查無搜尋結果
+            .btn-social-post-report-block
+
+              //此處為使用者撰寫私訊文字的區塊
+              textarea.social-message-edit-form(row="3" placeholder="撰寫新訊息...")
+
+              //當使用者尚未選擇帳號時顯示此按鈕樣式，並且禁止送出
+              input.btn-social-post-report.btn-social-post-report-un-fill-in(type="button" disabled="disabled" value="提交")
+
+              //當使用者已選擇帳號時顯示此按鈕樣式
+              input.btn-social-post-report.btn-social-post-report-fill-in(type="button" value="提交" data-bs-toggle='modal' data-bs-target='#social-message-edit-new-feedback')
+
+    //私訊 - 分享私訊
+    #social-message-share.social-modal-min-full.modal.p-0.fade(tabindex='-1' aria-labelledby='socialMessageEditNewLabel' aria-hidden='true' )
+      .modal-dialog.modal-dialog-centered.modal-block.m-tb-0
+        .modal-content
+
+          //彈跳視窗-標頭
+          .modal-header.bg-dark-gray.position-relative
+
+            //返回按鈕
+            button.btn-social-back(type='button' data-bs-dismiss='modal' aria-label='Close')
+              img(src="./img/back_outline_white.svg", alt="")
+            h4.modal-title.text-center.w-100.white 分享
+
+          //彈跳視窗-內部
+          .modal-body.bg-dark-gray.flex-column.p-0
+            .social-post-report-declare-block.social-message-search-block
+
+              //使用此欄位搜尋要私訊的對象
+              input.social-post-report-user-search.w-100(type="text" placeholder="搜尋")
+
+            //此區塊為選擇使用者時會顯示相對應的方框，點擊後可取消選取該使用者
+            .social-message-select-user-block
+              .social-message-select-user Sanders
+              .social-message-select-user Sanders
+              .social-message-select-user Sanders
+
+            //根據input.social-post-report-user-search的搜尋顯示對應的搜尋結果，並以下方的方式呈現
+            .social-post-report-options-section.social-message-edit-section
+              .social-post-report-options-block
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+                .social-post-report-options
+                  .social-post-report-user-data.d-flex.align-items-center
+                    img.social-post-report-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+                    .social-post-report-user-name Sanders
+                  input.social-post-report-radio(type='checkbox' name='options')
+              .social-post-report-last-hr
+
+              //當查無搜尋結果時顯示此文字
+              .social-message-list-search-not 查無搜尋結果
+
+            .btn-social-post-report-block
+
+              //此處為使用者撰寫私訊文字的區塊
+              textarea.social-message-edit-form(row="3" placeholder="分享訊息...")
+
+              //當使用者尚未選擇帳號時顯示此按鈕樣式，並且禁止送出
+              input.btn-social-post-report.btn-social-post-report-un-fill-in(type="button" disabled="disabled" value="提交")
+
+              //當使用者已選擇帳號時顯示此按鈕樣式
+              input.btn-social-post-report.btn-social-post-report-fill-in(type="button" value="提交" data-bs-toggle='modal' data-bs-target='#social-message-edit-new-feedback')
+
+    //私訊寄出反饋
+    #social-message-edit-new-feedback.social-modal.modal.fade(tabindex='-1' aria-labelledby='socialMessageEditNewLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.flex-column.justify-content-center
+        .modal-content
+          .modal-body.bg-dark-gray.flex-center.social-modal-complete
+            img.social-modal-complete-img(src="./img/complete_outline_white.svg", alt="")
+            .social-modal-complete-text 訊息已傳送
+
+    //圖片 - 全螢幕預覽
+    #social-message-chat-img-full.edit-social-post-modal.modal.fade(tabindex='-1' aria-labelledby='socialMessageChatImgFullLabel' aria-hidden='true')
+
+      //20220707刪除.d-none.d-lg-block
+      button.btn-edit-social-close.close(type='button' data-bs-dismiss='modal' aria-label='Close')
+        span.edit-social-close-icon(aria-hidden='true')
+          img(src="./img/close_outline_white.svg")
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content(style="background-color: rgba(0,0,0,0) !important;")
+          //串接私訊傳送的圖片，讓使用者可以全螢幕點擊預覽
+          img.social-message-chat-img-full(src="https://nicegay.org/wp-content/uploads/2022/04/2022041909024142.jpg")
+
+    //發文 - 上傳檔案
+    #edit-social-upload.edit-social-post-modal.modal.fade(tabindex='-1' aria-labelledby='editSocialUploadLabel' aria-hidden='true')
+      button.btn-edit-social-close.close.d-none.d-lg-block(type='button' data-bs-dismiss='modal' aria-label='Close')
+        span.edit-social-close-icon(aria-hidden='true')
+          img(src="./img/close_outline_white.svg")
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content
+          .modal-header.bg-dark-gray.position-relative
+            button.btn-social-back(data-bs-toggle='modal' data-bs-target='#edit-social-upload')
+              img(src="./img/back_outline_white.svg")
+            h4.modal-title.text-center.w-100.white 檔案上傳
+          .modal-body.bg-dark-gray.flex-center
+            img.mb-16px(src="./img/post_upload_image.svg", alt="")
+            p.white.text-center 請上傳圖片或影片檔案格式<br>
+              span.fz-14 *圖片大小限制10MB<br>
+              span.fz-14 *影片長度限制30秒內，大小限制100MB
+            label.btn-social-upload 上傳檔案
+              input(type="file")
+
+        //刪除.btn-social-close-bottom
+        button.btn-edit-social-close-bottom.d-block.d-lg-none.w-100(type='button' data-bs-dismiss='modal' aria-label='Close') 取消
+
+    //彈跳視窗 - 上傳檔案失敗
+    #edit-social-upload-fail.social-modal.modal.fade(tabindex='-1' aria-labelledby='editSocialUploadFailLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content
+          .modal-body.bg-dark-gray.flex-center
+            h4.modal-title.text-center.w-100.white 上傳檔案時發生錯誤
+            p.white.text-center 請確認檔案是否為圖片或影片格式，或是檔案大小超過限制。
+
+          //刪除.btn-edit-social-close-bottom.btn-social-close-bottom
+          //更改成 .btn-social-close-alerts
+          button.btn-social-close-alerts.w-100(type='button' data-bs-dismiss='modal' aria-label='Close') 我知道了
+
+    //彈跳視窗 - 上傳中動畫反饋
+    #edit-social-post-uploading.social-modal.modal.fade(tabindex='-1' aria-labelledby='editSocialPostLeaveLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content
+          .progress(style='height: 2px; background-color: #808080;')
+            .progress-bar.edit-social-post-progress-bar(role='progressbar' aria-valuenow="100" aria-valuemin='0' aria-valuemax='100' style='width: 0; background-color: #FFDC00;')
+          .modal-body.bg-dark-gray.flex-center.h-200px.h-mb-250px
+            .edit-social-post-uploading-animation
+              div
+            h4.modal-title.text-center.w-100.white 上傳中，請稍後
+
+    //刪除聊天室警示視窗
+    #social-message-chat-delete.social-modal.modal.fade(tabindex='-1' aria-labelledby='socialMessageChatDeleteLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.modal-block.flex-column.justify-content-center
+        .modal-content
+          .modal-body.bg-dark-gray.flex-center
+            h4.modal-title.text-center.w-100.white 確定要刪除聊天室嗎 ?
+            p.white.text-center 刪除後聊天紀錄將無法復原
+
+          button.btn-social-action-sheets-content.w-100.mt-0.red(data-bs-toggle='modal' data-bs-target='#social-message-chat-delete-feedback') 刪除
+
+        button.btn-social-close-action-sheets.w-100.w-mb-80vw(type='button' data-bs-dismiss='modal' aria-label='Close') 取消
+
+    //刪除聊天室反饋
+    #social-message-chat-delete-feedback.social-modal.modal.fade(tabindex='-1' aria-labelledby='socialMessageChatDeleteFeedbackLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.flex-column.justify-content-center
+        .modal-content
+          .modal-body.bg-dark-gray.flex-center.social-modal-complete
+            img.social-modal-complete-img(src="./img/complete_outline_white.svg", alt="")
+            .social-modal-complete-text 聊天室已刪除
+
+
+    script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js' integrity='sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ' crossorigin='anonymous')
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='./js/social.js')

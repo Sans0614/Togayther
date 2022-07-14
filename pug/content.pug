@@ -1,0 +1,338 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 文章名稱 - Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/style.css')
+  body
+    // partial:index.partial.html
+    .postContent
+      .container
+        .row
+          .col-md-12.categoryTitleBlock.postCard-content
+            .postContentImage
+              img(src='https://togayther.com/wp-content/uploads/2021/10/%E6%9C%AA%E5%91%BD%E5%90%8D-1.png' alt='')
+            .postContentTitleBlock
+              h1.postContentTitle 【GQ Story】Gender Blending ：當「與眾不同」成為美德，性別將不再有界限。
+              a(href='https://www.google.com/')
+                h5.meta 2021/09/23
+              a(href='https://www.google.com/')
+                h5.meta.metacategory 發燒話題
+          .col-md-9.categoryTitleBlock
+            .postContentInteractive
+              .likeButton 按讚
+                span 12
+              a(href="#commentBlock")
+                .commentButton 留言
+              .saveButton 收藏
+              .shareButton#shareBtn(type='button' data-bs-toggle='modal' data-bs-target='#shareModal') 分享
+
+              // Modal
+              #shareModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      h2.modal-title Share This Post !
+                      button.btn-close.close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                          span.shareCloseBtn(aria-hidden='true')
+                    .modal-body.border-bottom
+                      h4.modalSubTitle 文章分享
+                      a.facebookShareBtn(href="##")
+                      a.lineShareBtn(href="##")
+                    .modal-body
+                      h4.modalSubTitle 複製文章連結
+                      .field.d-flex.align-items-center.justify-content-between
+                      //.linkIcon
+                      input.copyLink(type='text' value='https://togayther.com/post/607')
+                      button.copyLinkBtn 複製
+
+            .postContentEditor
+              p
+                | 全世界的《GQ》近年都相當積極地討論什麼是 New Masculinity（新男子氣概），或許我們會因為出身背景、生活環境或產業別的不同，得到截然不同的答案。然而你我都必須承認，近幾年來，社會價值觀不斷在挑戰我們傳統的「男子氣概」定義，男人該有什麼樣子，已經從千篇一律的標準答案，變成一道讓每個人可以自己作答的開放題，畢竟數位時代下的發聲管道變得自由而暢通了，我們也因此能聽見更多元的聲音。「與眾不同」成為美德，每個人因為「差異」而顯得獨特，尤其從近年男裝的趨勢與發展，更能看到這些變化。
+              p
+                | 自從 Alessandro Michele 接下 GUCCI 創意總監一職，大張旗鼓地重新定義了男裝的輪廓，就是最佳的例證。大量的蕾絲、花朵、修身剪裁運用在男人的日常穿戴之中，時裝周不再區分男、女裝秀，取而代之的是對於性別表現的豐富主張。男人不一定要有「男人的樣子」，喜歡男生或女生、穿戴珍珠項鍊還是正裝領帶、無助哭泣或表現堅強，無論是哪種選擇，似乎都已經不奇怪。
+              p
+                | 從同性婚姻正式合法化，到前陣子引起網海激烈爭辯的「粉紅色口罩事件」，都一再驗證著我們看待性別差異的眼光，早已不再是傳統父權時代下的僵化印象。當這個議題逐步深入到你我的日常對話之中，可以確定的是，我們處在性別概念正在典範轉移的時代。
+              p
+                | 對話才正要開始，而身處在這個趨勢的核心位置，《GQ》這回很榮幸邀請到四位台灣正當紅的男演員：林柏宏、曾敬驊、陳昊森與章廣辰，透過他們各自的角色經驗及價值觀，與我們聊聊關於「男子氣概」的想像，還有那些我們好奇的事。
+
+            .postContentInteractive(style="text-align: left")
+              .likeButton 按讚
+                span 12
+              a(href="#commentBlock")
+                .commentButton 留言
+              .saveButton 收藏
+              .shareButton#shareBtn(style="position: absolute; right: 10px;" type='button' data-bs-toggle='modal' data-bs-target='#shareModal') 分享
+
+            .postAuthorBlock
+              a(href='')
+                .postAuthorImageBlock
+                  .postAuthorImage
+              .postAuthorContent
+                h5.postAuthorTitle AUTHOR 作者
+                h3.postAuthorName SANDERS
+                p.postAuthorIntor.ellipsis4
+                  | 在多次受傷之後，我們數度懷疑自己是否失去了愛人的能力，殊不知我們真正失去的，是重新認識與接納自己的勇氣。 經歷了幾段感情，念了一些書籍，發現了解與頓悟總在分手後，希望藉由這個平台分享一些自己的想法與閱讀心得整理，幫助一些跟我一樣曾經或正在感情世界迷網的夥伴，用更健康的觀點看待愛情，學著從喜歡自己開始，最後能用自己的雙手溫暖世界。
+            .readAroundBlock
+              h4.readAroundTitle 延伸閱讀/
+              .readAroundPost
+                ul
+                  a(href='')
+                    li.readAroundPostTitle.ellipsis1 【型男Care】一用就有感！改善難纏肌膚問題的中價位保養品推薦
+                  a(href='')
+                    li.readAroundPostTitle.ellipsis1 無緣無故心情不好？緩解「微憂鬱」的7個秘訣，擺脫負面情緒這樣做！
+                  a(href='')
+                    li.readAroundPostTitle.ellipsis1 【大人性教育】那些提升床上戰力的都市傳說 Ep 06：鍛鍊臀部肌肉
+            .postTag
+              ul
+                a(href='')
+                  li.postTagTilte 東京奧運
+                a(href='')
+                  li.postTagTilte 滑板
+                a(href='')
+                  li.postTagTilte 運動
+            #commentBlock.commentBlock
+              .commentSections
+                // 登入後的留言區塊畫面
+                .commentSection.commentNotLogin
+                  .row
+                    .col-12
+                      h4.commentTilte 文章留言區
+                      textarea.form-control.commentFormControl(rows='4' placeholder='分享你對文章的看法吧 !')
+                      button.btn.btn-dark.btnEdit(type='submit') 發佈
+                .commentSection.commentLine
+                  .d-flex.flex-row
+                    .commentImage
+                    .commentUser
+                      h4.commentAuthorName SANDERS
+                      p.commentContent 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                      h6.commentTime 2021.11.05
+                        span.commentReply 回覆
+                .commentSection.commentLine
+                  .d-flex.flex-row
+                    .commentImage
+                    .commentUser
+                      h4.commentAuthorName SANDERS
+                      p.commentContent 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                      h6.commentTime 2021.11.05
+                        span.commentReply 回覆
+                      .commentReplySections
+                        .commentReplySection
+                          .d-flex.flex-row
+                            .commentImage
+                            .commentUser
+                              h4.commentAuthorName SANDERS
+                              p.commentContent 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                              h6.commentTime 2021.11.05
+                        .commentReplySection
+                          .d-flex.flex-row
+                            .commentImage
+                            .commentUser
+                              h4.commentAuthorName SANDERS
+                              p.commentContent 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                              h6.commentTime 2021.11.05
+                              h5.commentEdit ...
+                                .commentEditBlock
+                                  h6.edit-comment 編輯留言
+                                  h6.delete-comment 刪除留言
+
+                              //編輯子留言的留言表單
+                              form.commentForm(method='post')
+                                textarea.form-control.commentFormControl(rows='3') 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                                button.btn.btn-dark.btnEdit(type='submit') 發佈
+                      a(href='')
+                        h4.commentbtn MORE
+
+                        //子留言的留言表單
+                        form.commentForm(method='post')
+                          textarea.form-control.commentFormControl(rows='3') 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                          button.btn.btn-dark.btnEdit(type='submit') 發佈
+                .commentSection.commentLine
+                  .d-flex.flex-row
+                    .commentImage
+                    .commentUser
+                      h4.commentAuthorName SANDERS
+                      p.commentContent 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                      h6.commentTime 2021.11.05
+                        span.commentReply 回覆
+
+                      //編輯已發佈的主留言表單
+                      form.commentForm(method='post')
+                        textarea.form-control.commentFormControl(rows='3') 真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒真的棒
+                        button.btn.btn-dark.btnEdit(type='submit') 發佈
+                  h5.commentEdit ...
+                    .commentEditBlock
+                      h6.edit-comment 編輯留言
+                      h6.delete-comment 刪除留言
+                  a(href='')
+                    h4.commentbtn MORE
+
+
+          .col-md-3
+            div
+              a(href='https://www.facebook.com/')
+                .postAdvertise.postCard.postAdvertiseImage.postCard-mb10.adv01
+                  img(src='./img/adv01.jpg' alt='')
+            article.postCard-Content.postCard-mb10
+              a(href='https://www.facebook.com/')
+              article.postCard.postCardh3
+                a(href='https://www.facebook.com/')
+                  article.postImage.postImage200(style='background-image:url(https://togayther.com/upload/post/cover/8b5b9a0793f47c0292aad5dd8783bd37.jpg)')
+                article.postContent
+                  a(href='https://www.facebook.com/')
+                    h3.postTitle.postTitle-first.ellipsis
+                      | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                  a(href='https://www.google.com/')
+                    h5.meta 2021/09/23
+                  a(href='https://www.google.com/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+            article.postCard-Content.postCard-mb10
+              a(href='https://www.facebook.com/')
+              article.postCard.postCardh3
+                a(href='https://www.facebook.com/')
+                  article.postImage.postImage200(style='background-image:url(https://togayther.com/upload/post/cover/8b5b9a0793f47c0292aad5dd8783bd37.jpg)')
+                article.postContent
+                  a(href='https://www.facebook.com/')
+                    h3.postTitle.postTitle-first.ellipsis
+                      | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                  a(href='https://www.google.com/')
+                    h5.meta 2021/09/23
+                  a(href='https://www.google.com/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+            article.postCard-Content.postCard-mb10
+              a(href='https://www.facebook.com/')
+              article.postCard.postCardh3
+                a(href='https://www.facebook.com/')
+                  article.postImage.postImage200(style='background-image:url(https://togayther.com/upload/post/cover/8b5b9a0793f47c0292aad5dd8783bd37.jpg)')
+                article.postContent
+                  a(href='https://www.facebook.com/')
+                    h3.postTitle.postTitle-first.ellipsis
+                      | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                  a(href='https://www.google.com/')
+                    h5.meta 2021/09/23
+                  a(href='https://www.google.com/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+    .categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 嚴選推薦
+            span.categorySubTitle RECOMMEND
+          article.col-md-3.postCard-other
+            a(href='https://www.facebook.com/')
+            article.postCard.postCardh4
+              a(href='https://www.facebook.com/')
+                article.postImage(style='background-image:url(https://togayther.com/upload/post/cover/8b5b9a0793f47c0292aad5dd8783bd37.jpg)')
+              article.postContent
+                a(href='https://www.facebook.com/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='https://www.facebook.com/')
+                  a(href='https://www.google.com/')
+                    h5.meta 2021/09/23
+                  a(href='https://www.google.com/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='https://www.facebook.com/')
+            article.postCard.postCardh4
+              a(href='https://www.facebook.com/')
+                article.postImage(style='background-image:url(https://togayther.com/upload/post/cover/8b5b9a0793f47c0292aad5dd8783bd37.jpg)')
+              article.postContent
+                a(href='https://www.facebook.com/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='https://www.facebook.com/')
+                  a(href='https://www.google.com/')
+                    h5.meta 2021/09/23
+                  a(href='https://www.google.com/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='https://www.facebook.com/')
+            article.postCard.postCardh4
+              a(href='https://www.facebook.com/')
+                article.postImage(style='background-image:url(https://togayther.com/upload/post/cover/8b5b9a0793f47c0292aad5dd8783bd37.jpg)')
+              article.postContent
+                a(href='https://www.facebook.com/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='https://www.facebook.com/')
+                  a(href='https://www.google.com/')
+                    h5.meta 2021/09/23
+                  a(href='https://www.google.com/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='https://www.facebook.com/')
+            article.postCard.postCardh4
+              a(href='https://www.facebook.com/')
+                article.postImage(style='background-image:url(https://togayther.com/upload/post/cover/8b5b9a0793f47c0292aad5dd8783bd37.jpg)')
+              article.postContent
+                a(href='https://www.facebook.com/')
+                  h3.postTitle.ellipsis 酒鬼們補貨啦！2021必喝「20 款超商罐酒」
+                .metaBlock
+                  a(href='https://www.facebook.com/')
+                  a(href='https://www.google.com/')
+                    h5.meta 2021/09/23
+                  a(href='https://www.google.com/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+    .advertiseBlock
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js' integrity='sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ' crossorigin='anonymous')
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='./js/content.js')
+    script(src='./js/content1.js')
+    script(src='./js/save.js')

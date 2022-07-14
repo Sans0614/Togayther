@@ -1,0 +1,3394 @@
+@charset "UTF-8";
+/*Colors*/
+.white {
+  color: #FFFFFF !important;
+}
+
+.gray {
+  color: #1d1d1d !important;
+}
+
+.dgray {
+  color: #242424 !important;
+}
+
+.mdgray {
+  color: #808080 !important;
+}
+
+.mgray {
+  color: #727272 !important;
+}
+
+.lightgrat {
+  color: #BBBBBB !important;
+}
+
+.red {
+  color: #F22D2D !important;
+}
+
+.tag-yellow {
+  color: #FFDC00;
+}
+.tag-yellow:hover {
+  color: #FFDC00;
+}
+
+.linkblue {
+  color: #CEDAF2 !important;
+}
+.linkblue:hover {
+  color: #CEDAF2 !important;
+  text-decoration: none !important;
+}
+
+/*Background*/
+.bg-basic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-333333 {
+  background-color: #333333;
+}
+
+.bg-dark-gray {
+  background: #242424;
+}
+
+.bg-gray {
+  background: #1d1d1d;
+}
+
+@media (max-width: 1098.99px) {
+  .bg-tb-gray-1d1d1d {
+    background-color: #1d1d1d !important;
+  }
+}
+/*Position*/
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.r-0 {
+  right: 0 !important;
+}
+
+.t-0 {
+  top: 0 !important;
+}
+
+.t-8px {
+  top: 8px !important;
+}
+
+/*Spacing*/
+.mr-8px {
+  margin-right: 8px !important;
+}
+
+.mr-16px {
+  margin-right: 16px !important;
+}
+
+.ml-8px {
+  margin-left: 8px !important;
+}
+
+.mb-16px {
+  margin-bottom: 16px !important;
+}
+
+.mb-40px {
+  margin-bottom: 40px !important;
+}
+
+.mt-8px {
+  margin-top: 8px !important;
+}
+
+.mt-16px {
+  margin-top: 16px !important;
+}
+
+.mt-24px {
+  margin-top: 24px !important;
+}
+
+.mt-50px {
+  margin-top: 50px !important;
+}
+
+.mt-74px {
+  margin-top: 74px !important;
+}
+
+.mx-32px {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.px-16px {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-40px {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1098.99px) {
+  .mb-tb-8px {
+    margin-bottom: 8px !important;
+  }
+
+  .m-tb-0 {
+    margin: 0 !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .mr-mb-0 {
+    margin-right: 0 !important;
+  }
+
+  .ml-mb-0 {
+    margin-left: 0 !important;
+  }
+
+  .px-mb-4px {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+/*Sizing*/
+.w-20px {
+  width: 20px !important;
+}
+
+.w-60px {
+  width: 60px;
+}
+
+.w-350px {
+  width: 350px;
+}
+
+.w-400px {
+  width: 400px;
+}
+
+.w-600px {
+  width: 600px;
+}
+
+.w-750px {
+  width: 750px;
+}
+
+.w-mxw-100pc {
+  max-width: 100%;
+}
+
+.h-20px {
+  height: 20px !important;
+}
+
+.h-25px {
+  height: 25px !important;
+}
+
+.h-35px {
+  height: 35px !important;
+}
+
+.h-60px {
+  height: 60px;
+}
+
+.h-200px {
+  height: 200px !important;
+}
+
+.h-750px {
+  height: 750px;
+}
+
+@media (max-width: 767.98px) {
+  .w-mb-80vw {
+    width: 80vw !important;
+  }
+
+  .h-mb-250px {
+    height: 250px !important;
+  }
+}
+/*Image*/
+.object-fit-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*Border*/
+.rounded-5 {
+  border-radius: 5px;
+}
+
+@media (min-width: 1098.99px) {
+  .rounded-pc-5-0-0-0 {
+    border-radius: 5px 0px 0px 0px !important;
+  }
+}
+/*Font-Size*/
+.fz-14 {
+  font-size: 14px !important;
+}
+
+.fz-24 {
+  font-size: 24px !important;
+}
+
+/*Display*/
+@media (min-width: 1098.99px) {
+  .d-tb-block {
+    display: block !important;
+  }
+
+  .d-tb-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-tb-none {
+    display: none !important;
+  }
+
+  .d-tb-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .d-tb-inline-flex {
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}
+/*滑鼠狀態*/
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*社群所有頁面統一使用*/
+.social {
+  background-color: #1d1d1d;
+}
+
+@media (max-width: 1098.99px) {
+  .social {
+    padding-bottom: 56px;
+  }
+}
+/*社群首頁*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#social-index {
+  margin-top: 16px;
+}
+
+/*社群頁標題*/
+.social-index-title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+.social-index-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+
+.social-index-title-line {
+  height: 18px;
+  width: 1px;
+  margin-left: 8px;
+  background-color: #FFFFFF;
+}
+
+.social-index-title-hr {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  height: 1px;
+  margin: 0 16px;
+  background-color: #FFFFFF;
+}
+
+/*動態文章顯示區塊*/
+.social-index-grid {
+  max-width: 1000px;
+  counter-reset: grid-item;
+}
+.social-index-grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.social-index-grid-item {
+  width: 33%;
+}
+.social-index-grid-item:before {
+  counter-increment: grid-item;
+  display: block;
+}
+
+.social-post-card {
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 4px 8px;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+/*動態文章滑到底*/
+.social-post-bottom {
+  margin-bottom: 0;
+  color: #808080;
+}
+
+.social-post-bottom-hr {
+  background-color: #808080;
+  width: 100px;
+  max-width: 100%;
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 1px;
+  margin: 0 8px;
+}
+
+/*動態文章影片與圖片區塊*/
+.social-post-card-media {
+  position: relative;
+}
+
+.social-post-card-image-plural, .video_play_fill_black_white {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 10px;
+  top: 10px;
+}
+
+.social-post-card-video, .social-post-card-image {
+  width: 100%;
+}
+
+.social-post-card-video::-webkit-media-controls-enclosure {
+  display: none;
+}
+
+/*動態文章內容區塊*/
+.socail-post-card-content {
+  padding: 8px 8px 4px;
+}
+
+.social-post-card-title {
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.social-post-card-title:hover {
+  color: #FFFFFF;
+}
+
+.social-post-card-follow-block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+
+.social-post-card-follow-pic {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
+}
+
+.social-post-card-follow {
+  color: #808080;
+  font-size: 14px;
+}
+
+.social-post-card-meta-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-post-card-author-block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+.social-post-card-author-pic {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
+}
+
+.social-post-card-author {
+  color: #808080;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.social-post-card-like {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: right;
+  height: 24px;
+}
+
+.social-post-card-unlike-btn, .social-post-card-like-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  background-image: url(../img/like_outline_808080.svg);
+  background-size: contain;
+}
+
+.social-post-card-like-btn {
+  background-image: url(../img/like_fill_red.svg);
+}
+
+.social-post-card-like-count {
+  color: #808080;
+  margin-left: 4px;
+}
+
+/*新會員卡片*/
+.social-post-card-member-block {
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.social-post-card-member-title {
+  position: absolute;
+  padding: 4px 12px;
+  background-color: #FFDC00;
+  left: 0;
+  top: 0;
+  border-radius: 10px 0 10px 0;
+  z-index: 1;
+  color: #1d1d1d;
+}
+
+.avatar.social-post-card-member-image-block {
+  height: 200px;
+}
+
+.avatar-pic.social-post-card-member-image {
+  height: 140px;
+  width: 140px;
+  border: 3px solid #FFFFFF;
+}
+
+.social-post-card-member-name {
+  font-size: 24px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.social-post-card-member-name-description {
+  color: #1d1d1d;
+}
+
+@media (max-width: 998.99px) {
+  .social-index-title-hr {
+    margin: 0 12px;
+  }
+}
+@media (max-width: 767.98px) {
+  /*社群頁標題*/
+  .social-index-title-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .social-index-title {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    margin-left: 4px;
+  }
+
+  .social-index-title-line {
+    height: 18px;
+    width: 1px;
+    margin-left: 8px;
+    background-color: #FFFFFF;
+  }
+
+  .social-index-title-hr {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    height: 1px;
+    margin: 0 4px;
+    background-color: #FFFFFF;
+  }
+
+  /*動態文章內容區塊*/
+  .social-index-grid-item {
+    width: 50%;
+  }
+
+  .social-post-card-title {
+    font-size: 14px;
+  }
+
+  .social-post-card-follow-block {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .social-post-card-follow-pic {
+    width: 12px;
+    height: 12px;
+  }
+
+  .social-post-card-follow {
+    font-size: 12px;
+    padding-top: 1px;
+  }
+
+  .social-post-card-author-block {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+  }
+
+  .social-post-card-author-pic {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social-post-card-author {
+    font-size: 12px;
+    padding-top: 3px;
+  }
+
+  .social-post-card-unlike-btn, .social-post-card-like-btn {
+    height: 12px;
+    width: 12px;
+  }
+
+  .social-post-card-like-count {
+    font-size: 12px;
+    margin-left: 2px;
+  }
+
+  /*新會員卡片*/
+  .avatar-pic.social-post-card-member-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .social-post-card-member-name-description {
+    font-size: 14px;
+  }
+}
+/*社群首頁-精選會員*/
+.social-index-user-block, .social-index-featured-member-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.social-index-featured-member-block {
+  margin-bottom: 12px;
+}
+
+.social-index-user-img, .social-index-featured-member-img, .social-tag-list-user-image {
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.social-index-featured-member-data {
+  width: 50%;
+}
+
+.social-index-user-data, .social-index-featured-member-data {
+  margin-left: 12px;
+}
+
+.social-index-user-name, .social-index-featured-member-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.social-index-user-birthday, .social-index-featured-member-birthday {
+  font-size: 14px;
+  font-weight: 300;
+  color: #BBBBBB;
+}
+
+.btn-social-index-user-personal-page, .btn-social-index-featured-member-unfollow, .btn-social-index-featured-member-follow {
+  color: #FFDC00;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+}
+.btn-social-index-user-personal-page:hover, .btn-social-index-featured-member-unfollow:hover, .btn-social-index-featured-member-follow:hover {
+  color: #FFFFFF;
+}
+
+.btn-social-index-featured-member-follow {
+  color: #FFFFFF;
+}
+
+.social-index-featured-member-block-title {
+  color: #FFFFFF;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 992px) {
+  .social-index-featured-member-swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .social-index-featured-member-block {
+    width: 60px !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .social-index-featured-member-img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #FFFFFF;
+  }
+
+  .social-index-featured-member-name {
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 60px;
+  }
+}
+/*編輯器-上傳檔案*/
+#edit-social-upload .btn-social-upload {
+  display: inline-block;
+  color: #242424;
+  background-color: #FFFFFF;
+  padding: 4px 12px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-social-post-modal input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/*彈跳視窗-取消按紐*/
+.btn-edit-social-close-bottom {
+  background-color: #242424;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  margin-top: 12px;
+  border-radius: 5px;
+  border: 0;
+}
+
+@media (max-width: 1098.99px) {
+  #edit-social-upload .modal-content, #edit-social-upload .btn-edit-social-close-bottom {
+    width: 500px !important;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  #edit-social-upload .modal-content, #edit-social-upload .btn-edit-social-close-bottom {
+    width: 350px !important;
+    max-width: 100%;
+  }
+}
+/*編輯器左右變上下斷點*/
+@media (min-width: 1099.99px) {
+  .flex-1100-row {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+/*編輯器-影片預覽區塊*/
+.video-social-preview-block {
+  width: 750px;
+  max-width: 100%;
+  height: 100%;
+  border-right: 1px solid #808080;
+}
+
+.video-social-preview {
+  height: 650px;
+  width: 100%;
+  background: #1d1d1d;
+}
+
+.video-social-preview-sizing {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 1098.99px) {
+  .video-social-preview-block {
+    width: 750px;
+    max-width: 100%;
+    height: 100%;
+    border-right: 0px solid #808080;
+    border-bottom: 1px solid #808080;
+  }
+}
+/*編輯器-圖片預覽區塊*/
+.img-social-preview-block {
+  width: 750px;
+  max-width: 100%;
+  border-right: 1px solid #808080;
+}
+
+.img-social-preview {
+  height: 580px;
+  width: 100%;
+  background: #1d1d1d;
+}
+.img-social-preview img, .img-social-preview video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-social-preview-bar-swiper {
+  height: 70px;
+  width: 80%;
+}
+.img-social-preview-bar-swiper .swiper-slide {
+  height: 50px;
+  opacity: 0.4;
+}
+.img-social-preview-bar-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.img-social-preview-bar-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+
+.btn-delete-social-image {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  z-index: 100;
+  border-radius: 100px;
+  right: -5px;
+  top: -5px;
+  background-color: #808080;
+  background-image: url(../img/close_outline_white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+}
+
+.img-social-preview-add {
+  height: 50px;
+  margin-left: -15px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 1098.99px) {
+  .img-social-preview-block {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #808080;
+  }
+
+  .img-social-preview {
+    height: 400px;
+  }
+
+  .img-social-preview-bar-swiper {
+    width: 50%;
+  }
+}
+/*編輯器-撰寫內容頁面*/
+.edit-social-block {
+  width: 350px;
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.edit-social-title, .edit-social-content {
+  background-color: #242424;
+  border: none;
+  border-bottom: 1px solid #808080;
+  color: #FFFFFF;
+  padding: 8px 12px 4px;
+  border-radius: 0 !important;
+}
+
+.edit-social-title {
+  font-size: 18px;
+}
+
+.edit-social-title::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+.edit-social-title::-moz-placeholder {
+  color: #FFFFFF;
+}
+
+.edit-social-title:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.edit-social-title::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.edit-social-title::placeholder {
+  color: #FFFFFF;
+}
+
+.edit-social-content::-webkit-input-placeholder {
+  color: #808080;
+}
+
+.edit-social-content::-moz-placeholder {
+  color: #808080;
+}
+
+.edit-social-content:-ms-input-placeholder {
+  color: #808080;
+}
+
+.edit-social-content::-ms-input-placeholder {
+  color: #808080;
+}
+
+.edit-social-content::placeholder {
+  color: #808080;
+}
+
+.edit-social-title:focus-visible, .edit-social-content:focus-visible {
+  outline: #808080 solid 1px;
+}
+
+.edit-social-friend, .edit-social-check-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #FFFFFF;
+  padding: 8px 12px;
+  font-size: 18px;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.edit-social-friend img, .edit-social-check-in img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  float: right;
+  height: 15px !important;
+  -webkit-appearance: none;
+}
+
+.edit-social-friend {
+  border-bottom: 1px solid #808080;
+}
+
+.edit-social-check-in-suggest-block {
+  padding-left: 10px;
+}
+
+.edit-social-check-in-suggest {
+  cursor: pointer;
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 4px 8px;
+  background-color: #333333;
+  margin: 4px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+@media (max-width: 1098.99px) {
+  .edit-social-block {
+    height: calc(var(--vh, 1vh) * 70);
+    min-height: 100%;
+    width: 100%;
+    padding: 0 16px 8px;
+    margin-bottom: 56px;
+  }
+  .edit-social-block .edit-social-title:focus-visible, .edit-social-block .edit-social-content:focus-visible {
+    outline: #808080 solid 0px;
+  }
+}
+@media (max-width: 767.99px) {
+  .edit-social-block {
+    height: 100%;
+  }
+}
+/*文章上傳 - 上傳中反饋*/
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-75%);
+            transform: translateY(-75%);
+  }
+}
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-75%);
+            transform: translateY(-75%);
+  }
+}
+.edit-social-post-uploading-animation {
+  --height:10px;
+  --loader-color: $white;
+  --animation-duration:0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: calc(var(--height) / 2);
+  height: calc(var(--height) * 1.75);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 24px;
+}
+.edit-social-post-uploading-animation:before, .edit-social-post-uploading-animation:after {
+  content: "";
+}
+.edit-social-post-uploading-animation > div, .edit-social-post-uploading-animation:before {
+  height: var(--height);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  -webkit-animation: bounce var(--animation-duration) ease-in-out infinite alternate;
+          animation: bounce var(--animation-duration) ease-in-out infinite alternate;
+}
+.edit-social-post-uploading-animation:after {
+  height: var(--height);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  -webkit-animation: bounce var(--animation-duration) ease-in-out infinite alternate;
+          animation: bounce var(--animation-duration) ease-in-out infinite alternate;
+  -webkit-animation-delay: calc(var(--animation-duration) / 2);
+          animation-delay: calc(var(--animation-duration) / 2);
+}
+.edit-social-post-uploading-animation > div {
+  -webkit-animation-delay: calc(var(--animation-duration) / 4);
+          animation-delay: calc(var(--animation-duration) / 4);
+}
+
+/*編輯器公版、文章內頁*/
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*針對編輯器所設定的modal-header置頂*/
+@media (max-width: 1098.99px) {
+  .modal-header-fixed-top {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .modal-body-fixed-top {
+    margin-top: 47px;
+  }
+}
+.edit-social-post-modal {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 998.99px) {
+  .edit-social-post-modal {
+    height: calc(100% - 56px);
+  }
+}
+.edit-social-post-modal .modal-block {
+  max-width: 1100px;
+}
+.edit-social-post-modal .modal-content {
+  border: 0;
+  background-color: #242424 !important;
+  border-radius: 5px;
+}
+.edit-social-post-modal .modal-header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px #808080;
+  border-radius: 5px 5px 0 0;
+}
+.edit-social-post-modal .modal-title {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+.edit-social-post-modal .modal-body {
+  height: 650px;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 1098.99px) {
+  .edit-social-post-modal .modal-body {
+    height: 100%;
+  }
+  .edit-social-post-modal .modal-header, .edit-social-post-modal .modal-body {
+    border-radius: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .edit-social-post-modal .modal-body {
+    height: 100%;
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+}
+/*彈跳視窗 - 手機版全螢幕公版*/
+.social-modal-min-full, .social-modal-personal-page {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.social-modal-min-full .modal-block, .social-modal-personal-page .modal-block {
+  max-width: 600px;
+}
+.social-modal-min-full .modal-content, .social-modal-personal-page .modal-content {
+  border: 0;
+  background-color: #242424 !important;
+  border-radius: 5px;
+  height: 500px;
+}
+.social-modal-min-full .modal-header, .social-modal-personal-page .modal-header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px #808080;
+  border-radius: 5px 5px 0 0;
+}
+.social-modal-min-full .modal-title, .social-modal-personal-page .modal-title {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+.social-modal-min-full .modal-body, .social-modal-personal-page .modal-body {
+  border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-modal-min-full .modal-block, .social-modal-personal-page .modal-block {
+    max-width: 100%;
+  }
+  .social-modal-min-full .modal-body, .social-modal-personal-page .modal-body {
+    height: calc(var(--vh, 1vh) * 100 - 56px);
+  }
+  .social-modal-min-full .modal-header, .social-modal-min-full .modal-body, .social-modal-min-full .modal-content, .social-modal-personal-page .modal-header, .social-modal-personal-page .modal-body, .social-modal-personal-page .modal-content {
+    border-radius: 0;
+  }
+  .social-modal-min-full .modal-content, .social-modal-personal-page .modal-content {
+    height: calc(var(--vh, 1vh) * 100 - 56px);
+  }
+  .social-modal-min-full .modal-dialog-centered, .social-modal-personal-page .modal-dialog-centered {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+/*彈跳視窗公版*/
+.social-modal {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.social-modal .modal-content {
+  border: 0;
+  background-color: #242424 !important;
+  border-radius: 5px;
+}
+.social-modal .modal-title {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+.social-modal .modal-body {
+  border-radius: 5px !important;
+  padding-top: 24px !important;
+  padding-bottom: 8px !important;
+}
+.social-modal .modal-body p {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .social-modal .modal-content {
+    width: 80vw;
+  }
+}
+/*彈跳視窗-返回按紐*/
+.btn-social-back {
+  background: none;
+  border: 0;
+  position: absolute;
+  left: 8px;
+}
+
+/*彈跳視窗-發佈按紐*/
+.btn-social-release {
+  position: absolute;
+  color: #242424;
+  background-color: #FFFFFF;
+  padding: 4px 12px;
+  right: 8px;
+  border: 0;
+  border-radius: 3px;
+}
+.btn-social-release input[type=submit] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/*彈跳視窗-右上關閉彈跳視窗按紐*/
+.btn-edit-social-close {
+  position: fixed;
+  right: 16px;
+  top: 8px;
+  opacity: 1;
+  -webkit-filter: drop-shadow(6px 6px 20px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(6px 6px 20px rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+
+/*彈跳視窗-右上關閉彈跳視窗Icon*/
+.edit-social-close-icon {
+  height: 25px;
+  width: 25px;
+}
+
+/*彈跳視窗-選單按鈕*/
+.btn-social-action-sheets-content {
+  border: 0;
+  border-top: 1px solid #808080;
+  background-color: #242424;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  border-radius: 0 0 5px 5px;
+}
+
+.btn-social-action-sheets-content:first-child {
+  border-radius: 5px;
+  border-top: 0;
+}
+
+/*彈跳視窗-選單取消按鈕*/
+.btn-social-close-action-sheets {
+  margin-top: 12px;
+  background-color: #242424;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: 0;
+}
+
+/*彈跳視窗-警示取消按鈕*/
+.btn-social-close-alerts {
+  background-color: #242424;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  margin-top: 12px;
+  border: 0;
+  border-top: 1px solid #808080;
+  border-radius: 0 0 5px 5px;
+}
+
+/*彈跳視窗-完成反饋*/
+.social-modal-complete {
+  padding-top: 56px !important;
+  padding-bottom: 56px !important;
+}
+
+.social-modal-complete-img {
+  width: 100px;
+  height: 100px;
+}
+
+.social-modal-complete-text {
+  color: #FFFFFF;
+  margin-top: 8px;
+}
+
+/*文章內頁*/
+.social-post .social-post-om-block, #social-personal-page .social-post-om-block, #social-message .social-post-om-block, #social-hashtag .social-post-om-block {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.social-post .social-post-om-content, #social-personal-page .social-post-om-content, #social-message .social-post-om-content, #social-hashtag .social-post-om-content {
+  border: 0;
+  background-color: #242424 !important;
+  border-radius: 5px;
+}
+.social-post .social-post-om-header, #social-personal-page .social-post-om-header, #social-message .social-post-om-header, #social-hashtag .social-post-om-header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px #808080;
+  border-radius: 5px 5px 0 0;
+}
+.social-post .social-post-om-title, #social-personal-page .social-post-om-title, #social-message .social-post-om-title, #social-hashtag .social-post-om-title {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.social-post .social-post-om-body, #social-personal-page .social-post-om-body, #social-message .social-post-om-body, #social-hashtag .social-post-om-body {
+  height: calc(var(--vh, 1vh) * 80);
+  border-radius: 0 0 5px 5px;
+  padding: 0;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post, #social-personal-page, #social-message, #social-hashtag {
+    padding-bottom: 56px;
+    background-color: #242424;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
+    z-index: 200;
+  }
+  .social-post .social-post-om-body, #social-personal-page .social-post-om-body, #social-message .social-post-om-body, #social-hashtag .social-post-om-body {
+    height: 100%;
+  }
+  .social-post .social-post-om-header, .social-post .social-post-om-body, #social-personal-page .social-post-om-header, #social-personal-page .social-post-om-body, #social-message .social-post-om-header, #social-message .social-post-om-body, #social-hashtag .social-post-om-header, #social-hashtag .social-post-om-body {
+    border-radius: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .social-post .social-post-om-body {
+    height: 100%;
+  }
+}
+/*文章內頁-影片預覽區塊*/
+.social-post-video-block {
+  width: 650px;
+  max-width: 100%;
+  height: 100%;
+  border-right: 1px solid #808080;
+}
+
+.social-post-video {
+  height: calc(var(--vh, 1vh) * 80);
+  width: 100%;
+  background: #1d1d1d;
+}
+.social-post-video img, .social-post-video video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video-social-preview-sizing {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-video-block {
+    width: 100%;
+    border-right: 0px solid #808080;
+    border-bottom: 0px solid #808080;
+  }
+
+  .social-post-video {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+/*文章內頁-圖片*/
+.social-post-img-block {
+  width: 650px;
+  max-width: 100%;
+  border-right: 1px solid #808080;
+}
+
+.social-post-img {
+  height: calc(var(--vh, 1vh) * 80);
+  width: 100%;
+}
+.social-post-img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.social-post-img .modal-body {
+  padding: 0;
+}
+
+.social-post-swiper-pagination, .social-notify-report-article-swiper-pagination {
+  bottom: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.social-post-swiper-pagination .swiper-pagination-bullet, .social-post-swiper-pagination .swiper-pagination-bullet-active-prev-prev, .social-post-swiper-pagination .swiper-pagination-bullet-active-prev, .social-post-swiper-pagination .swiper-pagination-bullet-active-next, .social-post-swiper-pagination .swiper-pagination-bullet-active-next-next, .social-notify-report-article-swiper-pagination .swiper-pagination-bullet, .social-notify-report-article-swiper-pagination .swiper-pagination-bullet-active-prev-prev, .social-notify-report-article-swiper-pagination .swiper-pagination-bullet-active-prev, .social-notify-report-article-swiper-pagination .swiper-pagination-bullet-active-next, .social-notify-report-article-swiper-pagination .swiper-pagination-bullet-active-next-next {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  opacity: 1;
+}
+.social-post-swiper-pagination .swiper-pagination-bullet-active, .social-notify-report-article-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #FFFFFF;
+  opacity: 1;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-img-block {
+    width: 100%;
+    border-right: none;
+    position: relative;
+  }
+
+  .social-post-img {
+    height: auto;
+    width: 100%;
+    position: static;
+  }
+
+  .social-post-swiper-pagination {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    bottom: -28px !important;
+  }
+}
+/*文章內頁-內容區塊*/
+.social-post-content-block {
+  width: 350px;
+  max-width: 100%;
+  height: calc(var(--vh, 1vh) * 80);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.social-post-content-block::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-content-block {
+    height: calc(100% + 48px);
+    min-height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+}
+/*文章內頁-標頭區塊*/
+.social-post-header {
+  position: relative;
+  min-height: 50px;
+  max-height: 100%;
+  width: 100%;
+  padding: 8px 12px;
+  border-bottom: 1px solid #808080;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-post-author-block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.social-post-author-img {
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.social-post-author-name, .social-post-check-in {
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-left: 8px;
+  margin-right: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+.social-post-author-name:hover, .social-post-check-in:hover {
+  color: #FFFFFF;
+}
+
+.social-post-check-in {
+  font-size: 12px;
+}
+
+.social-post-other-block {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.social-post-follow {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+.social-post-follow:hover {
+  color: #FFFFFF;
+}
+
+.social-post-more {
+  font-size: 12px;
+  color: #FFFFFF;
+  padding: 0;
+  letter-spacing: 3px;
+}
+.social-post-more:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*文章內頁-文字內容區塊*/
+@media (min-width: 1098.99px) {
+  .social-post-body {
+    min-height: calc(var(--vh, 1vh) * 100 - 176px);
+  }
+}
+.social-post-body-user {
+  position: relative;
+  max-height: 100%;
+  width: 100%;
+  padding: 0px 12px 4px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-post-title, .social-post-content {
+  background-color: #242424;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 12px 4px;
+  border-radius: 0 !important;
+  font-weight: 300;
+}
+
+.social-post-title {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+
+.social-post-content {
+  font-size: 16px;
+  padding-top: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-title {
+    font-size: 18px;
+    padding-top: 0;
+  }
+
+  .social-post-content {
+    font-size: 16px;
+  }
+}
+/*文章內頁-資訊區塊*/
+.social-post-meta {
+  color: #808080;
+  padding: 0 12px 8px;
+  border-bottom: 1px solid #808080;
+  font-size: 14px;
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-post-date {
+  margin-top: 2px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-date {
+    margin-top: 6px;
+  }
+}
+.social-post-tag-friend {
+  float: right;
+  border: 1px solid #808080;
+  border-radius: 100px;
+  padding: 6px 12px !important;
+  cursor: pointer;
+  line-height: 100%;
+  -webkit-appearance: none;
+}
+.social-post-tag-friend:hover {
+  background-color: #808080;
+  color: #242424;
+}
+
+/*文章內頁-互動區塊*/
+.social-post-interaction-block {
+  position: sticky;
+  bottom: -1px;
+  width: 100%;
+  z-index: 1;
+}
+
+/*文章內頁-回文提醒區塊*/
+.social-post-comment-reply-remind {
+  color: #FFFFFF;
+  background-color: #1d1d1d;
+  border-bottom: 1px solid #808080;
+  padding: 4px 0 4px 12px;
+}
+
+.social-post-comment-reply-remind-close {
+  width: 12px;
+  height: 12px;
+  float: right;
+  margin: 6px 12px;
+  cursor: pointer;
+}
+
+/*文章內頁-互動按鈕區塊*/
+.social-post-interaction {
+  width: 100%;
+  border-top: 1px solid #808080;
+  padding: 12px;
+  background-color: #242424;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-interaction {
+    padding-bottom: 8px;
+  }
+}
+.social-post-like {
+  float: left;
+  height: 100%;
+}
+
+.social-post-unlike-btn, .social-post-like-btn, .social-post-comment-btn, .social-post-share-btn {
+  height: 27px;
+  width: 27px;
+  margin-right: 10px;
+}
+.social-post-unlike-btn:hover, .social-post-like-btn:hover, .social-post-comment-btn:hover, .social-post-share-btn:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-unlike-btn, .social-post-like-btn, .social-post-comment-btn, .social-post-share-btn {
+    height: 34px;
+    width: 34px;
+    background-size: contain;
+  }
+}
+.social-post-like-btn {
+  background-image: url(../img/like_fill_red_social_post.svg);
+}
+
+.social-post-unlike-btn {
+  background-image: url(../img/like_outline_white.svg);
+}
+
+.social-post-comment-btn {
+  background-image: url(../img/comment_outline_white.svg);
+}
+
+.social-post-share-btn {
+  background-image: url(../img/share_outline_white.svg);
+}
+
+.social-post-like-number {
+  color: #FFFFFF;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-like-number {
+    color: #808080;
+  }
+}
+/*文章內頁-留言區塊*/
+.social-post-comment-block {
+  padding: 0 12px;
+  padding-bottom: 12px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-comment-block {
+    min-height: 100%;
+  }
+}
+.social-post-comment-count {
+  color: #FFFFFF;
+  padding: 8px 0 0 12px;
+  font-size: 14px;
+}
+
+.social-post-comment-single {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #808080;
+  margin-bottom: 0;
+}
+
+/* .social-post-comment-single:nth-last-child(-n+2)
+ * border-bottom: 0*/
+.social-post-comment-user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.social-post-comment-user-block {
+  margin-left: 12px;
+  width: calc(100% - 50px);
+}
+
+.social-post-comment-user-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #808080;
+  margin-bottom: 4px;
+}
+
+.social-post-comment-edit {
+  font-size: 8px;
+  float: right;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+.social-post-comment-edit:hover {
+  color: #FFFFFF;
+}
+
+.social-post-comment-user-content {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 4px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-comment-user-content {
+    font-size: 16px;
+  }
+}
+.social-post-comment-time {
+  color: #808080;
+  font-size: 14px;
+}
+
+.social-post-comment-input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8px;
+  background-color: #333333;
+  border-radius: 100px;
+}
+
+.social-post-comment-read-more {
+  margin: 0;
+  color: #808080;
+  font-weight: 300;
+  font-size: 14px;
+  cursor: pointer;
+}
+.social-post-comment-read-more:hover {
+  color: #FFFFFF;
+}
+.social-post-comment-read-more:before, .social-post-comment-read-more:after {
+  width: 38%;
+  background-color: #808080;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-comment-read-more:before, .social-post-comment-read-more:after {
+    width: 45%;
+    background-color: #808080;
+  }
+}
+@media (max-width: 767.99px) {
+  .social-post-comment-read-more:before, .social-post-comment-read-more:after {
+    width: 38%;
+    background-color: #808080;
+  }
+}
+.social-post-comment-input {
+  display: inline-block;
+  width: 80%;
+  background-color: #333333;
+  border-radius: 100px;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  border: 0;
+  font-size: 14px;
+}
+.social-post-comment-input:focus-visible {
+  outline: 0px;
+}
+
+.social-post-comment-submit {
+  width: 20%;
+  color: #808080;
+  background-color: #333333;
+  vertical-align: top;
+  border-radius: 100px;
+  padding: 8px 0;
+  border: 0;
+  font-size: 14px;
+}
+.social-post-comment-submit:hover {
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-comment-input, .social-post-comment-submit, .social-post-comment-read-more {
+    font-size: 16px;
+  }
+
+  .social-post-comment-input {
+    width: 90%;
+  }
+
+  .social-post-comment-submit {
+    width: 10%;
+  }
+}
+@media (max-width: 767.99px) {
+  .social-post-comment-input, .social-post-comment-submit, .social-post-comment-read-more {
+    font-size: 16px;
+  }
+
+  .social-post-comment-input {
+    width: 80%;
+  }
+
+  .social-post-comment-submit {
+    width: 20%;
+  }
+}
+/*文章內頁-回文區塊*/
+.social-post-comment-reply {
+  color: #808080;
+  cursor: pointer;
+  margin-left: 8px;
+  font-weight: 300;
+}
+.social-post-comment-reply:hover {
+  color: #FFFFFF;
+}
+
+.social-post-comment-reply-user-image {
+  width: 40px;
+  height: 40px;
+}
+
+.social-post-comment-reply-user-block {
+  margin-left: 8px;
+  width: calc(100% - 48px);
+}
+
+/*彈跳視窗 - 動態文章分享*/
+#social-post-share .social-post-share-modal-cotent {
+  padding: 20px;
+}
+#social-post-share .social-post-share-modal-title {
+  text-align: left;
+  border-bottom: 1px solid #FFFFFF;
+}
+#social-post-share .modal-body {
+  padding: 0 !important;
+  border-radius: 0;
+}
+#social-post-share .social-post-share-modal-sub-title {
+  color: #FFFFFF;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+#social-post-share .social-post-share-copy-link {
+  padding: 4px 8px;
+  background-color: #333333;
+  border: 0;
+  border-radius: 5px;
+  width: 84%;
+  color: #FFFFFF;
+}
+#social-post-share .btn-social-post-share-copy-link {
+  margin-left: 4px;
+  right: 0;
+}
+#social-post-share .btn-social-post-share-close {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+}
+#social-post-share .facebookShareBtn {
+  background-image: url(../img/facebook_outline_white.svg);
+}
+#social-post-share .facebookShareBtn:hover {
+  background-image: url(../img/facebookShareHoverIcon.png);
+}
+
+@media (max-width: 767.99px) {
+  #social-post-share .social-post-share-copy-link {
+    width: 100%;
+  }
+  #social-post-share .btn-social-post-share-copy-link {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+  #social-post-share .btn-social-post-share-close {
+    width: 16px;
+    height: 24px !important;
+  }
+}
+/*文章內頁 - 錯誤*/
+.social-post-error-block {
+  height: calc(var(--vh, 1vh) * 90);
+  color: #FFFFFF;
+  text-align: center;
+}
+
+@media (max-width: 1098.99px) {
+  .social-post-error-block {
+    height: calc(var(--vh, 1vh) * 100 - 105px);
+  }
+}
+.social-post-error-img {
+  margin-bottom: 32px;
+  width: 200px;
+}
+
+.social-post-error-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.btn-social-post-error {
+  background-color: #FFFFFF;
+  color: #1d1d1d;
+  padding: 4px 12px;
+  border-radius: 5px;
+  margin-top: 16px;
+}
+.btn-social-post-error:hover {
+  color: #1d1d1d;
+}
+
+.btn-social-post-error-text {
+  color: #FFFFFF;
+  margin-top: 12px;
+}
+.btn-social-post-error-text:hover {
+  color: #FFDC00;
+}
+
+@media (max-width: 767.99px) {
+  .social-post-error-img {
+    width: 150px;
+  }
+}
+/*檢舉功能*/
+.social-post-report-declare-block, .social-notify-report-content-block, .social-personal-page-block, .social-message-select-user-block {
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #808080;
+}
+
+.social-post-report-options-section {
+  overflow: auto;
+  height: 272px;
+}
+
+.social-notify-report-content-block {
+  overflow: auto;
+  height: 300px;
+  border-bottom: 0px solid #808080;
+}
+
+@media (max-width: 1098.99px) {
+  .social-notify-report-content-block {
+    height: calc(var(--vh, 1vh) * 60);
+  }
+}
+.social-post-report-options-block {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.social-post-report-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #808080;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.social-post-report-options:last-child {
+  border-bottom: 0px solid #808080;
+}
+
+.social-post-report-last-hr {
+  border-bottom: 1px solid #808080;
+  margin-bottom: 24px;
+}
+
+.social-post-report-title {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.social-post-report-content {
+  color: #808080;
+  font-size: 16px;
+}
+
+.btn-social-post-report-next {
+  color: #FFFFFF;
+}
+
+.social-post-report-radio {
+  width: 15px;
+  height: 15px;
+  accent-color: #1d1d1d;
+}
+
+.social-post-report-user-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.social-post-report-user-name {
+  color: #FFFFFF;
+  margin-left: 8px;
+  font-size: 20px;
+}
+
+.social-post-report-form {
+  background-color: #242424;
+  border: 1px solid #808080;
+  margin-bottom: 40px;
+}
+
+.social-post-report-user-search {
+  background: #333333;
+  border: 1px solid #333333;
+  color: #FFFFFF;
+  padding: 8px 12px 4px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.social-post-report-user-search::-webkit-input-placeholder {
+  color: #808080;
+}
+
+.social-post-report-user-search::-moz-placeholder {
+  color: #808080;
+}
+
+.social-post-report-user-search:-ms-input-placeholder {
+  color: #808080;
+}
+
+.social-post-report-user-search::-ms-input-placeholder {
+  color: #808080;
+}
+
+.social-post-report-user-search::placeholder {
+  color: #808080;
+}
+
+.btn-social-post-report-block {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: absolute;
+  bottom: 4px;
+  width: auto;
+  right: 0px;
+  left: 0px;
+  background-color: #242424;
+}
+
+.btn-social-post-report {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: none;
+  background-color: #FFFFFF;
+  color: #1d1d1d;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.btn-social-post-report-un-fill-in {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1098.99px) {
+  .btn-social-post-report-block {
+    bottom: 8px;
+  }
+
+  .social-post-report-options-section {
+    height: calc(var(--vh, 1vh) * 66);
+  }
+}
+@media (max-width: 1098.99px) and (max-height: 700px) {
+  .social-post-report-options-section {
+    height: calc(var(--vh, 1vh) * 60);
+  }
+}
+/*社群通知數字*/
+.social-notify-count {
+  background-color: #F22D2D;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+  color: #FFFFFF;
+  position: absolute;
+  font-size: 12px;
+  right: -10px;
+  top: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-notify-more {
+  width: 27px;
+  border-radius: 10px;
+  right: -16px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-notify-count {
+    right: 18px;
+  }
+
+  .social-notify-more {
+    right: 10px;
+  }
+
+  .social-message-count {
+    right: -8px;
+  }
+
+  .social-message-count-more {
+    right: -16px;
+  }
+}
+/*社群通知彈跳視窗*/
+#social-notify-modal {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 1098.99px) {
+  #social-notify-modal .modal-content {
+    height: 100%;
+  }
+  #social-notify-modal .modal-body {
+    height: calc(var(--vh, 1vh) * 80);
+    overflow: auto;
+  }
+  #social-notify-modal .modal-block {
+    max-width: 450px;
+    right: -330px;
+    top: 20px;
+  }
+}
+.social-notify-list-section {
+  overflow: auto;
+}
+
+@media (max-width: 1098.99px) {
+  .social-notify-list-section {
+    height: calc(var(--vh, 1vh) * 100 - 104px);
+  }
+}
+.social-notify-list-block {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.social-notify-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.social-notify-list:hover {
+  text-decoration: none;
+}
+
+.social-notify-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-left: 16px;
+}
+
+.social-notify-text-block {
+  margin-right: 16px;
+}
+
+.social-notify-text {
+  color: #FFFFFF;
+}
+
+.social-notify-time {
+  color: #808080;
+}
+
+.social-notify-post-image {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.social-notify-button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  right: 0 !important;
+  -webkit-appearance: none;
+}
+
+/*社群檢舉通知彈跳視窗*/
+.social-notify-report-img-block, .social-notify-report-video-block {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.social-notify-report-img, .social-notify-report-video {
+  width: 100%;
+  height: 100%;
+}
+
+.video-social-preview-sizing::-webkit-media-controls-enclosure {
+  display: none;
+}
+
+.social-notify-report-article-swiper-pagination {
+  position: static;
+  margin-top: 10px;
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+.social-post-report-account-user-img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  border-radius: 100%;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.social-post-report-account-user-name {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.social-post-report-account-user-intro {
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.social-post-report-grid-item {
+  width: 50%;
+}
+
+.btn-social-post-report-term {
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  color: #FFFFFF;
+}
+.btn-social-post-report-term:hover {
+  color: #FFFFFF;
+}
+
+/*個人主頁*/
+#social-personal-page {
+  min-height: 100%;
+}
+
+.social-personal-page-block {
+  border-bottom: 0px solid #808080;
+  padding-top: 0px;
+}
+
+.social-personal-page-more {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-left: 8px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-more {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    right: 8px;
+    position: absolute;
+  }
+}
+.social-personal-page-user-traffic-block {
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-user-traffic-block {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.social-personal-page-user-traffic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 350px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-user-traffic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.social-personal-page-traffic-number-block {
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.social-personal-page-traffic-name {
+  margin-left: 4px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-traffic-name {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 1098.99px) {
+  .social-personal-page-user-data-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.social-personal-page-user-img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  border-radius: 100%;
+  margin-right: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.social-personal-page-user-name {
+  color: #FFFFFF;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-user-name {
+    font-size: 16px;
+    margin-right: 0;
+  }
+}
+.social-personal-page-user-intro {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-user-intro {
+    font-size: 14px;
+  }
+}
+.edit-social-personal-page-name, .edit-social-personal-page-intro {
+  background-color: #333333;
+  border: none;
+  border-radius: 5px;
+  margin-top: 4px;
+  color: #FFFFFF;
+  padding: 8px 12px 4px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-interaction-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 8px;
+  }
+}
+.btn-social-personal-page-interaction {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  right: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 1098.99px) {
+  .btn-social-personal-page-interaction {
+    width: 50%;
+    margin-right: 4px;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+}
+.btn-social-personal-page-interaction:last-child {
+  margin-right: 0;
+}
+
+.social-personal-page-no-articles-block {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+}
+.social-personal-page-no-articles-block img {
+  width: 120px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-personal-page-no-articles-block {
+    height: calc(var(--vh, 1vh) * 70);
+  }
+}
+.social-modal-user-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8px;
+}
+
+.social-modal-follow-block {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.social-modal-user-options-section {
+  height: 453px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-modal-user-options-section {
+    height: calc(100% - 50px);
+  }
+}
+/*私訊頁*/
+.social-message-header, .social-message-chat-header {
+  border-radius: 5px 0 0 0 !important;
+  width: 400px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.social-message-chat-header {
+  width: 600px;
+  border-radius: 0 5px 0 0 !important;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-header, .social-message-chat-header {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+.social-message-edit {
+  width: 22px;
+}
+
+.social-message-list-page {
+  width: 400px;
+  border-right: 1px solid #808080;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-list-page {
+    border-right: 0px;
+    width: 100%;
+  }
+}
+.social-message-search-block, .social-message-list {
+  border-bottom: 0px;
+}
+
+.social-message-list {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-list {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-bottom: 1px solid #808080;
+  }
+
+  .social-message-list:nth-last-child(-n+2) {
+    border-bottom: 0px;
+  }
+}
+.social-message-list-section {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 74px);
+}
+
+.social-message-logs-content, .social-message-logs-user-name {
+  color: #808080;
+  margin-left: 8px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 250px;
+  max-width: 80%;
+}
+
+.social-message-logs-user-name {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin-bottom: -4px;
+}
+
+.social-message-more {
+  color: #808080;
+  font-size: 24px;
+}
+
+.social-no-message {
+  width: 120px;
+}
+
+/*沒有搜尋結果*/
+.social-message-list-search-not {
+  text-align: center;
+  color: #808080;
+  font-size: 14px;
+}
+
+/*撰寫新私訊 - 彈跳視窗*/
+.social-message-edit-section {
+  height: 204px;
+}
+
+.social-message-edit-form {
+  background-color: #242424;
+  border: 1px solid #808080;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px;
+}
+
+.social-message-edit-form::-webkit-input-placeholder {
+  color: #808080;
+}
+
+.social-message-edit-form::-moz-placeholder {
+  color: #808080;
+}
+
+.social-message-edit-form:-ms-input-placeholder {
+  color: #808080;
+}
+
+.social-message-edit-form::-ms-input-placeholder {
+  color: #808080;
+}
+
+.social-message-edit-form::placeholder {
+  color: #808080;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-edit-section {
+    height: calc(var(--vh, 1vh) * 56);
+  }
+}
+@media (max-width: 1098.99px) and (max-height: 700px) {
+  .social-message-edit-section {
+    height: calc(var(--vh, 1vh) * 51);
+  }
+}
+input.social-post-report-radio[type=checkbox] {
+  accent-color: #1d1d1d;
+}
+
+.social-message-select-user-block {
+  border-bottom: 0px;
+  padding-top: 0;
+  max-height: 72px;
+  overflow: auto;
+}
+
+.social-message-select-user {
+  color: #FFFFFF;
+  display: inline-block;
+  background: url(../img/close_outline_white.svg) center right no-repeat;
+  background-size: 30% 30%;
+  background-position-x: 105%;
+  background-color: #333333;
+  padding: 4px 25px 4px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 8px 8px 0;
+}
+
+/*私訊聊天室窗*/
+.social-message-chat-block {
+  height: 100%;
+  width: 600px;
+  max-width: 100%;
+  position: relative;
+  background-color: #242424;
+}
+
+.social-message-chat-content-block {
+  padding: 0px 16px 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*私訊聊天時間區塊*/
+.social-message-chat-time {
+  color: #808080;
+  text-align: center;
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-chat-time {
+    font-size: 12px;
+  }
+}
+/*私訊分享按鈕*/
+.social-message-chat-share-block {
+  border-radius: 100px;
+  background-color: #333333;
+  margin-left: 8px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-image: url(../img/message_share_outline_white.svg);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*私訊使用者區塊*/
+.social-message-chat-user, .social-message-chat-personal {
+  margin: 8px 0;
+}
+
+.social-message-chat-personal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.social-message-chat-personal .social-message-chat-content {
+  background-color: #FFFFFF;
+  color: #1d1d1d;
+}
+
+.social-message-chat-user .social-message-chat-content {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.social-message-chat-content-link-title {
+  font-size: 14px;
+}
+
+.social-message-chat-personal .social-message-chat-content-link-title {
+  color: #333333;
+}
+
+.social-message-chat-user .social-message-chat-content-link-title {
+  color: #FFFFFF;
+}
+
+.social-message-chat-content-link-description {
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.social-message-chat-user .social-message-chat-content-link-description {
+  color: #BBBBBB;
+}
+
+.social-message-chat-personal .social-message-chat-content-link-description {
+  color: #808080;
+}
+
+/*私訊聊天對方大頭照*/
+.social-message-chat-user-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+}
+
+/*私訊區塊樣式*/
+.social-message-chat-content {
+  display: inline-block;
+  margin-left: 8px;
+  border-radius: 10px;
+  max-width: 250px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-chat-content {
+    max-width: 200px;
+  }
+}
+/*私訊傳送文字*/
+.social-message-chat-content-part {
+  padding: 8px;
+  text-align: left;
+}
+
+/*私訊傳送文字顏色*/
+.social-message-chat-personal .social-message-chat-content-part a {
+  color: #836FFF;
+}
+
+.social-message-chat-user .social-message-chat-content-part a {
+  color: #CEDAF2;
+}
+
+/*私訊傳送影片*/
+.social-message-chat-content-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.social-message-chat-content-video::-webkit-media-controls-enclosure {
+  display: none;
+}
+
+.social-message-chat-content-post-user-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+}
+
+.social-message-chat-content-post-user-name {
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.social-message-chat-content-post-title {
+  padding: 8px;
+  font-size: 14px;
+}
+
+/*私訊傳送個人主頁*/
+.social-message-chat-content-personal-page-img-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 4px 4px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.social-message-chat-content-personal-page-img {
+  width: 50%;
+  height: 120px;
+  padding: 4px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.social-message-chat-content-personal-page {
+  width: 250px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-chat-content-personal-page {
+    width: 200px;
+  }
+}
+/*私訊傳送網址*/
+.social-message-chat-user-content-link, .social-message-chat-user-content-text a {
+  padding-left: 8px;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.social-message-chat-user-content-link {
+  color: #CEDAF2;
+}
+.social-message-chat-user-content-link:hover {
+  color: #CEDAF2;
+}
+
+.social-message-chat-user-content-text a {
+  color: #836FFF;
+}
+.social-message-chat-user-content-text a:hover {
+  color: #836FFF;
+}
+
+.social-message-chat-content-link {
+  padding: 8px;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+
+/*已讀*/
+.social-message-chat-read {
+  font-size: 14px;
+  color: #BBBBBB;
+}
+
+/*私訊輸入框*/
+.social-message-chat-input-block {
+  position: sticky;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #242424;
+  padding: 12px 16px 16px;
+}
+
+.social-message-chat-input-upload {
+  margin-right: 12px;
+  width: 28px;
+  height: 28px;
+  background-image: url(../img/picture_outline_white.svg);
+  background-size: contain;
+}
+
+.social-message-chat-input {
+  width: 88%;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-chat-input {
+    width: 80%;
+  }
+}
+.social-message-chat-submit {
+  width: 12%;
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-chat-submit {
+    width: 20%;
+  }
+}
+@media (max-width: 1098.99px) {
+  #social-message-chat-block .modal-content {
+    height: calc(var(--vh, 1vh) * 100 - 56px);
+  }
+}
+/*封鎖後輸入框樣式*/
+.social-message-chat-input-blockade-block {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
+.social-message-chat-input-blockade-btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-message-chat-input-blockade-cancel {
+  color: #FFFFFF;
+}
+.social-message-chat-input-blockade-cancel:hover {
+  color: #FFFFFF;
+}
+
+/*私訊詳情頁*/
+.social-message-chat-more-block {
+  width: 100%;
+}
+
+.social-message-chat-more {
+  padding: 16px;
+}
+
+.social-message-chat-more-title {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.social-message-chat-more-btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 8px;
+}
+
+.social-message-more-close {
+  top: 12px;
+}
+
+/*私訊傳送圖片 - 全螢幕預覽*/
+.social-message-chat-img-full {
+  max-height: calc(var(--vh, 1vh) * 90);
+  max-width: 100vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: rgba(0, 0, 0, 0);
+}
+
+/*分享彈跳視窗 - 私訊ICON*/
+#social-post-share .social-message-share-btn {
+  background-image: url(../img/message_share_outline_white_circle.svg);
+  cursor: pointer;
+}
+#social-post-share .social-message-share-btn:hover {
+  background-image: url(../img/message_share_outline_white_circle_hover.svg);
+}
+
+@media (max-width: 1098.99px) {
+  .social-message-chat-block {
+    width: 100%;
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100 - 97px);
+  }
+}
+/*私訊按鈕與已讀功能放置區塊*/
+.social-message-chat-interaction-block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+}
+
+/*搜尋功能彈跳視窗*/
+.social-search-options-section {
+  height: 354px;
+}
+
+@media (max-width: 1098.99px) {
+  .social-search-options-section {
+    height: calc(var(--vh, 1vh) * 100 - 202px);
+  }
+}
+.social-search-check-in-block, .social-search-hashtag-name {
+  margin-left: 8px;
+  line-height: 1.4;
+}
+
+.social-search-check-in-name, .social-search-hashtag-name {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.social-search-check-in-address {
+  font-size: 14px;
+  color: #808080;
+}
+
+.social-search-list-delete-btn {
+  height: 16px;
+  width: 16px;
+  background-image: url(../img/close_outline_808080.svg);
+  background-size: auto;
+}
+.social-search-list-delete-btn:hover {
+  background-image: url(../img/close_outline_white.svg);
+}
+
+.social-search-list-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 16px 4px 16px;
+}
+
+/*標註與打卡頁*/
+.social-hashtag-title-image {
+  width: 50px;
+  height: 50px;
+}
+
+.social-hashtag-content-title, .social-hashtag-content-post-count {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 16px;
+  color: #FFFFFF;
+}
+
+.social-hashtag-content-post {
+  margin-left: 8px;
+}
+
+.social-hashtag-block {
+  max-width: 1000px;
+  margin: 24px auto;
+}
+
+@media (max-width: 1098.99px) {
+  .social-hashtag-block {
+    margin: 16px;
+  }
+}
+.social-hashtag-no-articles-block, .social-check-in-no-articles-block {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(var(--vh, 1vh) * 85);
+}
+
+.social-check-in-no-articles-block {
+  height: calc(var(--vh, 1vh) * 65);
+}
+
+@media (max-width: 1098.99px) {
+  .social-check-in-no-articles-block {
+    height: calc(var(--vh, 1vh) * 55);
+  }
+}
+.social-check-in-iframe {
+  width: 1000px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  border: 0;
+}
+
+/*# @ 選擇視窗*/
+.social-tag-block {
+  border: 0;
+  background-color: #333333;
+  padding: 0px 8px;
+  max-height: 250px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 1098.99px) {
+  .social-tag-block {
+    max-height: 160px;
+  }
+
+  .edit-social-tag-block {
+    width: calc(100% - 32px);
+  }
+}
+.social-tag-list {
+  color: #FFFFFF;
+  font-size: 18px;
+  border-bottom: 1px solid #808080;
+  padding: 8px 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-tag-list:last-child {
+  border: 0;
+}
+
+.social-tag-list-user-image {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+/*編輯器 - 打卡與標註朋友*/
+.edit-social-check-in-select-block {
+  padding: 8px 35px 8px 12px;
+  background-position-x: 96%;
+  background-size: 15px;
+}
+
+.edit-social-post-check-in-options-section {
+  height: 379px;
+}
+
+@media (max-width: 1098.99px) {
+  .edit-social-post-check-in-options-section {
+    height: calc(var(--vh, 1vh) * 100 - 177px);
+  }
+}
+.social-tag-list-user-name, .social-tag-list-user-name-id {
+  line-height: 1.1;
+}
+
+.social-tag-list-user-name-id {
+  font-size: 16px;
+  color: #808080;
+}

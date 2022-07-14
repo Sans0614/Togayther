@@ -1,0 +1,918 @@
+/*
+1.變數
+2.定義會員整個區塊
+3.會員首頁  左邊區塊
+4.會員首頁  右上區塊
+5.會員首頁  右下區塊 文章收藏 
+6.文章收藏頁面
+7.全站優惠券列表
+8.搜尋
+9.coupon介紹頁
+10.點數通知
+11.共用
+12.off canvas
+*/
+
+
+
+/*1.變數*/
+:root {
+	--main-color: #1d1d1d;
+	--text-title-color: #1d1d1d;
+	--text-p-color: #070707;
+	--text-gray-color: #bbb;
+	--fs-large: 32px;
+	--fs-normal: 18px;
+	--fs-small: 14px;
+}
+
+
+/*2.定義會員整個區塊*/
+
+.member-area {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 390px 590px;
+	font-family: "Noto Serif TC";
+}
+
+@media (max-width:768px) {
+	.member-area {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+
+/*3.會員首頁  左邊區塊*/
+.member-profile {
+	grid-column: 1;
+	grid-row: 1/3;
+	overflow: hidden;
+}
+
+.avatar {
+	position: relative;
+	height: 284px;
+}
+
+.avatar-pic {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	border: 5px solid #fff;
+	box-sizing: border-box;
+	transform: translateY(-50%);
+}
+
+.avatar-bg-pic {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.avatar-bg img {
+	width: 100%;
+}
+
+.section-count {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.member-birth{
+	color:#bbb;
+	font-weight:300;
+	font-size:var(--fs-normal);
+}
+
+.count-num1,
+.count-num2,
+.count-num3 {
+	flex-basis: 64px;
+	position: relative;
+	font-weight: 300;
+}
+
+.count-num1::after,
+.count-num2:after,
+.count-num3:after {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	color: #bbb;
+	font-size: 16px;
+	content: '文章收藏';
+}
+
+.count-num2::after {
+	content: '會員登入';
+}
+
+.count-num3::after {
+	content: '邀請會員';
+}
+
+
+
+
+
+/*4.會員首頁  右上區塊*/
+.member-card {
+	font-weight: 300;
+}
+
+.member-card-cover {
+	border-radius: 3px;
+	color: #fff;
+	min-height: 200px;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-image: url(../img/memberCard.jpg); 
+	/*background-position: top -10px right 10% ;*/
+}
+/*@media (max-width:768px) {
+	.member-card-cover {
+		background-position: top -10px right -80px;
+		background-size: 65%;
+	}
+}*/
+
+.member-card-cover-title {
+	color: #fff;
+	font-size: var(--fs-normal);
+	display: flex;
+}
+
+.member-card-cover-title .card-number {
+	margin-left: auto;
+	font-size: 16px;
+}
+
+.member-card-cover-slogan {
+	color: #fff;
+	font-size: var(--fs-large);
+	font-weight: 500;
+}
+
+.topic-collection {
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.topic-collection h2 {
+	font-size: 20px;
+	color: var(--main-color);
+}
+
+.inviteBtn{
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.16);
+}
+.inviteBtn:before{
+	content: "";
+	display: inline-block;
+	height: 20px;
+	width: 25px;
+	background-image: url('../img/shareInvite.svg');
+	background-size: contain;
+	vertical-align: sub;
+	margin-right: 10px;
+}
+
+
+/*5.會員首頁  右下區塊 文章收藏  */
+.collection {
+	max-width: 263px;
+	width: 100%;
+	overflow: hidden;
+}
+@media (max-width:768px) {
+	.collection {
+		max-width: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+
+.collection-title {
+	min-height: 70px;
+}
+
+.collection-title,
+.collection-title a {
+	font-family: "Noto Serif TC";
+	font-size: var(--text-normal);
+	color: var(--text-title-color);
+	font-weight: 700;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	letter-spacing: 2px;
+}
+
+.collection img {
+	width: 263px;
+	height: 150px;
+	object-fit: cover;
+}
+@media (max-width:768px) {
+	.collection img {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+.collection-type {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--text-gray-color);
+	font-size: var(--fs-small);
+}
+
+.collection-button-prev i,
+.collection-button-next i {
+	color: var(--main-color);
+}
+
+.member-area .title {
+	font-size: 32px;
+}
+
+
+/*6.文章收藏頁面*/
+.collections-list {
+	position: relative;
+}
+
+.collections-list-collection {
+	min-height: 330px;
+	overflow: hidden;
+}
+
+.collections-list-collection img {
+	width: 320px;
+	height: 200px;
+	object-fit: cover;
+}
+
+@media (max-width:992px) {
+	.collections-list-collection img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+}
+
+.addFavrite-icon,
+.addFavrite-icon:hover {
+	width: 30px;
+	height: 30px;
+	background: url("../img/saveOutlineIcon.svg") center center no-repeat;
+	background-size: 50%;
+	cursor: pointer;
+}
+
+.addFavrite-icon:hover,
+.addFavrite-icon.add {
+	background: url("../img/saveFullIcon.svg") center center no-repeat;
+	background-size: 50%;
+}
+
+.collections-list .filter-section {
+	width: 200px;
+	position: absolute;
+	top: 0;
+	left: -230px;
+}
+@media (max-width:1500px) and (min-width:1200px){
+	.collections-list .filter-section {
+		display:none!important;
+	}
+	.filter-btn{
+		display:block!important;
+	}
+
+}
+
+@media (min-width:1501px) {
+	.filter-btn{
+		display:none!important;
+	}
+	.filter-select{
+		margin-left:auto;
+	}
+
+}
+
+
+/*7.全站優惠券列表*/
+
+.coupon-list-collection {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.coupon-list-collection img {
+	width: 320px;
+	height: 150px;
+	object-fit: cover;
+}
+
+@media (max-width:992px) {
+	.coupon-list-collection img {
+		width: 100%;
+		height: 150px;
+		object-fit: cover;
+	}
+}
+
+.coupon-title,
+.coupon-title a {
+	font-family: "Noto Serif TC";
+	font-size: var(--text-normal);
+	color: var(--text-title-color);
+	font-weight: 700;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	letter-spacing: 2px;
+}
+
+.coupon-description,
+.coupon-time {
+	font-size: var(--fs-small);
+	color: var(--text-gray-color);
+}
+
+.coupon-detail {
+	position: relative;
+}
+
+.coupon-detail .status {
+	position: absolute;
+	top: 116px;
+	right: 0;
+}
+
+
+.mark {
+	display: inline-block;
+	border-radius: 100px;
+	box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.25);
+	background-color: #f5f5f5;
+	font-size: var(--fs-small);
+}
+
+.get-coupon {
+	display: flex;
+	justify-content: space-between;
+}
+.btn-getcoupon{
+	border-radius: 3px;
+	background-color: #1c1c1c;
+	color: #fff;
+	font-size: var(--fs-small);
+	transition:  .3s ease-out box-shadow;
+	display: flex;
+	align-items: center;
+}
+
+.btn-getcoupon:hover {
+	color: #fff;
+	box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-coupon-not-enough{
+	background-color: #1c1c1c;
+	opacity: 0.6;
+}
+
+.btn-delete-coupon-block{
+	height: 26px;
+    width: 26px;
+    background-color: #FFF;
+    border-radius: 100px;
+    cursor: pointer;
+	position: absolute;
+	z-index: 500;
+	right: 24px;
+    top: 8px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.6)
+}
+
+
+.btn-delete-coupon{
+	height: 14px;
+    width: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-image: url(../img/closeIcon.svg);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.point {
+	color: var(--text-gray-color);
+}
+
+.coupon-code{
+	color: #FF0000;
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+.point-num {
+	color: #f00;
+	font-size: 24px;
+	font-weight: 300;
+}
+.use-limit{
+	color:#727272;
+	font-size:16px;
+}
+.use-limit-big{
+	color: #f00;
+	font-size:20px;
+
+}
+/*8.搜尋*/
+.search-result,
+.search-result .btn-link {
+	font-size: 16px;
+	color: var(--text-gray-color);
+}
+
+.search-item {
+	border: 1px solid #bbb;
+	color: var(--text-title-color);
+	display: inline-block;
+	cursor: pointer;
+	background: url(../img/close.svg) center right no-repeat;
+	background-size: 30% 30%;
+	background-position-x: 105%;
+	padding-right: 25px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.clear-allitem{
+	display:inline-block;
+}
+.search-bar {
+	width: 200px;
+	height: 34px;
+	border-radius: 5px;
+	border: solid 1px #bbb;
+	background-color: #fff;
+	display: flex;
+}
+.search-bar:hover{
+	border: solid 1px #1d1d1d;
+}
+.search-bar .btn-link {
+	color: #1b1b1b;
+}
+.search-bar:hover{
+	border: solid 1px #1d1d1d;
+}
+.search-bar:hover >  .search-icon{
+	background: url("../img/searchClickIcon.svg") center center no-repeat;
+	background-size: 50%;
+}
+.search-bar input {
+	height: 100%;
+}
+
+.search-icon,
+.search-icon:hover {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url("../img/searchIcon.svg") center center no-repeat;
+	background-size: 50%;
+	cursor: pointer;
+}
+
+.search-icon:hover {
+	background: url("../img/searchClickIcon.svg") center center no-repeat;
+	background-size: 50%;
+}
+
+.search-by-type {
+	font-size: var(--fs-normal);
+	display: flex;
+	justify-content: space-between;
+}
+
+.search-by-type-checkbox {
+	font-size: 16px;
+	color: #bbb;
+	padding-left: 0;
+}
+
+
+/*9.coupon介紹頁*/
+.coupon-content {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.coupon-content img {
+	width: 100%;
+	max-width: 800px;
+	max-height: 350px;
+	height: auto;
+	object-fit: cover;
+}
+
+.single-coupon-detail {
+	padding: 0 100px;
+}
+
+@media (max-width:768px) {
+	.single-coupon-detail {
+		padding: 0 20px;
+	}
+}
+
+.single-coupon-detail-img {
+	position: relative;
+}
+.single-coupon-detail-img img{
+	display:block;
+}
+.single-coupon-detail-img .detail-status {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.single-coupon-detail .coupon-time,
+.single-coupon-detail .coupon-store,
+.single-coupon-detail .coupon-description {
+	color: var(--text-title-color);
+	font-size: 16px;
+}
+
+
+
+.single-coupon-detail .point-num {
+	color: #f00;
+	font-size: 42px;
+}
+@media (max-width:768px) {
+	.single-coupon-detail .point-num {
+		font-size: 30px;
+	}
+}
+
+.coupon-detail-title {
+	font-family: "Noto Serif TC";
+	font-weight: 700;
+	font-size: 24px;
+	color: var(--text-title-color);
+}
+
+/*10.點數通知*/
+.notification {
+	position: relative;
+	z-index: 1501;
+	margin-top: 48px;
+	display: none;
+}
+
+.notification-pop {
+	width: 340px;
+	min-height: 137px;
+	border-radius: 3px;
+	box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.16);
+	border: solid 1px #bbb;
+	background-color: #fff;
+	position: absolute;
+    right: 0;
+}
+@media (max-width:768px) {
+	.notification-pop {
+		width: 320px;
+	}
+}
+
+.notification-title {
+	border-bottom: 1px solid #8ccccc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: var(--fs-normal);
+	color: var(--text-title-color);
+}
+
+.notification-content {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #8ccccc;
+}
+.notification-content:last-of-type{
+	border-bottom: none;
+}
+
+.points {
+	background: #ff3939;
+	color: #fff;
+	font-size: 24px;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media (max-width:768px) {
+	.points {
+		background: #ff3939;
+		color: #fff;
+		font-size: 16px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.close-notification {
+	width: 21px;
+	height: 21px;
+	background: #efefef;
+	border-radius: 100%;
+	position: relative;
+	transform: rotate(45deg);
+}
+
+.close-notification::before {
+	content: '';
+	width: 1px;
+	height: 9px;
+	background: #727272;
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	z-index: 999;
+}
+
+.close-notification::after {
+	content: '';
+	width: 9px;
+	height: 1px;
+	background: #727272;
+	position: absolute;
+	top: 10px;
+	left: 6px;
+}
+
+/*11.共用*/
+.mycontainer {
+	min-height: 800px;
+	margin-top:50px;
+}
+@media (max-width:768px) {
+	.mycontainer {
+		margin-top:30px;
+	}
+}
+.fs20 {
+	font-size: 20px;
+}
+
+.fs28 {
+	font-size: 28px;
+}
+
+.gray {
+	color: var(--text-gray-color);
+}
+
+.yellow {
+	color: #fee406;
+}
+
+.member-area .rounded {
+	border-radius: 15px !important;
+}
+
+.member-area .shadow {
+	box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16) !important;
+}
+
+.shadow2 {
+	box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+
+.myselect,
+.mybutton {
+	width: 190px;
+	height: 34px;
+	border-radius: 3px;
+	border: solid 1px #bbb;
+	background-color: #fff;
+	display: inline-block;
+	color:#1d1d1d;
+}
+.myselect{
+	display:flex;
+	align-items: center;
+}
+.myselect img{
+	margin-left:auto;
+	width:12px;
+}
+
+.ok,
+.failure {
+	font-size: var(--fs-small);
+	color: #5fad58;
+}
+
+.failure {
+	color: #ff0000;
+}
+
+.link-small {
+	font-size: var(--fs-small);
+	color: var(--text-gray-color);
+}
+
+
+.icon-success{
+	width:60px;
+	height:60px;
+	background:url("../img/successIcon.svg") center center no-repeat;
+	background-size: cover;
+	display:inline-block;
+}
+@media (max-width:768px) {
+	.myselect,
+	.mybutton {
+		width: 100%;
+		height: 34px;
+		border-radius: 5px;
+		border: solid 1px #bbb;
+		background-color: #fff;
+		color: #1d1d1d;
+		font-size: var(--fs-small)
+	}
+
+}
+
+.collapse input[type=checkbox]:checked+label {
+	color: #1b1b1b;
+	background: #fff;
+
+}
+
+.collapse input[type=checkbox] {
+	display: none;
+}
+
+.collapse input[type=checkbox]+label {
+	display: inline-block;
+	padding-left: 22px;
+	line-height: 15px;
+	background: url(../img/not-checked.svg) no-repeat;
+	user-select: none;
+}
+
+.collapse input[type=checkbox]:checked+label {
+	background: url(../img/checked.svg) no-repeat;
+}
+
+.collapse input[type=radio] {
+	display: none;
+}
+
+.collapse input[type=radio]+label {
+	display: inline-block;
+	padding-left: 22px;
+	line-height: 15px;
+	background: url(../img/not-radio.svg) no-repeat;
+	user-select: none;
+}
+
+.collapse input[type=radio]:checked+label {
+	background: url(../img/radio.svg) no-repeat;
+	color: #1b1b1b;
+}
+
+.white-header {
+	background: #fff;
+}
+
+.filter-header a {
+	display: flex;
+	justify-content: space-between;
+	font-size:18px;
+}
+
+.filter-header a img {
+	transform: rotate(180deg);
+	transition: 0.3s transform ease-in-out;
+	width: 10px;
+}
+
+.filter-header a.collapsed img {
+	transform: rotate(0);
+}
+
+.bottom-green-line {
+	border-bottom: 1px solid #8ccccc;
+}
+
+.red {
+	color: #ff0000;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+	background-color:#f5f5f5!important;
+	color:var(--text-title-color)!important;
+}
+.dropdown-menu.show{
+	width:190px;
+}
+@media (max-width:768px) {
+	.dropdown-menu.show{
+		width:100%;
+	}
+}
+
+.dropdown-menu.show .dropdown-item{
+	padding: 0.25rem 0.75rem;
+}
+/*12.off canvas*/
+.bs-canvas-overlay {
+	opacity: 0;
+	z-index: -1;
+}
+
+.bs-canvas-overlay.show {
+	opacity: 0.85;
+	z-index: 1100;
+
+}
+
+.bs-canvas {
+	top: 0;
+	width: 0;
+	z-index: 1500;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #fff;
+}
+
+.bs-canvas-left {
+	left: 0;
+	box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.bs-canvas-right {
+	right: 0;
+}
+
+.bs-canvas-anim {
+	transition: all .4s ease-out;
+	-webkit-transition: all .4s ease-out;
+	-moz-transition: all .4s ease-out;
+	-ms-transition: all .4s ease-out;
+}
+
+.bg-black {
+	z-index: 1009;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.btn-link>.postbtn:hover{
+	color: #0056b3;
+	text-decoration: none;
+}
+
+.dropdown-toggle::after {
+	display:none;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.992" height="20" viewBox="0 0 24.992 20">
+  <g id="组_993" data-name="组 993" transform="translate(-1233.008 -339)">
+    <path id="路径_46" data-name="路径 46" d="M449.508,254.644a10.022,10.022,0,0,0-4.27-3.225,5.773,5.773,0,1,0-7.348,0,9.986,9.986,0,0,0-6.323,9.295v.481h19.994v-.481A9.955,9.955,0,0,0,449.508,254.644Zm-12.755-7.677a4.811,4.811,0,1,1,1.409,3.4A4.793,4.793,0,0,1,436.753,246.968Zm-2.369,8.261a9.049,9.049,0,0,1,4.514-3.144,5.749,5.749,0,0,0,5.332,0,9.021,9.021,0,0,1,6.355,8.149H432.543A8.987,8.987,0,0,1,434.384,255.229Z" transform="translate(801.441 97.805)" fill="#fff"/>
+    <g id="组_992" data-name="组 992">
+      <g id="椭圆_206" data-name="椭圆 206" transform="translate(1249 343)" fill="none" stroke="#fff" stroke-width="1">
+        <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+        <circle cx="4.5" cy="4.5" r="4" fill="none"/>
+      </g>
+      <path id="路径_281" data-name="路径 281" d="M1251.032,347.5h4" transform="translate(0.383)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+      <path id="路径_282" data-name="路径 282" d="M1251.032,347.5h4" transform="translate(1600.915 -905.532) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

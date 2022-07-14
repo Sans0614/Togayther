@@ -1,0 +1,1056 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/style.css')
+  body
+    // partial:index.partial.html
+    #slider
+      .swiper.mySwiper.bannerSwiper
+        .swiper-wrapper
+          .swiper-slide
+            a.pcbanner(href='')
+              img(src='https://togayther.com/upload/banner//e03761b8e36c89de00bdaf46ac3a6194.jpg' alt='')
+            a.mbbanner(href='')
+              img(src='https://togayther.com/upload/banner//e8cd127969bb16de3dd150bfb263ef2e.jpg' alt='')
+          .swiper-slide
+            a.pcbanner(href='')
+              img(src='https://togayther.com/upload/banner//f35f58f69fdb08efd6b9e09f8c9219f5.jpg' alt='')
+            a.mbbanner(href='')
+              img(src='https://togayther.com/upload/banner//acd1e5a9ac911d117a8a8acea3fcba4a.jpg' alt='')
+          .swiper-slide
+            a.pcbanner(href='')
+              img(src='https://togayther.com/upload/banner//c75d23462062194ed5e19da0f03abbb3.jpg' alt='')
+            a.mbbanner(href='')
+              img(src='https://togayther.com/upload/banner//3b25aca47b634e2198312c78547fae86.jpg' alt='')
+        .swiper-button-next
+        .swiper-button-prev
+        .swiper-pagination.Bannerswiper-pagination
+    //20220622新增 #categorysection 區塊，並把#categorybar 推到該區塊裡面
+    #categorysection
+      a.category-social-btn(href='/social')
+        img(src='./img/navbar/index_web_fill_gradient.svg')
+        .category-social-btn-text 社群
+
+      #categorybar
+        .d-flex
+          a.flex-fill(href='#hotIssue') 發燒話題
+          a.flex-fill(href='#youtube') 精選頻道
+          a.flex-fill(href='#craftsman') 品味職人
+          a.flex-fill(href='#mediaEntertainment') 影音娛樂
+          a.flex-fill(href='#livingConsumption') 生活消費
+          a.flex-fill(href='#foodTravel') 美食旅遊
+          a.flex-fill(href='#fashion') 潮流時尚
+          a.flex-fill(href='#sports') 運動健康
+          a.flex-fill(href='#links') 友善連結
+    #hotIssue.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 發燒話題
+            span.categorySubTitle HOT ISSUE
+          article.col-md-6.postCard-first
+            a(href='/') 
+              article.postCard.postCardh4
+                a(href='/')
+                  article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/LOL-1.jpg)')
+                article.postContent
+                  a(href='/')
+                    h3.postTitle.postTitle-first.ellipsis 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                  .metaBlock
+                    a(href='/')
+                    a(href='/')
+                      h5.meta 2021/09/23
+                    a(href='/')
+                      h5.meta.metacategory 發燒話題
+                  .saveBlock
+                    a(href="##") 
+                      img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                    a(href="##") 
+                      img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+              article.postCard.postCardh4
+                a(href='/')
+                  article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/%E6%9C%AA%E5%91%BD%E5%90%8D-1.png)')
+                article.postContent
+                  a(href='/')
+                    h3.postTitle.ellipsis
+                      | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦
+                  .metaBlock
+                    a(href='/')
+                    a(href='/')
+                      h5.meta 2021/09/23
+                    a(href='/')
+                      h5.meta.metacategory 發燒話題
+                  .saveBlock
+                    a(href="##") 
+                      img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                    a(href="##") 
+                      img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+              article.postCard.postCardh4
+                a(href='/')
+                  article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/615EC794B91761633601428.jpeg)')
+                article.postContent
+                  a(href='/')
+                    h3.postTitle.ellipsis
+                      | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                  .metaBlock
+                    a(href='/')
+                    a(href='/')
+                      h5.meta 2021/09/23
+                    a(href='/')
+                      h5.meta.metacategory 發燒話題
+                  .saveBlock
+                    a(href="##") 
+                      img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                    a(href="##") 
+                      img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/60AC9C3E9DB6D1621924926.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/20210927-101728_U720_M715192_659d.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1634805204439.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/c22-1634629703.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 發燒話題
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+        a(href='')
+          h4.postbtn MORE
+    #youtube.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 精選頻道
+            span.categorySubTitle YOUTUBE
+      .container.youtubecontainer
+        article#youtubepost
+          .swiper.youtubeSwiper
+            .swiper-wrapper
+              .swiper-slide
+                article.postCard-youtube
+                  a(href='/')
+                  article.postCard
+                    a(href='/')
+                      article.postImage(style='background-image:url("https://i.ytimg.com/vi/k-aVF0lloaU/hqdefault.jpg")')
+                      article.postContent
+                        h3.postTitle.ellipsis
+                          | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                    .metaBlock
+                      a(href='/')
+                      a(href='/')
+                        h5.meta 2021/09/23
+                      a(href='/')
+                        h5.meta.metacategory 精選頻道
+                    .saveBlock
+                      a(href="##") 
+                        img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                      a(href="##") 
+                        img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+              .swiper-slide
+                article.postCard-youtube
+                  a(href='/')
+                  article.postCard
+                    a(href='/')
+                      article.postImage(style='background-image:url("https://i.ytimg.com/vi/k-aVF0lloaU/hqdefault.jpg")')
+                      article.postContent
+                        h3.postTitle.ellipsis 酒鬼們補貨啦！2021必喝「20 款超商罐酒」
+                    .metaBlock
+                      a(href='/')
+                      a(href='/')
+                        h5.meta 2021/09/23
+                      a(href='/')
+                        h5.meta.metacategory 精選頻道
+                    .saveBlock
+                      a(href="##") 
+                        img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                      a(href="##") 
+                        img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+              .swiper-slide
+                article.postCard-youtube
+                  a(href='/')
+                  article.postCard
+                    a(href='/')
+                      article.postImage(style='background-image:url("https://i.ytimg.com/vi/k-aVF0lloaU/hqdefault.jpg")')
+                    article.postContent
+                      a(href='/')
+                        h3.postTitle.ellipsis
+                          | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                      .metaBlock
+                        a(href='/')
+                        a(href='/')
+                          h5.meta 2021/09/23
+                        a(href='/')
+                          h5.meta.metacategory 精選頻道
+                      .saveBlock
+                        a(href="##") 
+                          img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                        a(href="##") 
+                          img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+              .swiper-slide
+                article.postCard-youtube
+                  a(href='/')
+                  article.postCard
+                    a(href='/')
+                      article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/thumbnail_1280X720-1.jpg)')
+                    article.postContent
+                      a(href='/')
+                        h3.postTitle.ellipsis 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                      .metaBlock
+                        a(href='/')
+                        a(href='/')
+                          h5.meta 2021/09/23
+                        a(href='/')
+                          h5.meta.metacategory 精選頻道
+                      .saveBlock
+                        a(href="##") 
+                          img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                        a(href="##") 
+                          img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          .swiper-button-next
+          .swiper-button-prev
+        a(href='')
+          h4.postbtn MORE
+    .advertiseBlock
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    #craftsman.categoryBlock.categoryLessBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 品味職人
+            span.categorySubTitle CRAFTSMAN
+          article.col-md-6.postCard-first
+            a(href='/')
+            article.postCard.postCardh5
+              a(href='/')
+                article.postImage.postImage450(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/5.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 品味職人
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh5
+              a(href='/')
+                article.postImage.postImage450(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/246065987_3744518292318361_8423804980213136229_n-1.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 品味職人
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh5
+              a(href='/')
+                article.postImage.postImage450(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/212743080_6453045134709308_3886389525702016054_n.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 品味職人
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+        a(href='')
+          h4.postbtn MORE
+    #mediaEntertainment.categoryBlock.categoryLessBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 影音娛樂
+            span.categorySubTitle MEDIA ENTERTAINMENT
+          article.col-md-3.postCard-first
+            a(href='/')
+            article.postCard.postCardh5
+              a(href='/')
+                article.postImage.postImage450(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/242150174-423813545832761-3169111605100386182-n-1632627632.jpeg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 影音娛樂
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh5
+              a(href='/')
+                article.postImage.postImage450(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/collage-1630483513-1.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 影音娛樂
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-6.postCard-other
+            a(href='/')
+            article.postCard.postCardh5
+              a(href='/')
+                article.postImage.postImage450(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/winkl-blog-image2019-01-03-13-57-53-000015465238735149.jpeg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 影音娛樂
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+        a(href='')
+          h4.postbtn MORE
+    .advertiseBlock
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    #livingConsumption.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 生活消費
+            span.categorySubTitle LIVING CONSUMPTION
+          article.col-md-3.postCard-first
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1635234896527.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 生活消費
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1635155171039.jpeg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 生活消費
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/121093cf.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 生活消費
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/162824051155.jpeg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 生活消費
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/236283167-2324715507661634-2351658701040036431-n-1634803359.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 生活消費
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1634875130510.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 生活消費
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          .col-md-6.pdlr10
+            .postAdvertiseBlock.adv05
+              a(href='/')
+                .postAdvertise.postCard(style='background-image:url(./img/adv05.jpg)')
+        a(href='')
+          h4.postbtn MORE
+    #foodTravel.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 美食旅遊
+            span.categorySubTitle FOOD & TRAVEL
+          article.col-md-6.postCard-first
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1635234896527.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 美食旅遊
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-6.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1635155171039.jpeg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 美食旅遊
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/121093cf.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 美食旅遊
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/162824051155.jpeg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 美食旅遊
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/236283167-2324715507661634-2351658701040036431-n-1634803359.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 美食旅遊
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          .col-md-3.pdlr10
+            .postAdvertiseBlock.adv05
+              a(href='/')
+                .postAdvertise.postCard(style='background-image:url(./img/adv03.jpg)')
+        a(href='')
+          h4.postbtn MORE
+    .advertiseBlock
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    #fashion.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 潮流時尚
+            span.categorySubTitle FASHION
+          article.col-md-6.postCard-first
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1-%E8%B3%AA%E7%89%A9%E9%9C%BD%E7%95%AB-1625116272.png)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 潮流時尚
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/1635155171039.jpeg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 潮流時尚
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/collage-1634288741.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 潮流時尚
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          .col-md-3.pdlr10
+            .postAdvertiseBlock.adv03
+              a(href='/')
+                .postAdvertise.postCard(style='background-image:url(./img/adv03.jpg)')
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/001.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 潮流時尚
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-6.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/sbx031919-starbucks-recyclable-and-compostable-cups-5-1-1632990768.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 潮流時尚
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+        a(href='')
+          h4.postbtn MORE
+    #sports.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 運動健康
+            span.categorySubTitle SPORTS
+          article.col-md-6.postCard-first
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/20210806141813-16b6f0ee.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/20210901124946-0a74cf3a.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          .col-md-3.pdlr10
+            .postAdvertiseBlock.adv03
+              a(href='/')
+                .postAdvertise.postCard(style='background-image:url(./img/adv03.jpg)')
+          article.col-md-6.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/20201214120050-d672d8c7.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/image-5-11.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/image-34.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+        a(href='')
+          h4.postbtn MORE
+    .advertiseBlock
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    #links.categoryBlock
+      .container
+        .row
+          .col-md-12.categoryTitleBlock
+            h2.categoryTitle 友善連結
+            span.categorySubTitle LINKS
+          article.col-md-3.postCard-first
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/20210806141813-16b6f0ee.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.postTitle-first.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/20210901124946-0a74cf3a.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/20201214120050-d672d8c7.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-3.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/image-5-11.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          article.col-md-6.postCard-other
+            a(href='/')
+            article.postCard.postCardh4
+              a(href='/')
+                article.postImage(style='background-image:url(https://togayther.com/wp-content/uploads/2021/10/image-34.jpg)')
+              article.postContent
+                a(href='/')
+                  h3.postTitle.ellipsis
+                    | 酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！酒鬼們補貨啦！2021必喝「20 款超商罐酒」推薦，日本賣到缺貨的乳酸沙瓦台灣也買得到！
+                .metaBlock
+                  a(href='/')
+                  a(href='/')
+                    h5.meta 2021/09/23
+                  a(href='/')
+                    h5.meta.metacategory 運動健康
+                .saveBlock
+                  a(href="##") 
+                    img.saveIcon(src="./img/saveOutlineIcon.svg", alt="")
+                  a(href="##") 
+                    img.unsavedIcon(src="./img/saveFullIcon.svg", alt="")
+          .col-md-6.pdlr10
+            .postAdvertiseBlock.adv05
+              a(href='/')
+                .postAdvertise.postCard(style='background-image:url(./img/adv05.jpg)')
+        a(href='')
+          h4.postbtn MORE
+    #aboutus
+      .aboutusTitle
+        h2 ABOUT US
+      .content
+        p
+          | 2019年5月台灣通過了同性婚姻法 也成為亞洲第一個認可同婚的國家
+          br
+          | 在同時 「Togayther平台」的構思也開始萌芽 抱持著回饋同志族群的本心 宣傳平權公益的想法
+          br
+          | 期待與您共同分享您生活中點滴的感動時刻
+          br
+          | Togayther Always Be with You
+    // partial
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js')
+    script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='./js/index.js')
+    script(src='./js/app.js')
+    script(src='./js/save.js')
+

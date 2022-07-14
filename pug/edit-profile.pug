@@ -1,0 +1,118 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 變更資料 - Togayther
+    meta(name='description' content='我們是由together(⼀起)和gay(同性戀)組合⽽成，TOGAYTHER是互聯網，也是⽀援網，期待在此成為 陪伴同志⼀起的 ⽣活新平台')
+    link(rel='icon' href='./img/favicon.svg' type='image/x-icon')
+    meta(property='og:image' content='./img/ogimage.jpg')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
+    link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='stylesheet' href='./css/style.css')
+  body
+    // partial:index.partial.html
+    .formBlock
+      .container.formContent.profileEditContent
+        .dropdown.mbmenu
+          a#dropdownProfileMenu.btn.dropdown-toggle.btnLightGray(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false') 變更資料
+          ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+            li
+              a.dropdown-item(href='#') 變更密碼
+            li
+              a.dropdown-item(href='#') 我的帳戶
+        .row
+          .col-md-2.profileEditMenu
+            ul.pcmenu
+              li.active.pdt0 變更資料
+              li
+                a(href='')  變更密碼
+              li
+                a(href='')  我的帳戶
+          .col-md-10
+            h2.categoryTitle 變更資料
+            span.categorySubTitle EDIT PROFILE
+            .registerBlock
+              form.g-3.needs-validation(novalidate='' oninput="passwordConfirm.setCustomValidity(passwordConfirm.value != password.value ? '密碼不一致' : '')")
+                .form-row
+                  .mb100.col-md-12.profileImagesUpload
+                    .profileBanner
+                      .profileBannerEdit
+                      .uploadBannerBlock
+                        input.uploadImg(type='file')
+                    .profileImg
+                      .profileImgEdit
+                      .uploadImgBlock
+                        input.uploadImg(type='file')
+                  .mb-3.col-md-6
+                    label.form-label(for='InputUsername UsernameValidation')
+                      | 暱稱
+                      span.text-danger *
+                    input#inputUsername.form-control(type='text' placeholder='請輸入您的暱稱' aria-label='使用者名稱' required='required')
+                    .invalid-feedback 此題為必填
+                  .mb-3.col-md-6
+                    label.form-label(for='SelectGender GenderValidation')
+                      | 性別
+                      span.text-danger *
+                    select.form-select.form-control(aria-label='性別' required='required')
+                      option(selected='') 男生
+                      option(value='1') 女生
+                      option(value='2') 不指定
+                      option(value='3') 不透漏
+                    .invalid-feedback 此題為必填
+                  .mb-3.col-md-12
+                    label.form-label(for='InputAccount AccountValidation')
+                      | 信箱
+                      span.text-danger *
+                    input#inputMail.form-control(type='email' aria-label='信箱' placeholder='請輸入您的信箱' required='required')
+                    .invalid-feedback 信箱格式錯誤
+                  .mb-3.col-md-6
+                    label.form-label(for='InputBirthday') 生日
+                    input#inputBirthday.form-control(type='date' aria-label='生日' placeholder='請輸入您的電子生日')
+                  .mb-3.col-md-6
+                    label.form-label(for='InputPhone') 聯絡電話
+                    input#inputPhone.form-control(type='tel' placeholder='請輸入您的聯絡電話' aria-label='電話' maxlength='10')
+                  .mb-3.col-md-3
+                    label.form-label(for='SelectGender GenderValidation') 居住地區
+                    select.form-select.form-control(aria-label='性別' required='required')
+                      option(selected='') 台北市
+                      option(value='1') 基隆市
+                      option(value='2') 新北市
+                      option(value='3') 桃園市
+                      option(value='3') 新竹市 
+                      option(value='4') 新竹縣
+                      option(value='5') 苗栗縣
+                      option(value='6') 台中市
+                      option(value='7') 彰化縣
+                      option(value='8') 南投縣 
+                      option(value='9') 雲林縣
+                      option(value='10') 嘉義市
+                      option(value='11') 嘉義縣
+                      option(value='12') 臺南市
+                      option(value='13') 高雄市
+                      option(value='14') 屏東縣  
+                      option(value='15') 宜蘭縣
+                      option(value='16') 花蓮縣
+                      option(value='17')  臺東縣 
+                      option(value='18') 澎湖縣
+                      option(value='19')  金門縣
+                      option(value='20') 連江縣
+                  .mb-3.col-md-9
+                    label.form-label(for='InputAddress') 地址
+                    input#inputAddress.form-control(type='text' placeholder='請輸入您的地址' aria-label='地址')
+                  .mb-3.col-md-12
+                    button.btn.btn-dark(type='submit') 確定修改
+    .advertiseBlock.mt0
+      .container
+        .row
+          .col-md-12.adv02
+            a(href='')
+              img(src='./img/adv02.jpg' alt='')
+    // partial
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js')
+    script(src='./js/form.js')

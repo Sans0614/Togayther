@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+    link(rel='stylesheet' href='./css/navbar.css')
+  body
+    #navbar
+      .container.navbarcontainer
+        .row
+          .col-md-6.col-8.d-flex.align-items-center
+            #navbarMenu
+              #navbarMenuBtn
+                img(src='./img/navbar/MenuIcon.svg' alt='')
+            #navbarBrandLogo
+              a(href='https://togayther.com/')
+                img(src='./img/navbar/Logo_h50.png' alt='')
+          .col-md-6.col-4.iconBlock.d-flex.align-items-center
+            a.d-md-block.d-none(href='https://www.facebook.com/togayther2021/' target=' _blank')
+              img#facebookIcon.facebook(src='./img/navbar/FacebookIcon.svg' alt='')
+            a.d-md-block.d-none(href='https://www.instagram.com/togayther_com/' target=' _blank')
+              img#instagramIcon.instagram(src='./img/navbar/InstagramIcon.svg' alt='')
+            #searchbtn
+              img(src='./img/navbar/SearchIcon.svg' alt='')
+            a.member(href='')
+              img(src='./img/navbar/MemberIcon.svg' alt='')
+            //前往社群網站 
+            a(href='https://togayther.com/social')
+
+              //20220622 更換圖片路徑
+              img(src='./img/navbar/index_web_fill_gradient.svg')
+    // 搜尋頁面
+    #navbarSearchPage
+      .closebtn
+        #navbarSearchCloseBtn
+          img(src='./img/navbar/CloseMenuIcon.svg' alt='')
+      .searchBar
+        form(action='')
+          input.searchform(type='text' placeholder='請輸入您想搜尋的內容')
+          input.submitbtn(type='submit' value='')
+    // 導覽列內容
+    #navbarMenuContent
+      #navbarMenubg
+      #navbarMenuText(style='display: none')
+        .closebtn
+          #navbarMenuCloseBtn
+            img(src='./img/navbar/CloseMenuIcon.svg' alt='')
+        .submenu
+          a(href='https://togayther.com/login/')
+
+            //20220622 把MEMBERSHIP 更改成 會員中心
+            h5 會員中心
+
+        //20220622 新增進入社群網站按鈕
+        .submenu
+          a(href='/social')
+            h5 TOGAYTHER 社群測試版
+
+        hr
+        .menu
+          a(href='https://togayther.com/hot_issue/')
+            h3(data-hover-text='HOT ISSUE') 發燒話題
+          a(href='https://togayther.com/youtube/')
+            h3(data-hover-text='YOUTUBE') 精選頻道
+          a(href='https://togayther.com/craftsman/')
+            h3(data-hover-text='CRAFTSMAN') 品味職人
+          a(href='https://togayther.com/media_entertainment/')
+            h3(data-hover-text='MEDIA ENTERTAINMENT') 影音娛樂
+          a(href='https://togayther.com/living_consumption/')
+            h3(data-hover-text='LIVING CONSUMPTION') 生活消費
+          a(href='https://togayther.com/food_travel/')
+            h3(data-hover-text='FOOD&TRAVEL') 美食旅遊
+          a(href='https://togayther.com/fashion/')
+            h3(data-hover-text='FASHION') 潮流時尚
+          a(href='https://togayther.com/sports/')
+            h3(data-hover-text='SPORTS') 運動健康
+          a(href='https://togayther.com/links/')
+            h3(data-hover-text='LINKS') 友善連結
+        hr
+            
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='./js/navbar.js')

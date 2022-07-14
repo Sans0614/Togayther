@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/member.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- partial:index.partial.html-->
+    <div id="navbar">
+      <div class="container navbarcontainer">
+        <div class="row">
+          <div class="col-md-6 col-9 d-flex align-items-center">
+            <div id="navbarMenu">
+              <div id="navbarMenuBtn"><img src="./img/navbar//MenuIcon.svg" alt=""></div>
+            </div>
+            <div id="navbarBrandLogo"><a href="https://togayther.com/"><img src="./img/navbar/Logo_h50.png" alt=""></a></div>
+          </div>
+          <div class="col-md-6 col-3 iconBlock d-flex align-items-center"><a class="d-md-block d-none" href="https://www.facebook.com/togayther2021/" target=" _blank"><img class="facebook" id="facebookIcon" src="./img/navbar/FacebookIcon.svg" alt=""></a><a class="d-md-block d-none" href="https://www.instagram.com/togayther2021/" target=" _blank"><img class="instagram" id="instagramIcon" src="./img/navbar/InstagramIcon.svg" alt=""></a>
+            <div id="searchbtn"><img src="./img/navbar/SearchIcon.svg" alt=""></div><a class="member" href=""><img src="./img/navbar/MemberIcon.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="notification-pop px-4 pt-3 ">
+                <div class="notification-title pb-2" >
+                    <span>  獲得會員點數通知</span>  
+                    <!-- <button class="btn" id="close-notification"><i class="fas fa-times "></i></button> -->
+                    <div class="close-notification" id="close-notification"></div>
+                </div>
+                <div class="notification-content  my-2 pb-2">
+                  <div class="points rounded-circle mr-3 ">250</div> 
+                  <div>會員登入獲得250點</div>
+                </div>
+                <div class="notification-content my-2 pb-2">
+                  <div class="points rounded-circle mr-3">50</div> 
+                  <div>文章收藏獲得50點</div>
+                </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 點數通知-->
+    <!--
+    <div class="notification" id="notification">
+      <div class="container">
+        <div class="row justify-content-end pr-2">
+          <div class="notification-pop px-4 pt-3 ">
+                <div class="notification-title pb-2" >
+                    <span>  獲得會員點數通知</span>  
+                    // <button class="btn" id="close-notification"><i class="fas fa-times "></i></button>
+                    <div class="close-notification" id="close-notification"></div>
+                </div>
+                <div class="notification-content  my-2 pb-2">
+                  <div class="points rounded-circle mr-3 ">250</div> 
+                  <div>會員登入獲得250點</div>
+                </div>
+                <div class="notification-content my-2 pb-2">
+                  <div class="points rounded-circle mr-3">50</div> 
+                  <div>文章收藏獲得50點</div>
+                </div>
+          </div>      
+        </div>        
+      </div>
+    </div>
+    -->
+
+
+
+
+    <!-- 搜尋頁面-->
+    <div id="navbarSearchPage">
+      <div class="closebtn">
+        <div id="navbarSearchCloseBtn"><img src="./img/navbar/CloseMenuIcon.svg" alt=""></div>
+      </div>
+      <div class="searchBar">
+        <form action="">
+          <input class="searchform" type="text" placeholder="請輸入您想搜尋的內容">
+          <input class="submitbtn" type="submit" value="">
+        </form>
+      </div>
+    </div>
+    <!-- 導覽列內容-->
+    <div id="navbarMenuContent">
+      <div id="navbarMenubg"></div>
+      <div id="navbarMenuText" style="display: none">
+        <div class="closebtn">
+          <div id="navbarMenuCloseBtn"><img src="./img/navbar/CloseMenuIcon.svg" alt=""></div>
+        </div>
+        <div class="submenu"><a href="https://togayther.com/login/">
+            <h5>MEMBERSHIP</h5></a></div>
+        <hr>
+        <div class="menu"><a href="https://togayther.com/hot_issue/">
+            <h3 data-hover-text="HOT ISSUE">發燒話題</h3></a><a href="https://togayther.com/youtube/">
+            <h3 data-hover-text="YOUTUBE">精選頻道</h3></a><a href="https://togayther.com/craftsman/">
+            <h3 data-hover-text="CRAFTSMAN">品味職人</h3></a><a href="https://togayther.com/media_entertainment/">
+            <h3 data-hover-text="MEDIA ENTERTAINMENT">影音娛樂</h3></a><a href="https://togayther.com/living_consumption/">
+            <h3 data-hover-text="LIVING CONSUMPTION">生活消費</h3></a><a href="https://togayther.com/food_travel/">
+            <h3 data-hover-text="FOOD&amp;TRAVEL">美食旅遊</h3></a><a href="https://togayther.com/fashion/">
+            <h3 data-hover-text="FASHION">潮流時尚</h3></a><a href="https://togayther.com/sports/">
+            <h3 data-hover-text="SPORTS">運動健康</h3></a><a href="https://togayther.com/links/">
+            <h3 data-hover-text="LINKS">友善連結</h3></a></div>
+        <hr>
+      </div>
+    </div>
+    <!-- partial-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="./js/navbar.js"></script>
+  </body>
+
+
+  <!--點數訊息控制-->
+  <script>
+    $(function(){
+      $('#notification').fadeIn();
+      $('#close-notification').on('click',()=>{
+        $('#notification').fadeOut();
+      })
+    })
+  </script>
+
+
+</html>

@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/*關於我們*/   
+#footer {
+  background-color: #1d1d1d;
+}
+#footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1000px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+#footer .container .logo img {
+  margin-bottom: 15px;
+  width: 180px;
+}
+#footer .container .contact {
+  margin: 15px 0;
+}
+#footer .container .contact .footer, #footer .container .menu .footer {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+#footer .container .contact .mail:before, #footer .container .contact .address:before, #footer .container .menu .mail:before, #footer .container .menu .address:before {
+  content: "";
+  display: inline-block;
+  vertical-align: sub;
+  margin-right: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#footer .container .contact .mail:before, #footer .container .menu .mail:before {
+  height: 15px;
+  width: 20px;
+  background-image: url(../img/footer/MailIcon.svg);
+}
+#footer .container .contact .address:before, #footer .container .menu .address:before {
+  height: 20px;
+  width: 15px;
+  background-image: url(../img/footer/AddressIcon.svg);
+}
+#footer .container .copyrightbar .copyright {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  color: #727272;
+  margin-top: 30px;
+}
+
+@media (max-width: 1050px) {
+  #footer .container {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #footer .container {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  #footer .container .logo img {
+    margin-bottom: 15px;
+    width: 180px;
+  }
+  #footer .container .contact {
+    margin: 15px 0;
+    width: 100%;
+  }
+  #footer .container .contact:before, #footer .container .contact:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #FFF;
+  }
+  #footer .container .contact:before {
+    margin-bottom: 15px;
+  }
+  #footer .container .contact:after {
+    margin-top: 15px;
+  }
+  #footer .container .contact .footer {
+    display: block;
+    margin: 0;
+  }
+  #footer .container .contact .mail {
+    margin-bottom: 10px;
+  }
+  #footer .container .menu .footer {
+    margin: 0 10px;
+  }
+}
