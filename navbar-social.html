@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.svg">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/member.css">
@@ -25,25 +26,32 @@
           </div>
           <!--20220617 把col-3 更改成 col-5-->
           <div class="col-md-6 col-5 iconBlock d-flex align-items-center">
-            <!-- 回到自媒體文章網站--><a class="icon" href="/"><img src="./img/navbar/media_web_fill_white.svg"></a>
-            <!-- 首頁 - 點擊後回到社群首頁頂端與重整頁面--><a class="icon d-none d-lg-block" id="homebtn" href=""><img src="./img/navbar/home_outline_white.svg"></a>
-            <!-- 202205070 開啟搜尋功能--><img class="icon d-none d-lg-block" id="searchbtn" src="./img/navbar/search_outline_white.svg" type="button" data-bs-toggle="modal" data-bs-target="#social-search">
+            <!-- 回到自媒體文章網站--><a class="icon" href="/">
+              <!--20220725 更換圖片路徑 ./img/navbar/media_web_fill_white.svg 更改成 ./img/navbar/back_to_media_outline_white.svg-->
+              <!--20220725 新增data-hover-src--><img src="./img/navbar/back_to_media_outline_white.svg" data-hover-src="./img/navbar/back_to_media_fill_white.svg"></a>
+            <!-- 首頁 - 點擊後回到社群首頁頂端與重整頁面--><a class="icon d-none d-lg-block" id="homebtn" href="">
+              <!--20220725 新增data-hover-src--><img src="./img/navbar/home_outline_white.svg" data-hover-src="./img/navbar/home_fill_white.svg"></a>
+            <!--202205070 開啟搜尋功能-->
+            <!--20220725 新增data-hover-src--><img class="icon d-none d-lg-block" id="searchbtn" src="./img/navbar/search_outline_white.svg" type="button" data-bs-toggle="modal" data-bs-target="#social-search" data-hover-src="./img/navbar/search_fill_white.svg">
             <!-- 訊息 - 社群第三階段開放-->
             <!-- 20220428開啟私訊功能 #messagebtn.icon(src='./img/navbar/message_outline_white.svg' alt='') 更改成下方樣式-->
             <div class="icon position-relative">
               <!-- 新的私訊數在9則(包含)以內-->
               <div class="social-notify-count social-message-count">9</div>
               <!--新的私訊數超過9則-->
-              <div class="social-notify-count social-notify-more social-message-count social-message-count-more">9+</div><img id="messagebtn" src="./img/navbar/message_outline_white.svg" alt="">
+              <div class="social-notify-count social-notify-more social-message-count social-message-count-more">9+</div>
+              <!--20220725 新增data-hover-src--><img id="messagebtn" src="./img/navbar/message_outline_white.svg" data-hover-src="./img/navbar/message_fill_white.svg">
             </div>
-            <!--發文 - 開啟上傳檔案視窗--><a class="icon d-none d-lg-block"><img src="./img/navbar/post_outline_white.svg" @click="$refs.socialUploadModal.show()"></a>
+            <!--發文 - 開啟上傳檔案視窗--><a class="icon d-none d-lg-block">
+              <!--20220725 新增data-hover-src--><img src="./img/navbar/post_outline_white.svg" data-hover-src="./img/navbar/post_fill_white.svg" @click="$refs.socialUploadModal.show()"></a>
             <!--通知-->
             <!--20220405 更改-->
             <div class="icon d-none d-lg-block position-relative" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-modal">
               <!--新的通知數在9則(包含)以內-->
               <div class="social-notify-count">9</div>
               <!--新的通知數超過9則-->
-              <div class="social-notify-count social-notify-more">9+</div><img id="notifybtn" src="./img/navbar/notify_outline_white.svg">
+              <div class="social-notify-count social-notify-more">9+</div>
+              <!--20220725 新增data-hover-src--><img id="notifybtn" src="./img/navbar/notify_outline_white.svg" data-hover-src="./img/navbar/notify_fill_white.svg">
             </div>
             <!--登入前會員頭像 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示--><a class="member d-none d-lg-block mr-16px" href=""><img src="./img/navbar/member_outline_white.svg" alt=""></a>
             <!--登入後會員頭像 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示--><a class="member memberlogin d-none d-lg-block" href="/account"><img src="./img/navbar/MemberLoginIcon.svg" alt=""></a>
@@ -54,19 +62,26 @@
     <!--置尾導覽列-lg以下顯示-->
     <div class="bg-gray d-flex d-lg-none align-items-center position-fixed w-100 bottom-0" id="navbar-lg-social">
       <!--首頁 - 點擊後回到社群首頁頂端與重整頁面-->
-      <div class="navbar-lg-icon d-flex justify-content-center align-items-center"><a id="homebtn" href=""><img class="icon" src="./img/navbar/home_outline_white.svg"></a></div>
+      <div class="navbar-lg-icon d-flex justify-content-center align-items-center"><a id="homebtn" href="">
+          <!--20220725 新增data-hover-src--><img class="icon" src="./img/navbar/home_outline_white.svg" data-hover-src="./img/navbar/home_fill_white.svg"></a></div>
       <!--搜尋-->
       <!--20220507 串接搜尋彈跳視窗-->
-      <div class="navbar-lg-icon d-flex justify-content-center align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#social-search"><img id="searchbtn" src="./img/navbar/search_outline_white.svg"></div>
+      <div class="navbar-lg-icon d-flex justify-content-center align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#social-search">
+        <!--20220725 新增data-hover-src--><img id="searchbtn" src="./img/navbar/search_outline_white.svg" data-hover-src="./img/navbar/search_fill_white.svg">
+      </div>
       <!--發文 - 開啟上傳檔案視窗-->
-      <div class="navbar-lg-icon h-40px d-flex justify-content-center align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#edit-social-upload"><img class="h-40px icon" id="postbtn" src="./img/navbar/post_outline_white.svg"></div>
+      <!--20220725 .align-items-center 更改成 .align-items-end-->
+      <div class="navbar-lg-icon h-40px d-flex justify-content-center align-items-end" type="button" data-bs-toggle="modal" data-bs-target="#edit-social-upload">
+        <!--20220725 h-40px 更改成 h-60px--><img class="h-60px icon" id="postbtn" src="./img/navbar/post_fill_white.svg">
+      </div>
       <!--通知-->
       <!--20220405 更改-->
       <div class="navbar-lg-icon d-flex justify-content-center align-items-center position-relative" type="button" data-bs-toggle="modal" data-bs-target="#social-notify-modal">
         <!--新的通知數在9則(包含)以內-->
         <div class="social-notify-count">9</div>
         <!--新的通知數超過9則-->
-        <div class="social-notify-count social-notify-more">9+</div><img class="icon" id="notifybtn" src="./img/navbar/notify_outline_white.svg" alt="">
+        <div class="social-notify-count social-notify-more">9+</div>
+        <!--20220725 新增data-hover-src--><img class="icon" id="notifybtn" src="./img/navbar/notify_outline_white.svg" data-hover-src="./img/navbar/notify_fill_white.svg">
       </div>
       <!--會員 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示-->
       <div class="navbar-lg-icon d-flex justify-content-center align-items-center">

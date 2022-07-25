@@ -434,3 +434,7 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#navbar-lg-social #postbtn {
+  -webkit-filter: drop-shadow(6px 6px 20px rgba(0, 0, 0, 0.24));
+          filter: drop-shadow(6px 6px 20px rgba(0, 0, 0, 0.24));
+}

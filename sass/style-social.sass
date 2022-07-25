@@ -1360,8 +1360,12 @@ body
 .social-post-comment-single
   padding-top: 12px
   padding-bottom: 12px
-  border-bottom: 1px solid $gray-808080
+  //- border-bottom: 1px solid $gray-808080
   margin-bottom: 0
+
+.social-post-comment-all > .social-post-comment-single:not(:last-child), .social-post-comment-reply-all > .social-post-comment-single:not(:last-child)
+  border-bottom: 1px solid #808080
+  
 /*
 .social-post-comment-single:nth-last-child(-n+2)
   border-bottom: 0*/

@@ -76,3 +76,12 @@ $('#social-notify-report-account,#social-notify-report-falsely').on( 'shown.bs.m
     itemSelector: '.social-index-grid-item',
   });
 })
+
+$("[data-hover-src]").mouseenter(function(){
+  $(this).data('original-src', $(this).attr());
+  $(this).attr('src', $(this).data('data-hover-src'))
+});
+
+$("[data-hover-src]").mouseleave(function(){
+  $(this).attr('src', $(this).data('original-src'))
+});

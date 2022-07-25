@@ -8,6 +8,7 @@ html(lang='en')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap')
     link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+    link(rel='apple-touch-icon' href='./apple-touch-icon.svg')
     link(rel='stylesheet' href='./css/navbar.css')
     link(rel='stylesheet' href='./css/style.css')
     link(rel='stylesheet' href='./css/member.css')
@@ -32,14 +33,20 @@ html(lang='en')
 
             // 回到自媒體文章網站
             a.icon(href='/')
-              img(src='./img/navbar/media_web_fill_white.svg')
+
+              //20220725 更換圖片路徑 ./img/navbar/media_web_fill_white.svg 更改成 ./img/navbar/back_to_media_outline_white.svg
+              //20220725 新增data-hover-src
+              img(src='./img/navbar/back_to_media_outline_white.svg' data-hover-src='./img/navbar/back_to_media_fill_white.svg')
 
             // 首頁 - 點擊後回到社群首頁頂端與重整頁面
             a#homebtn.icon.d-none.d-lg-block(href='')
-              img(src='./img/navbar/home_outline_white.svg')
 
-            // 202205070 開啟搜尋功能
-            img#searchbtn.icon.d-none.d-lg-block(src='./img/navbar/search_outline_white.svg' type='button' data-bs-toggle='modal' data-bs-target='#social-search')
+              //20220725 新增data-hover-src
+              img(src='./img/navbar/home_outline_white.svg' data-hover-src='./img/navbar/home_fill_white.svg')
+
+            //202205070 開啟搜尋功能
+            //20220725 新增data-hover-src
+            img#searchbtn.icon.d-none.d-lg-block(src='./img/navbar/search_outline_white.svg' type='button' data-bs-toggle='modal' data-bs-target='#social-search'  data-hover-src='./img/navbar/search_fill_white.svg')
 
             // 訊息 - 社群第三階段開放
             // 20220428開啟私訊功能 #messagebtn.icon(src='./img/navbar/message_outline_white.svg' alt='') 更改成下方樣式
@@ -51,11 +58,14 @@ html(lang='en')
               //新的私訊數超過9則
               .social-notify-count.social-notify-more.social-message-count.social-message-count-more 9+
 
-              img#messagebtn(src='./img/navbar/message_outline_white.svg' alt='')
+              //20220725 新增data-hover-src
+              img#messagebtn(src='./img/navbar/message_outline_white.svg' data-hover-src='./img/navbar/message_fill_white.svg')
 
             //發文 - 開啟上傳檔案視窗
             a.icon.d-none.d-lg-block
-              img(src='./img/navbar/post_outline_white.svg' @click='$refs.socialUploadModal.show()')
+              
+              //20220725 新增data-hover-src
+              img(src='./img/navbar/post_outline_white.svg' data-hover-src='./img/navbar/post_fill_white.svg' @click='$refs.socialUploadModal.show()')
 
             //通知
             //20220405 更改
@@ -67,7 +77,8 @@ html(lang='en')
               //新的通知數超過9則
               .social-notify-count.social-notify-more 9+
 
-              img#notifybtn(src='./img/navbar/notify_outline_white.svg')
+              //20220725 新增data-hover-src
+              img#notifybtn(src='./img/navbar/notify_outline_white.svg' data-hover-src='./img/navbar/notify_fill_white.svg')
 
             //登入前會員頭像 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示
             a.member.d-none.d-lg-block.mr-16px(href='')
@@ -83,20 +94,27 @@ html(lang='en')
       //首頁 - 點擊後回到社群首頁頂端與重整頁面
       .navbar-lg-icon.d-flex.justify-content-center.align-items-center
         a#homebtn(href="")
-          img.icon(src='./img/navbar/home_outline_white.svg')
+          
+          //20220725 新增data-hover-src
+          img.icon(src='./img/navbar/home_outline_white.svg' data-hover-src='./img/navbar/home_fill_white.svg')
 
       //搜尋
       //20220507 串接搜尋彈跳視窗
       .navbar-lg-icon.d-flex.justify-content-center.align-items-center(type='button' data-bs-toggle='modal' data-bs-target='#social-search')
-        img#searchbtn(src='./img/navbar/search_outline_white.svg')
+        
+        //20220725 新增data-hover-src
+        img#searchbtn(src='./img/navbar/search_outline_white.svg' data-hover-src='./img/navbar/search_fill_white.svg')
 
       //發文 - 開啟上傳檔案視窗
-      .navbar-lg-icon.h-40px.d-flex.justify-content-center.align-items-center(type='button' data-bs-toggle='modal' data-bs-target='#edit-social-upload')
-        img.h-40px#postbtn.icon(src='./img/navbar/post_outline_white.svg')
+      //20220725 .align-items-center 更改成 .align-items-end
+      .navbar-lg-icon.h-40px.d-flex.justify-content-center.align-items-end(type='button' data-bs-toggle='modal' data-bs-target='#edit-social-upload')
+
+        //20220725 h-40px 更改成 h-60px
+        img#postbtn.h-60px.icon(src='./img/navbar/post_fill_white.svg')
 
       //通知
       //20220405 更改
-      .navbar-lg-icon.d-flex.justify-content-center.align-items-center.position-relative(type='button' data-bs-toggle='modal' data-bs-target='#social-notify-modal')
+      .navbar-lg-icon.d-flex.justify-content-center.align-items-center.position-relative(type='button' data-bs-toggle='modal' data-bs-target='#social-notify-modal' )
 
         //新的通知數在9則(包含)以內
         .social-notify-count 9
@@ -104,7 +122,8 @@ html(lang='en')
         //新的通知數超過9則
         .social-notify-count.social-notify-more 9+
 
-        img#notifybtn.icon(src='./img/navbar/notify_outline_white.svg' alt='')
+        //20220725 新增data-hover-src
+        img#notifybtn.icon(src='./img/navbar/notify_outline_white.svg' data-hover-src='./img/navbar/notify_fill_white.svg')
 
       //會員 - 連結到個人社群主頁，社群第二階段開放，但圖片先顯示
       .navbar-lg-icon.d-flex.justify-content-center.align-items-center
