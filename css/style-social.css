@@ -109,6 +109,10 @@
   margin-left: 8px !important;
 }
 
+.ml-12px {
+  margin-left: 12px !important;
+}
+
 .mb-16px {
   margin-bottom: 16px !important;
 }
@@ -140,6 +144,10 @@
 .mx-32px {
   margin-left: 32px;
   margin-right: 32px;
+}
+
+.pl-12px {
+  padding-left: 12px !important;
 }
 
 .px-16px {
@@ -706,10 +714,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  padding: 8px 12px;
 }
-
-.social-index-featured-member-block {
-  margin-bottom: 12px;
+.social-index-user-block:hover, .social-index-featured-member-block:hover {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #333333;
 }
 
 .social-index-user-img, .social-index-featured-member-img, .social-tag-list-user-image {
@@ -724,17 +734,22 @@ body {
      object-fit: cover;
 }
 
-.social-index-featured-member-data {
-  width: 50%;
-}
-
 .social-index-user-data, .social-index-featured-member-data {
-  margin-left: 12px;
+  width: 48%;
+  margin-left: 8px;
 }
 
 .social-index-user-name, .social-index-featured-member-name {
   font-size: 18px;
   font-weight: 400;
+  color: #FFFFFF;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.social-index-user-name:hover, .social-index-featured-member-name:hover {
   color: #FFFFFF;
 }
 
@@ -749,20 +764,24 @@ body {
   font-size: 14px;
   font-weight: 400;
   position: absolute;
-  right: 0;
+  right: 12px;
 }
 .btn-social-index-user-personal-page:hover, .btn-social-index-featured-member-unfollow:hover, .btn-social-index-featured-member-follow:hover {
-  color: #FFFFFF;
+  color: #FFDC00;
 }
 
-.btn-social-index-featured-member-follow {
+.btn-social-index-featured-member-unfollow {
   color: #FFFFFF;
+}
+.btn-social-index-featured-member-unfollow:hover {
+  color: #FFDC00;
 }
 
 .social-index-featured-member-block-title {
   color: #FFFFFF;
   margin-top: 16px;
   margin-bottom: 8px;
+  margin-left: 12px;
 }
 
 @media (max-width: 992px) {

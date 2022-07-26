@@ -210,7 +210,6 @@ html(lang='en')
                         .social-post-card-like-btn.bg-basic
                         span.social-post-card-like-count 99
               .social-index-grid-item
-                  //2022/03/18新增點選後進入該新會員的個人頁面
                   a(href="") 
                     .social-post-card.social-post-card-member-block
                       span.social-post-card-member-title 新會員
@@ -285,15 +284,13 @@ html(lang='en')
               .social-post-bottom-hr
 
           //電腦版精選會員-社群第二階段開放
-          //20220330 d-tb-block->.d-lg-block
           .col-lg-3.d-lg-block.d-none(style="padding-left: 0px")
-            .social-index-user-block
 
-              //連結使用者的個人主頁
-              a(href="")
-
-                //串接使用者的大頭照
-                img.social-index-user-img(src="./img/navbar/MemberLoginIcon.svg", alt="")
+            //20220726 把 class="social-index-user-block" 內的 <a> 全數移除 改到 .<a class="social-index-user-block"> 上 ，點擊後就跳轉到該使用者的個人頁面
+            a.social-index-user-block(href="")
+              
+              //串接使用者的大頭照
+              img.social-index-user-img(src="./img/navbar/MemberLoginIcon.svg")
               .social-index-user-data
 
                 //串接使用者的名稱
@@ -303,9 +300,10 @@ html(lang='en')
                 .social-index-user-birthday 1996/01/01
 
               //連結使用者的個人主頁
-              a.btn-social-index-user-personal-page(href="") 查看
+              .btn-social-index-user-personal-page 查看
 
             .social-index-featured-member-block-title 活躍用戶
+
             .social-index-featured-member-block
 
               //連結精選會員的個人主頁
@@ -317,7 +315,8 @@ html(lang='en')
               .social-index-featured-member-data
 
                 //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                //20220726 新增點擊名字也能跳轉到該會員主頁的連結
+                a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -333,8 +332,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -351,8 +350,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -368,8 +367,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -385,8 +384,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -402,8 +401,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -419,8 +418,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -436,8 +435,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -453,8 +452,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -470,8 +469,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -487,8 +486,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤
@@ -504,8 +503,8 @@ html(lang='en')
 
               .social-index-featured-member-data
 
-                //串接精選會員的名稱
-                .social-index-featured-member-name SANDERS
+                  //串接精選會員的名稱
+                  a.social-index-featured-member-name(href="") SANDERS
 
               //追蹤該精選會員，根據使用者的追蹤狀態顯示相對應的按鈕，並且可以在此區塊直接點選追蹤或取消追蹤
               a.btn-social-index-featured-member-unfollow(href="") 追蹤

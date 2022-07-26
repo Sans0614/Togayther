@@ -81,6 +81,9 @@ $tag-yellow: #FFDC00
 .ml-8px
   margin-left: 8px !important
 
+.ml-12px
+  margin-left: 12px !important
+
 .mb-16px
   margin-bottom: 16px !important
 
@@ -105,6 +108,9 @@ $tag-yellow: #FFDC00
 .mx-32px
   margin-left: 32px
   margin-right: 32px
+
+.pl-12px
+  padding-left: 12px !important
 
 .px-16px
   padding-left: 16px
@@ -488,9 +494,11 @@ body
   display: flex
   align-items: center
   position: relative
-
-.social-index-featured-member-block
-  margin-bottom: 12px
+  padding: 8px 12px
+  &:hover
+    padding: 8px 12px
+    border-radius: 5px
+    background-color: $gray-333333
 
 .social-index-user-img,.social-index-featured-member-img,.social-tag-list-user-image
   width: 50px
@@ -502,16 +510,21 @@ body
   border-radius: 100px
   object-fit: cover
 
-.social-index-featured-member-data
-  width: 50%
-
 .social-index-user-data,.social-index-featured-member-data
-  margin-left: 12px
+  width: 48%
+  margin-left: 8px
 
 .social-index-user-name,.social-index-featured-member-name
   font-size: 18px
   font-weight: 400
   color: $white
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: 2
+  overflow: hidden
+  &:hover
+    color: $white
 
 .social-index-user-birthday,.social-index-featured-member-birthday
   font-size: 14px
@@ -519,20 +532,24 @@ body
   color: $gray-BBBBBB
 
 .btn-social-index-user-personal-page,.btn-social-index-featured-member-unfollow,.btn-social-index-featured-member-follow
-  color: #FFDC00
+  color: $tag-yellow
   font-size: 14px
   font-weight: 400
   position: absolute
-  right: 0
+  right: 12px
   &:hover
-    color: $white
-.btn-social-index-featured-member-follow
+    color: $tag-yellow
+
+.btn-social-index-featured-member-unfollow
   color: $white
+  &:hover
+    color: $tag-yellow
 
 .social-index-featured-member-block-title
   color: $white
   margin-top: 16px
   margin-bottom: 8px
+  margin-left: 12px
 
 @media (max-width: 992px)
   .social-index-featured-member-swiper
