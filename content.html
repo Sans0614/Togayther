@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <!-- partial:index.partial.html-->
     <div class="postContent">
       <div class="container">
         <div class="row">
@@ -34,27 +33,6 @@
                 <div class="commentButton">留言</div></a>
               <div class="saveButton">收藏</div>
               <div class="shareButton" id="shareBtn" type="button" data-bs-toggle="modal" data-bs-target="#shareModal">分享</div>
-              <!-- Modal-->
-              <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h2 class="modal-title">Share This Post !</h2>
-                      <button class="btn-close close" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="shareCloseBtn" aria-hidden="true"></span></button>
-                    </div>
-                    <div class="modal-body border-bottom">
-                      <h4 class="modalSubTitle">文章分享</h4><a class="facebookShareBtn" href="##"></a><a class="lineShareBtn" href="##"></a>
-                    </div>
-                    <div class="modal-body">
-                      <h4 class="modalSubTitle">複製文章連結</h4>
-                      <div class="field d-flex align-items-center justify-content-between"></div>
-                      <!--.linkIcon-->
-                      <input class="copyLink" type="text" value="https://togayther.com/post/607">
-                      <button class="copyLinkBtn">複製</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="postContentEditor">
               <p>全世界的《GQ》近年都相當積極地討論什麼是 New Masculinity（新男子氣概），或許我們會因為出身背景、生活環境或產業別的不同，得到截然不同的答案。然而你我都必須承認，近幾年來，社會價值觀不斷在挑戰我們傳統的「男子氣概」定義，男人該有什麼樣子，已經從千篇一律的標準答案，變成一道讓每個人可以自己作答的開放題，畢竟數位時代下的發聲管道變得自由而暢通了，我們也因此能聽見更多元的聲音。「與眾不同」成為美德，每個人因為「差異」而顯得獨特，尤其從近年男裝的趨勢與發展，更能看到這些變化。</p>
@@ -287,6 +265,37 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 adv02"><a href=""><img src="./img/adv02.jpg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+    <!--分享彈跳視窗-->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Share This Post !</h2>
+            <button class="btn-close close" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="shareCloseBtn" aria-hidden="true"></span></button>
+          </div>
+          <div class="modal-body border-bottom">
+            <h4 class="modalSubTitle">文章分享</h4><a class="facebookShareBtn" href="##"></a><a class="lineShareBtn" href="##"></a>
+          </div>
+          <div class="modal-body">
+            <h4 class="modalSubTitle">複製文章連結</h4>
+            <div class="field d-flex align-items-center justify-content-between"></div>
+            <!--.linkIcon-->
+            <input class="copyLink" type="text" value="https://togayther.com/post/607">
+            <button class="copyLinkBtn" type="button" data-bs-toggle="modal" data-bs-target="#content-copy-link-feedback">複製</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--連結複製反饋-->
+    <div class="modal fade" id="content-copy-link-feedback" tabindex="-1" aria-labelledby="contentCopyLinkFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content modal-content-basic-white text-center w-auto">
+          <div class="modal-body bg-dark-gray flex-center content-copy-link-complete px-96px py-36px"><img class="content-copy-link-complete-img" src="./img/complete_fill_green.svg">
+            <div class="content-copy-link-complete-text">連結已複製</div>
+          </div>
         </div>
       </div>
     </div>

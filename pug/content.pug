@@ -15,7 +15,6 @@ html(lang='en')
     link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
     link(rel='stylesheet' href='./css/style.css')
   body
-    // partial:index.partial.html
     .postContent
       .container
         .row
@@ -36,25 +35,6 @@ html(lang='en')
                 .commentButton 留言
               .saveButton 收藏
               .shareButton#shareBtn(type='button' data-bs-toggle='modal' data-bs-target='#shareModal') 分享
-
-              // Modal
-              #shareModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
-                .modal-dialog
-                  .modal-content
-                    .modal-header
-                      h2.modal-title Share This Post !
-                      button.btn-close.close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                          span.shareCloseBtn(aria-hidden='true')
-                    .modal-body.border-bottom
-                      h4.modalSubTitle 文章分享
-                      a.facebookShareBtn(href="##")
-                      a.lineShareBtn(href="##")
-                    .modal-body
-                      h4.modalSubTitle 複製文章連結
-                      .field.d-flex.align-items-center.justify-content-between
-                      //.linkIcon
-                      input.copyLink(type='text' value='https://togayther.com/post/607')
-                      button.copyLinkBtn 複製
 
             .postContentEditor
               p
@@ -328,6 +308,35 @@ html(lang='en')
           .col-md-12.adv02
             a(href='')
               img(src='./img/adv02.jpg' alt='')
+
+
+    //分享彈跳視窗
+    #shareModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-header
+            h2.modal-title Share This Post !
+            button.btn-close.close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                span.shareCloseBtn(aria-hidden='true')
+          .modal-body.border-bottom
+            h4.modalSubTitle 文章分享
+            a.facebookShareBtn(href="##")
+            a.lineShareBtn(href="##")
+          .modal-body
+            h4.modalSubTitle 複製文章連結
+            .field.d-flex.align-items-center.justify-content-between
+            //.linkIcon
+            input.copyLink(type='text' value='https://togayther.com/post/607')
+            button.copyLinkBtn(type='button' data-bs-toggle='modal' data-bs-target='#content-copy-link-feedback') 複製
+
+    //連結複製反饋
+    #content-copy-link-feedback.modal.fade(tabindex='-1' aria-labelledby='contentCopyLinkFeedbackLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered.flex-column.justify-content-center
+        .modal-content.modal-content-basic-white.text-center.w-auto
+          .modal-body.bg-dark-gray.flex-center.content-copy-link-complete.px-96px.py-36px
+            img.content-copy-link-complete-img(src="./img/complete_fill_green.svg")
+            .content-copy-link-complete-text 連結已複製
+
     script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous')
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js' integrity='sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ' crossorigin='anonymous')

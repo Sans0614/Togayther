@@ -239,10 +239,20 @@
                       <div class="field d-flex align-items-center justify-content-between"></div>
                       <!--.linkIcon-->
                       <input class="copyLink" type="text" value="https://togayther.com/post/607">
-                      <button class="copyLinkBtn">複製</button>
+                      <button class="copyLinkBtn" type="button" data-toggle="modal" data-target="#member-invite-copy-link-feedback">複製</button>
                     </div>
             </div>
         </div>
+    </div>
+    <!--連結複製反饋-->
+    <div class="modal fade" id="member-invite-copy-link-feedback" tabindex="-1" aria-labelledby="memberInviteCopyLinkFeedbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+        <div class="modal-content modal-content-basic-white text-center w-auto">
+          <div class="modal-body bg-dark-gray flex-center content-copy-link-complete px-96px py-36px"><img class="content-copy-link-complete-img" src="./img/complete_fill_green.svg">
+            <div class="content-copy-link-complete-text">連結已複製</div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
