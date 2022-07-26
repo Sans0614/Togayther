@@ -78,10 +78,10 @@ $('#social-notify-report-account,#social-notify-report-falsely').on( 'shown.bs.m
 })
 
 $("[data-hover-src]").mouseenter(function(){
-  $(this).data('original-src', $(this).attr());
-  $(this).attr('src', $(this).data('data-hover-src'))
+  $(this).attr('data-original-src',$(this).attr("src"));
+  $(this).attr('src', $(this).data('hover-src'));
 });
 
 $("[data-hover-src]").mouseleave(function(){
-  $(this).attr('src', $(this).data('original-src'))
+  $(this).attr('src', $(this).data('original-src'));
 });
