@@ -51,6 +51,13 @@
 	overflow: hidden;
 }
 
+/*20220726 調整手機版顯示順序*/
+@media (max-width:768px) {
+	.member-profile {
+		grid-area: 2;
+	}
+}
+
 .avatar {
 	position: relative;
 	height: 284px;
@@ -79,6 +86,13 @@
 	display: flex;
 	justify-content: center;
 	gap: 10px;
+}
+
+/*20220726 手機版隱藏數字區塊*/
+@media (max-width: 768px){
+	.section-count {
+		display: none;
+	}
 }
 
 .member-birth{
