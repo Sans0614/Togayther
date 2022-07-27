@@ -453,14 +453,14 @@ html(lang='en')
                 .social-post-like-number 83,997個讚
 
                 //留言輸入欄 - 大螢幕，不管是主留言或是子留言，都使用此表單
-                .social-post-comment-input-block
-                  input.social-post-comment-input(placeholder='留言⋯')
-                  button.btn.social-post-comment-submit(type='submit') 發佈
-
-                //留言編輯欄 - 大螢幕 ，當使用者是編輯留言時顯示此表單
-                //.social-post-comment-input-block
-                  input.social-post-comment-input(value='2樓下地獄')
-                  button.btn.social-post-comment-submit(type='submit') 儲存
+                //20220727 把主留言與回覆留言分開
+                .position-relative.mt-8px.h-37px
+                  .social-post-comment-input-block.position-absolute.w-100.mt-0
+                    input.social-post-comment-input(placeholder='留言⋯')
+                    button.btn.social-post-comment-submit(type='submit') 發佈
+                  .social-post-comment-input-block.position-absolute.w-100.mt-0
+                    input.social-post-comment-input(placeholder='留言⋯')
+                    button.btn.social-post-comment-submit(type='submit') 發佈
 
     //詳情頁彈跳視窗 - 第三人稱視角
     #social-post-third-person-more.social-modal.modal.fade(tabindex='-1' aria-labelledby='socialPostThirdPersonMoreLabel' aria-hidden='true')

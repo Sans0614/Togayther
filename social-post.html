@@ -390,16 +390,17 @@
                 <div class="btn social-post-share-btn bg-basic" type="button" data-bs-toggle="modal" data-bs-target="#social-post-share"></div>
                 <div class="social-post-like-number">83,997個讚</div>
                 <!--留言輸入欄 - 大螢幕，不管是主留言或是子留言，都使用此表單-->
-                <div class="social-post-comment-input-block">
-                  <input class="social-post-comment-input" placeholder="留言⋯">
-                  <button class="btn social-post-comment-submit" type="submit">發佈</button>
+                <!--20220727 把主留言與回覆留言分開-->
+                <div class="position-relative mt-8px h-37px">
+                  <div class="social-post-comment-input-block position-absolute w-100 mt-0">
+                    <input class="social-post-comment-input" placeholder="留言⋯">
+                    <button class="btn social-post-comment-submit" type="submit">發佈</button>
+                  </div>
+                  <div class="social-post-comment-input-block position-absolute w-100 mt-0">
+                    <input class="social-post-comment-input" placeholder="留言⋯">
+                    <button class="btn social-post-comment-submit" type="submit">發佈</button>
+                  </div>
                 </div>
-                <!--留言編輯欄 - 大螢幕 ，當使用者是編輯留言時顯示此表單-->
-                <!--.social-post-comment-input-block
-                input.social-post-comment-input(value='2樓下地獄')
-                button.btn.social-post-comment-submit(type='submit') 儲存
-                
-                -->
               </div>
             </div>
           </div>
