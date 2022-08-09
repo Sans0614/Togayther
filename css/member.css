@@ -927,6 +927,6 @@
 	text-decoration: none;
 }
 
-.dropdown-toggle::after {
+.dropdown-toggle-couponlist::after {
 	display:none;
 }

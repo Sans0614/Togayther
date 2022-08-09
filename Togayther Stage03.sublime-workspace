@@ -263,34 +263,7 @@
 			"file": "pug/navbar-social.pug",
 			"settings":
 			{
-				"buffer_size": 45668,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "account.html",
-			"settings":
-			{
-				"buffer_size": 18698,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "pug/social-post.pug",
-			"settings":
-			{
-				"buffer_size": 33034,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "edit-profile.html",
-			"settings":
-			{
-				"buffer_size": 7590,
+				"buffer_size": 45676,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -317,7 +290,7 @@
 			"file": "css/member.css",
 			"settings":
 			{
-				"buffer_size": 14443,
+				"buffer_size": 14454,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -380,7 +353,7 @@
 		[
 			[
 				"Package Control: ",
-				"Package Control: Remove Package"
+				"Package Control: Install Package"
 			],
 			[
 				"SublimeLinter",
@@ -428,15 +401,25 @@
 	},
 	"expanded_folders":
 	[
-		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit"
+		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit"
 	],
 	"file_history":
 	[
-		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/social-post.html",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/all-couponlist.html",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/my-couponlist.html",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/account.html",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/edit-profile.pug",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/edit-password.pug",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/coupon-detail.html",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/edit-password.html",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/edit-profile.html",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/navbar.pug",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/social-post.pug",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/index.pug",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/social.pug",
+		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/social-post.html",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/social.html",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/content.html",
-		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/account.html",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/content.pug",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/css/member.css",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/css/style-social.css",
@@ -447,8 +430,6 @@
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/social-hashtag.pug",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/social-personal-page.pug",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/edit-social-post.pug",
-		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/social-post.pug",
-		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/navbar.pug",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Stage03/Edit/js/navbar.js",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Stage03/Slasher/Web-End/Code/Edit/social-message.html",
 		"/C/升活商務顧問有限公司/20200708_中化360/01_指示藥品OTC/01_Website/03_Index/02_Code/edit/index.php",
@@ -551,19 +532,11 @@
 		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/00_升活商務顧問公司Lifeupdate/01_Website/06_Code/operation.html",
 		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/00_升活商務顧問公司Lifeupdate/01_Website/06_Code/css/style.css",
 		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/00_升活商務顧問公司Lifeupdate/01_Website/06_Code/sass/style.sass",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/00_升活商務顧問公司Lifeupdate/01_Website/06_Code/pug/operation.pug",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Edit/css/style-social.css",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Edit/coupon-detail2.html",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Edit/navbar.html",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Edit/login.html",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Edit/social.html",
-		"/C/Users/sans/AppData/Local/Temp/Rar$DIa4396.28141/style-social.css",
-		"/C/Users/sans/AppData/Local/Temp/Rar$DIa1704.34270/style-social.css",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/01_20200708_中化360/01_指示藥品OTC/03_data/05_mapjs/dist/20211224/index.html"
+		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/00_升活商務顧問公司Lifeupdate/01_Website/06_Code/pug/operation.pug"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 39.3333333333
 	},
 	"find_in_files":
 	{
@@ -577,6 +550,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dropdown-toggle",
+			".dropdown-toggle",
+			"dropdown-toggle",
+			"#dropdownProfileMenu",
 			"height: 35px",
 			".social-index-featured-member-data",
 			"social-index-featured-member-block",
@@ -700,11 +677,7 @@
 			"social-message-chat-content",
 			".social-message-chat-content",
 			"social-message-chat-personal",
-			".social-message-chat-content-link-description",
-			".social-message-chat-user",
-			".social-message-chat-user,.social-message-chat-content",
-			".social-message-chat-user,.social-message-chat-content ",
-			".social-message-chat-content"
+			".social-message-chat-content-link-description"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -722,7 +695,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -731,15 +704,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 45668,
+						"buffer_size": 45676,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								31317,
-								31317
+								773,
+								773
 							]
 						],
 						"settings":
@@ -843,124 +816,20 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3621.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "account.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18698,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2108,
-								2108
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 247.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "pug/social-post.pug",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 33034,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								22356,
-								22356
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 8854.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "edit-profile.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7590,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								552,
-								552
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 285.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 1,
 					"file": "sass/style-social.sass",
 					"semi_transient": false,
 					"settings":
@@ -972,8 +841,8 @@
 						"selection":
 						[
 							[
-								2477,
-								2477
+								2332,
+								2332
 							]
 						],
 						"settings":
@@ -1062,14 +931,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2781.0,
+						"translation.y": 3021.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 2,
 					"file": "sass/style.sass",
 					"semi_transient": false,
 					"settings":
@@ -1081,8 +950,8 @@
 						"selection":
 						[
 							[
-								11906,
-								11906
+								32686,
+								32686
 							]
 						],
 						"settings":
@@ -1171,27 +1040,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12395.0,
+						"translation.y": 32655.3333333,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 3,
 					"file": "css/member.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14443,
+						"buffer_size": 14454,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								640,
-								640
+								8389,
+								8389
 							]
 						],
 						"settings":
@@ -1201,18 +1070,18 @@
 							"origin_encoding": "UTF-8",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/CSS3/CSS3.sublime-syntax",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 463.0,
+						"translation.y": 9260.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 4,
 					"file": "sass/navbar.sass",
 					"semi_transient": false,
 					"settings":
@@ -1314,10 +1183,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5871.0,
+						"translation.y": 5301.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1327,7 +1196,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 8,
+					"buffer": 5,
 					"file": "js/social.js",
 					"semi_transient": false,
 					"settings":
@@ -1430,14 +1299,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 969.0,
+						"translation.y": 969.333333333,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 6,
 					"file": "js/navbar.js",
 					"semi_transient": true,
 					"settings":
@@ -1468,11 +1337,11 @@
 						"translation.y": 627.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 7,
 					"file": "js/app.js",
 					"semi_transient": false,
 					"settings":
@@ -1503,11 +1372,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 8,
 					"file": "js/index.js",
 					"semi_transient": false,
 					"settings":
@@ -1538,7 +1407,7 @@
 						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1546,7 +1415,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -1578,7 +1447,7 @@
 		"cols":
 		[
 			0.0,
-			0.670289855073,
+			0.545195611568,
 			0.971014492754,
 			1.0
 		],
@@ -1605,7 +1474,7 @@
 	"project": "Togayther Stage03.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1635,7 +1504,7 @@
 		],
 		"width": 592.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
