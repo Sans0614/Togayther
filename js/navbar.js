@@ -33,19 +33,27 @@ setTimeout(menudisplay,1000)
 
 /*社群換圖*/
 $("#facebookIcon").mouseenter(function(){
-  $("#facebookIcon").attr("src","../img/navbar/FacebookIconHover.svg");
+  $("#facebookIcon").attr("src","./img/navbar/FacebookIconHover.svg");
 });
 
 $("#facebookIcon").mouseleave(function(){
-      $("#facebookIcon").attr("src","../img/navbar/FacebookIcon.svg");
+  $("#facebookIcon").attr("src","./img/navbar/FacebookIcon.svg");
 });
 
 $("#instagramIcon").mouseenter(function(){
-  $("#instagramIcon").attr("src","../img/navbar/InstagramIconHover.svg");
+  $("#instagramIcon").attr("src","./img/navbar/InstagramIconHover.svg");
 });
 
 $("#instagramIcon").mouseleave(function(){
-      $("#instagramIcon").attr("src","../img/navbar/InstagramIcon.svg");
+  $("#instagramIcon").attr("src","./img/navbar/InstagramIcon.svg");
+});
+
+$("#navbar-go-to-social-btn").mouseenter(function(){
+  $("#navbar-go-to-social-btn").attr("src","./img/navbar/go_to_social_fill_black.svg");
+});
+
+$("#navbar-go-to-social-btn").mouseleave(function(){
+  $("#navbar-go-to-social-btn").attr("src","./img/navbar/go_to_social_outline_black.svg");
 });
 
 $("[data-hover-text]").mouseenter(function(){

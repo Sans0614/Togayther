@@ -209,11 +209,11 @@ textarea {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background-color: #1d1d1d;
-  padding: 12px 24px;
+  padding: 8px 24px;
 }
 .category-social-btn img {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
 }
 .category-social-btn .category-social-btn-text {
   margin-left: 8px;

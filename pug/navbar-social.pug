@@ -34,9 +34,8 @@ html(lang='en')
             // 回到自媒體文章網站
             a.icon(href='/')
 
-              //20220725 更換圖片路徑 ./img/navbar/media_web_fill_white.svg 更改成 ./img/navbar/back_to_media_outline_white.svg
-              //20220725 新增data-hover-src
-              img(src='./img/navbar/back_to_media_outline_white.svg' data-hover-src='./img/navbar/back_to_media_fill_white.svg')
+              //20220823 新增#navbar-back-to-media-btn
+              img#navbar-back-to-media-btn(src='./img/navbar/back_to_media_outline_white.svg' data-hover-src='./img/navbar/back_to_media_fill_white.svg')
 
             // 首頁 - 點擊後回到社群首頁頂端與重整頁面
             a#homebtn.icon.d-none.d-lg-block(href='')
@@ -44,7 +43,7 @@ html(lang='en')
               //20220725 新增data-hover-src
               img(src='./img/navbar/home_outline_white.svg' data-hover-src='./img/navbar/home_fill_white.svg')
 
-            //202205070 開啟搜尋功能
+            //20220507 開啟搜尋功能
             //20220725 新增data-hover-src
             img#searchbtn.icon.d-none.d-lg-block(src='./img/navbar/search_outline_white.svg' type='button' data-bs-toggle='modal' data-bs-target='#social-search'  data-hover-src='./img/navbar/search_fill_white.svg')
 

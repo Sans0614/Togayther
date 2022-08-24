@@ -20,6 +20,13 @@ html(lang='en')
               a(href='https://togayther.com/')
                 img(src='./img/navbar/Logo_h50.png' alt='')
           .col-md-6.col-4.iconBlock.d-flex.align-items-center
+
+            //20220823 從.iconBlock 中最後一項到第一項
+            a(href='https://togayther.com/social')
+
+              //20220823 更換圖片路徑 & 新增#go-to-social-btn
+              img#navbar-go-to-social-btn(src='./img/navbar/go_to_social_outline_black.svg')
+
             a.d-md-block.d-none(href='https://www.facebook.com/togayther2021/' target=' _blank')
               img#facebookIcon.facebook(src='./img/navbar/FacebookIcon.svg' alt='')
             a.d-md-block.d-none(href='https://www.instagram.com/togayther_com/' target=' _blank')
@@ -28,11 +35,7 @@ html(lang='en')
               img(src='./img/navbar/SearchIcon.svg' alt='')
             a.member(href='')
               img(src='./img/navbar/MemberIcon.svg' alt='')
-            //前往社群網站 
-            a(href='https://togayther.com/social')
 
-              //20220622 更換圖片路徑
-              img(src='./img/navbar/index_web_fill_gradient.svg')
     // 搜尋頁面
     #navbarSearchPage
       .closebtn

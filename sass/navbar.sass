@@ -131,9 +131,11 @@ $LinkBlue: #CEDAF2
       a,#searchbtn
         cursor: pointer
         img
-          /*20220330 從margin 改成 padding*/
           padding: 0px 5px
-          height: 25px  
+          height: 25px
+
+        #navbar-go-to-social-btn
+          height: 30px
       a.memberlogin
         img
           height: 30px
@@ -143,6 +145,7 @@ $LinkBlue: #CEDAF2
       border-radius: 100%
       background-size: cover
       margin: 0 5px
+
 #navbarSearchPage
   position: relative
   z-index: 200
@@ -307,10 +310,15 @@ $LinkBlue: #CEDAF2
 
 #navbar
   .icon
+    display: flex
+    align-items: center
     -webkit-appearance: none
     cursor: pointer
     height: 25px
     margin-right: 24px
+
+  #navbar-back-to-media-btn
+    height: 30px
 
 @media (max-width: 1199.98px)
   #navbar

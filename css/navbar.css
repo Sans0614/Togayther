@@ -178,9 +178,11 @@ p {
   cursor: pointer;
 }
 #navbar .navbarcontainer .iconBlock a img, #navbar .navbarcontainer .iconBlock #searchbtn img {
-  /*20220330 從margin 改成 padding*/
   padding: 0px 5px;
   height: 25px;
+}
+#navbar .navbarcontainer .iconBlock a #navbar-go-to-social-btn, #navbar .navbarcontainer .iconBlock #searchbtn #navbar-go-to-social-btn {
+  height: 30px;
 }
 #navbar .navbarcontainer .iconBlock a.memberlogin img {
   height: 30px;
@@ -397,10 +399,19 @@ p {
 }
 
 #navbar .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-appearance: none;
   cursor: pointer;
   height: 25px;
   margin-right: 24px;
+}
+#navbar #navbar-back-to-media-btn {
+  height: 30px;
 }
 
 @media (max-width: 1199.98px) {
