@@ -111,46 +111,41 @@ $LinkBlue: #CEDAF2
   top: 0
   z-index: 100
   box-shadow: 0px 3px 6px rgba(0,0,0,0.2)
-
-  a,#searchbtn
-    cursor: pointer
-
-  a.memberlogin
-    img
-      height: 30px
-
   .navbarcontainer
     padding-left: 10px
     padding-right: 10px
     position: relative
+    .row
+      #navbarMenu
+        #navbarMenuBtn
+          cursor: pointer
+          img
+            height: 22px
+      #navbarBrandLogo
+        margin-left: 10px
+        margin-top: 9px
+        img
+          height: 32px
+          object-fit: contain
+    .iconBlock
+      justify-content: flex-end
+      a,#searchbtn
+        cursor: pointer
+        img
+          padding: 0px 5px
+          height: 25px
 
-  #navbarMenuBtn
-    cursor: pointer
-    img
-      height: 22px
-
-  #navbarBrandLogo
-    margin-left: 10px
-    margin-top: 9px
-    img
-      height: 32px
-      object-fit: contain
-
-  .iconBlock
-    justify-content: flex-end
-    img
-      padding: 0px 5px
+        #navbar-go-to-social-btn
+          height: 30px
+      a.memberlogin
+        img
+          height: 30px
+    .profile-image
+      width: 25px
       height: 25px
-
-  #navbar-go-to-social-btn
-    height: 30px
-
-  .profile-image
-    width: 25px
-    height: 25px
-    border-radius: 100%
-    background-size: cover
-    margin: 0 5px
+      border-radius: 100%
+      background-size: cover
+      margin: 0 5px
 
 #navbarSearchPage
   position: relative
@@ -162,59 +157,53 @@ $LinkBlue: #CEDAF2
   width: 100%
   height: 100%
   background-color: rgba(46,48,47,0.9)
-
   .closebtn
     position: relative
     cursor: pointer
-
-  #navbarSearchCloseBtn
-    position: absolute
-    right: 30px
-    top: 20px
-
-    img
-      width: 20px
-
+    #navbarSearchCloseBtn
+      position: absolute
+      right: 30px
+      top: 20px
+      img
+        width: 20px
   .searchBar
     +flexCenter
     width: 100%
     height: 100%
-
-  form
-    display: flex
-
-  input.searchform
-    background-color: #1d1d1d
-    color: #FFF
-    font-size: 18px
-    outline: none
-    padding-left: 25px
-    height: 60px
-    width: 300px
-    border-radius: 100px 0px 0px 100px
-    border: 0px
-
-  input.searchform::placeholder
-    color: $MGray
-    font-size: 18px
-
-  input.submitbtn
-    background-color: #1d1d1d
-    color: #FFF
-    padding-right: 30px
-    border-radius: 0px 100px 100px 0px
-    border: 0px
-    height: 60px
-    width: 60px
-    background-image: url(../img/navbar/SearchPageIcon.svg)
-    background-position: center
-    background-repeat: no-repeat
-    background-size: 25px
+    form
+      display: flex
+      input.searchform
+        background-color: #1d1d1d
+        color: #FFF
+        font-size: 18px
+        outline: none
+        padding-left: 25px
+        height: 60px
+        width: 300px
+        border-radius: 100px 0px 0px 100px
+        border: 0px
+      input.searchform::placeholder
+        color: $MGray
+        font-size: 18px
+      input.submitbtn
+        background-color: #1d1d1d
+        color: #FFF
+        padding-right: 30px
+        border-radius: 0px 100px 100px 0px
+        border: 0px
+        height: 60px
+        width: 60px
+        background-image: url(../img/navbar/SearchPageIcon.svg)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 25px
+      // input
+      //   &:focus
+      //     outline: 1px solid $MGray
 
 #navbarMenuContent
   position: relative
   z-index: 200
-
   #navbarMenubg
     display: none
     position: fixed
@@ -224,7 +213,6 @@ $LinkBlue: #CEDAF2
     height: 100vh
     padding: 30px 20px
     background-color: #2E302F
-
   #navbarMenuText
     display: none
     position: fixed
@@ -234,72 +222,79 @@ $LinkBlue: #CEDAF2
     min-height: 100%
     padding: 30px 20px
     background-color: #2E302F
-
-  .closebtn
-    position: relative
-    cursor: pointer
-
-  #navbarMenuCloseBtn
-    position: absolute
-    right: 0px
-    top: 0px
-    img
-      width: 20px
-  a
-    &:hover
-    text-decoration: none
-  h3
-    font-size: 24px
-    font-weight: 400
-    line-height: 48px
-    color: #FFF
-  h5
-    font-size: 16px
-    line-height: 24px
-    font-weight: 300
-    color: #FFF
-
-  h5.first
-    margin-top: 10px
-
-  hr
-    +hr($bgc:#FFF,$width:100%,$height: 1px,$ml:0)
+    .closebtn
+      position: relative
+      cursor: pointer
+      #navbarMenuCloseBtn
+        position: absolute
+        right: 0px
+        top: 0px
+        img
+          width: 20px
+    .submenu
+      a
+        h5
+          font-size: 16px
+          line-height: 24px
+          font-weight: 300
+          color: #FFF
+        h5.first
+          margin-top: 10px
+        &:hover
+          text-decoration: none
+    hr
+      +hr($bgc:#FFF,$width:100%,$height: 1px,$ml:0)
+    .menu
+      a
+        h3
+          font-size: 24px
+          font-weight: 400
+          line-height: 48px
+          color: #FFF
+        &:hover
+          text-decoration: none
 
 //Phone
 @media (max-width: 768px)
   #navbar
-    #navbarMenuBtn
-      img
-        width: 25px
-    #navbarBrandLogo
-      margin-top: 8px
-      img
-        height: 28px
-        width: auto
-    .iconBlock
-      img
-        height: 25px
-
+    .container
+      .row
+        #navbarMenu
+          #navbarMenuBtn
+            img
+              width: 25px
+        #navbarBrandLogo
+          margin-top: 8px
+          img
+            height: 28px
+            width: auto
+      .iconBlock
+        a,#searchbtn
+          cursor: pointer
+          img
+            height: 25px
   #navbarSearchPage
-    input.searchform
-      height: 60px
-      width: 80%
-    input.submitbtn
-      height: 60px
-      width: 20%
-      background-image: url(../img/navbar/SearchPageIcon.svg)
-      background-position: center
-      background-repeat: no-repeat
-      background-size: 25px
-
+    .searchBar
+      form
+        input.searchform
+          height: 60px
+          width: 80%
+        input.submitbtn
+          height: 60px
+          width: 20%
+          background-image: url(../img/navbar/SearchPageIcon.svg)
+          background-position: center
+          background-repeat: no-repeat
+          background-size: 25px
   #navbarMenuContent
     #navbarMenuText,#navbarMenubg
       width: 300px
     #navbarMenuText
       .menu
-        h3
-          font-size: 22px
-          line-height: 44px
+        a
+          h3
+            font-size: 22px
+            line-height: 44px
 
 
 /*社群功能*/

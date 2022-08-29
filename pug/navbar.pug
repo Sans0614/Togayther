@@ -12,14 +12,17 @@ html(lang='en')
     #navbar
       .container.navbarcontainer
         .row
-          .col-md-6.col-8.d-flex.align-items-center
+          // 20220829 把 class="col-md-6 col-8" 更改成 class="col-6"
+          .col-6.d-flex.align-items-center
             #navbarMenu
               #navbarMenuBtn
                 img(src='./img/navbar/MenuIcon.svg' alt='')
             #navbarBrandLogo
               a(href='https://togayther.com/')
                 img(src='./img/navbar/Logo_h50.png' alt='')
-          .col-md-6.col-4.iconBlock.d-flex.align-items-center
+
+          // 20220829 把 class="col-md-6 col-4" 更改成 class="col-6"
+          .col-6.iconBlock.d-flex.align-items-center
 
             //20220823 從.iconBlock 中最後一項到第一項
             a(href='https://togayther.com/social')

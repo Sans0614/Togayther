@@ -151,43 +151,45 @@ p {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
+#navbar a, #navbar #searchbtn {
+  cursor: pointer;
+}
+#navbar a.memberlogin img {
+  height: 30px;
+}
 #navbar .navbarcontainer {
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
 }
-#navbar .navbarcontainer .row #navbarMenu #navbarMenuBtn {
+#navbar #navbarMenuBtn {
   cursor: pointer;
 }
-#navbar .navbarcontainer .row #navbarMenu #navbarMenuBtn img {
+#navbar #navbarMenuBtn img {
   height: 22px;
 }
-#navbar .navbarcontainer .row #navbarBrandLogo {
+#navbar #navbarBrandLogo {
   margin-left: 10px;
   margin-top: 9px;
 }
-#navbar .navbarcontainer .row #navbarBrandLogo img {
+#navbar #navbarBrandLogo img {
   height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-#navbar .navbarcontainer .iconBlock {
+#navbar .iconBlock {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-#navbar .navbarcontainer .iconBlock a, #navbar .navbarcontainer .iconBlock #searchbtn {
-  cursor: pointer;
-}
-#navbar .navbarcontainer .iconBlock a img, #navbar .navbarcontainer .iconBlock #searchbtn img {
+#navbar .iconBlock img {
   padding: 0px 5px;
   height: 25px;
 }
-#navbar .navbarcontainer .iconBlock a #navbar-go-to-social-btn, #navbar .navbarcontainer .iconBlock #searchbtn #navbar-go-to-social-btn {
+#navbar #navbar-go-to-social-btn {
   height: 30px;
 }
-#navbar .navbarcontainer .iconBlock a.memberlogin img {
-  height: 30px;
-}
-#navbar .navbarcontainer .profile-image {
+#navbar .profile-image {
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -210,12 +212,12 @@ p {
   position: relative;
   cursor: pointer;
 }
-#navbarSearchPage .closebtn #navbarSearchCloseBtn {
+#navbarSearchPage #navbarSearchCloseBtn {
   position: absolute;
   right: 30px;
   top: 20px;
 }
-#navbarSearchPage .closebtn #navbarSearchCloseBtn img {
+#navbarSearchPage #navbarSearchCloseBtn img {
   width: 20px;
 }
 #navbarSearchPage .searchBar {
@@ -235,12 +237,12 @@ p {
   width: 100%;
   height: 100%;
 }
-#navbarSearchPage .searchBar form {
+#navbarSearchPage form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-#navbarSearchPage .searchBar form input.searchform {
+#navbarSearchPage input.searchform {
   background-color: #1d1d1d;
   color: #FFF;
   font-size: 18px;
@@ -251,27 +253,27 @@ p {
   border-radius: 100px 0px 0px 100px;
   border: 0px;
 }
-#navbarSearchPage .searchBar form input.searchform::-webkit-input-placeholder {
+#navbarSearchPage input.searchform::-webkit-input-placeholder {
   color: #727272;
   font-size: 18px;
 }
-#navbarSearchPage .searchBar form input.searchform::-moz-placeholder {
+#navbarSearchPage input.searchform::-moz-placeholder {
   color: #727272;
   font-size: 18px;
 }
-#navbarSearchPage .searchBar form input.searchform:-ms-input-placeholder {
+#navbarSearchPage input.searchform:-ms-input-placeholder {
   color: #727272;
   font-size: 18px;
 }
-#navbarSearchPage .searchBar form input.searchform::-ms-input-placeholder {
+#navbarSearchPage input.searchform::-ms-input-placeholder {
   color: #727272;
   font-size: 18px;
 }
-#navbarSearchPage .searchBar form input.searchform::placeholder {
+#navbarSearchPage input.searchform::placeholder {
   color: #727272;
   font-size: 18px;
 }
-#navbarSearchPage .searchBar form input.submitbtn {
+#navbarSearchPage input.submitbtn {
   background-color: #1d1d1d;
   color: #FFF;
   padding-right: 30px;
@@ -309,69 +311,63 @@ p {
   padding: 30px 20px;
   background-color: #2E302F;
 }
-#navbarMenuContent #navbarMenuText .closebtn {
+#navbarMenuContent .closebtn {
   position: relative;
   cursor: pointer;
 }
-#navbarMenuContent #navbarMenuText .closebtn #navbarMenuCloseBtn {
+#navbarMenuContent #navbarMenuCloseBtn {
   position: absolute;
   right: 0px;
   top: 0px;
 }
-#navbarMenuContent #navbarMenuText .closebtn #navbarMenuCloseBtn img {
+#navbarMenuContent #navbarMenuCloseBtn img {
   width: 20px;
 }
-#navbarMenuContent #navbarMenuText .submenu a h5 {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 300;
-  color: #FFF;
-}
-#navbarMenuContent #navbarMenuText .submenu a h5.first {
-  margin-top: 10px;
-}
-#navbarMenuContent #navbarMenuText .submenu a:hover {
+#navbarMenuContent a {
   text-decoration: none;
 }
-#navbarMenuContent #navbarMenuText hr {
-  background-color: #FFF;
-  width: 100%;
-  height: 1px;
-  margin-left: 0;
-}
-#navbarMenuContent #navbarMenuText .menu a h3 {
+#navbarMenuContent h3 {
   font-size: 24px;
   font-weight: 400;
   line-height: 48px;
   color: #FFF;
 }
-#navbarMenuContent #navbarMenuText .menu a:hover {
-  text-decoration: none;
+#navbarMenuContent h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #FFF;
+}
+#navbarMenuContent h5.first {
+  margin-top: 10px;
+}
+#navbarMenuContent hr {
+  background-color: #FFF;
+  width: 100%;
+  height: 1px;
+  margin-left: 0;
 }
 
 @media (max-width: 768px) {
-  #navbar .container .row #navbarMenu #navbarMenuBtn img {
+  #navbar #navbarMenuBtn img {
     width: 25px;
   }
-  #navbar .container .row #navbarBrandLogo {
+  #navbar #navbarBrandLogo {
     margin-top: 8px;
   }
-  #navbar .container .row #navbarBrandLogo img {
+  #navbar #navbarBrandLogo img {
     height: 28px;
     width: auto;
   }
-  #navbar .container .iconBlock a, #navbar .container .iconBlock #searchbtn {
-    cursor: pointer;
-  }
-  #navbar .container .iconBlock a img, #navbar .container .iconBlock #searchbtn img {
+  #navbar .iconBlock img {
     height: 25px;
   }
 
-  #navbarSearchPage .searchBar form input.searchform {
+  #navbarSearchPage input.searchform {
     height: 60px;
     width: 80%;
   }
-  #navbarSearchPage .searchBar form input.submitbtn {
+  #navbarSearchPage input.submitbtn {
     height: 60px;
     width: 20%;
     background-image: url(../img/navbar/SearchPageIcon.svg);
@@ -383,7 +379,7 @@ p {
   #navbarMenuContent #navbarMenuText, #navbarMenuContent #navbarMenubg {
     width: 300px;
   }
-  #navbarMenuContent #navbarMenuText .menu a h3 {
+  #navbarMenuContent #navbarMenuText .menu h3 {
     font-size: 22px;
     line-height: 44px;
   }
