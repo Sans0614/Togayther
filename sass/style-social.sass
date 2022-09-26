@@ -585,7 +585,6 @@ body
     cursor: pointer
     position: relative
     border-radius: 3px
-    cursor: pointer
 
 .edit-social-post-modal
   input[type="file"]
@@ -1090,6 +1089,11 @@ body
     max-width: 100%
     max-height: 100%
     object-fit: cover
+
+//- 20220926文章內頁-影片播放器控制隱藏
+.social-post-video::-webkit-media-controls-enclosure
+  display: none
+
 .video-social-preview-sizing
   max-width: 100%
   max-height: 100%

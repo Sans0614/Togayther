@@ -41,12 +41,19 @@ html(lang='en')
                   .mb100.col-md-12.profileImagesUpload
                     .profileBanner
                       .profileBannerEdit
-                      .uploadBannerBlock
-                        input.uploadImg(type='file')
+
+                      //20220926 把 <div class="uploadBannerBlock"> 區塊更改成 <label class="uploadBannerBlock"> 區塊樣式
+                      label.uploadBannerBlock
+                        img(src="./img/upload_outline_white.svg")
+                        span.d-none.d-md-inline-block 上傳封面照
+                        input(type='file')
                     .profileImg
                       .profileImgEdit
-                      .uploadImgBlock
-                        input.uploadImg(type='file')
+
+                      //20220926 把 <div class="uploadImgBlock"> 區塊更改成 <label class="uploadImgBlock"> 區塊樣式
+                      label.uploadImgBlock
+                        img(src="./img/camera_outline_white.svg")
+                        input(type='file')
                   .mb-3.col-md-6
                     label.form-label(for='InputUsername UsernameValidation')
                       | 暱稱

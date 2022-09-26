@@ -297,6 +297,14 @@ textarea {
   margin-top: 50px;
 }
 
+.categoryListBlock .container:first-child {
+  padding-top: 0px;
+}
+
+.categoryListBlock .container:nth-child(2n+1) {
+  padding-top: 56px;
+}
+
 /*九大分類標題區塊*/
 .categoryTitleBlock {
   padding: 0 10px;
@@ -1410,14 +1418,51 @@ textarea {
   border-radius: 10px 10px 0 0;
 }
 
-.uploadBannerBlock {
+.uploadImgBlock [type=file], .uploadBannerBlock [type=file] {
   position: absolute;
-  right: 10px;
-  bottom: 5px;
-  width: 90px;
-  overflow: hidden;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
 }
 
+.uploadBannerBlock {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  margin: 0;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  background-color: #1d1d1d;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.uploadBannerBlock img {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 767.98px) {
+  .uploadBannerBlock {
+    border-radius: 100px;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+  }
+  .uploadBannerBlock img {
+    position: relative;
+    left: 50%;
+    top: 34%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
 .profileImg {
   position: absolute;
   top: 120px;
@@ -1443,25 +1488,23 @@ textarea {
 }
 
 .uploadImgBlock {
-  width: 90px;
-  margin: 10px auto 0;
-  overflow: hidden;
-}
-
-.uploadImg::-webkit-file-upload-button {
-  background: #FFF;
-  border: 1px solid #1d1d1d;
-  border-radius: 5px;
-  color: #1d1d1d;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0;
+  height: 36px;
+  width: 36px;
+  background-color: #1d1d1d;
+  border: 1px solid #FFFFFF;
+  border-radius: 100px;
   cursor: pointer;
-  padding: 4px 12px;
 }
-.uploadImg::-webkit-file-upload-button:hover {
-  background: #1d1d1d;
-  border: 1px solid #1d1d1d;
-  color: #FFF;
-  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+.uploadImgBlock img {
+  position: relative;
+  left: 50%;
+  top: 35%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .profileEditMenu ul {

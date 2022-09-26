@@ -825,7 +825,6 @@ body {
   cursor: pointer;
   position: relative;
   border-radius: 3px;
-  cursor: pointer;
 }
 
 .edit-social-post-modal input[type=file] {
@@ -1489,6 +1488,10 @@ body {
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.social-post-video::-webkit-media-controls-enclosure {
+  display: none;
 }
 
 .video-social-preview-sizing {
