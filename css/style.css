@@ -297,12 +297,12 @@ textarea {
   margin-top: 50px;
 }
 
-.categoryListBlock .container:first-child {
-  padding-top: 0px;
-}
-
 .categoryListBlock .container:nth-child(2n+1) {
   padding-top: 56px;
+}
+
+.categoryListBlock .container:first-child {
+  padding-top: 0px;
 }
 
 /*九大分類標題區塊*/
