@@ -264,6 +264,24 @@
 	"buffers":
 	[
 		{
+			"file": "all-couponlist.html",
+			"settings":
+			{
+				"buffer_size": 65503,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "my-couponlist.html",
+			"settings":
+			{
+				"buffer_size": 67351,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "pug/index.pug",
 			"settings":
 			{
@@ -279,24 +297,6 @@
 				"buffer_size": 6415,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "pug/navbar.pug",
-			"settings":
-			{
-				"buffer_size": 3987,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "navbar.html",
-			"settings":
-			{
-				"buffer_size": 4470,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -433,11 +433,12 @@
 	"expanded_folders":
 	[
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit",
-		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/css",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug"
 	],
 	"file_history":
 	[
+		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/navbar.html",
+		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/navbar.pug",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/edit-profile.html",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/css/style-social.css",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/css/style.css",
@@ -452,9 +453,7 @@
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/content.html",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/sass/style-social - 20220513backup.sass",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/navbar-social.pug",
-		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/navbar.pug",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/navbar-social.html",
-		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/navbar.html",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/all-couponlist.html",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/my-couponlist.html",
 		"/C/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/account.html",
@@ -569,7 +568,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -583,6 +582,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"container",
 			"img",
 			"file",
 			"upload",
@@ -709,8 +709,7 @@
 			"edit-social-personal-page-user-data-block",
 			"//20220517 新增placeholder",
 			"input.edit-social-pe",
-			"textarea.edit-social-personal-page",
-			".edit-social-personal-page-name-id"
+			"textarea.edit-social-personal-page"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -733,6 +732,66 @@
 			[
 				{
 					"buffer": 0,
+					"file": "all-couponlist.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 65503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57589,
+								57589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 20595.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "my-couponlist.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 67351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59544,
+								59544
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 22364.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "pug/index.pug",
 					"semi_transient": false,
 					"settings":
@@ -760,11 +819,11 @@
 						"translation.y": 5700.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 3,
 					"file": "pug/edit-profile.pug",
 					"semi_transient": false,
 					"settings":
@@ -782,6 +841,8 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -790,71 +851,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "pug/navbar.pug",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3987,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3604,
-								3604
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 339.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "navbar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4470,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1336,
-								1391
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -876,8 +873,8 @@
 						"selection":
 						[
 							[
-								23852,
-								23852
+								4844,
+								4815
 							]
 						],
 						"settings":
@@ -966,10 +963,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 22555.0,
+						"translation.y": 4897.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1003,7 +1000,7 @@
 						"translation.y": 12216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1112,7 +1109,7 @@
 						"translation.y": 10675.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1482,7 +1479,7 @@
 		"cols":
 		[
 			0.0,
-			0.544036191278,
+			0.746689991037,
 			0.971014492754,
 			1.0
 		],
