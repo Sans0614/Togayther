@@ -1130,7 +1130,6 @@ textarea {
 
 /*廣告區塊*/
 .advertiseBlock {
-  background-color: #F5F5F5;
   padding: 20px 0;
   margin-top: 50px;
 }
@@ -1615,15 +1614,12 @@ textarea {
   .container {
     max-width: 100%;
   }
-
   .formContent, .profileContent {
     width: 500px;
   }
-
   .profileEditContent {
     width: 95%;
   }
-
   .swiper-button-next, .swiper-button-prev {
     display: none;
   }
@@ -1632,7 +1628,6 @@ textarea {
   .formContent {
     width: 100%;
   }
-
   #slider .swiper-slide {
     font-size: 10px;
   }
@@ -1642,7 +1637,6 @@ textarea {
   #slider .swiper-slide .mbbanner {
     display: block;
   }
-
   #youtubepost .swiper-button-next, #youtubepost .swiper-button-prev {
     display: none;
   }
@@ -1650,12 +1644,10 @@ textarea {
     right: 10px;
     bottom: 24px;
   }
-
   /*九大分類區塊*/
   .categoryBlock, .categoryListBlock {
     margin-top: 30px;
   }
-
   /*九大分類標題*/
   .categoryTitle {
     font-size: 24px;
@@ -1663,11 +1655,9 @@ textarea {
     letter-spacing: 1px;
     margin: 0px 10px 10px 0px;
   }
-
   .categorySubTitle {
     font-size: 16px;
   }
-
   /*文章卡片區塊*/
   .postCard {
     height: 100%;
@@ -1680,19 +1670,15 @@ textarea {
   .postCard:hover .postImage:hover {
     border-radius: 0;
   }
-
   .postCard430, .postCard590 {
     position: static;
   }
-
   .postCard-first, .postCard-other {
     margin-bottom: 20px;
   }
-
   .postCard-content {
     padding: 0;
   }
-
   .postCard-first {
     padding: 0;
   }
@@ -1702,7 +1688,6 @@ textarea {
   .postCard-first .postCard .postContent {
     padding: 0px 10px;
   }
-
   .postCard-other .postCard {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1724,36 +1709,28 @@ textarea {
     flex: 70%;
     margin-left: 10px;
   }
-
   .postCard-Content {
     display: none;
   }
-
   .categoryLessBlock .postCard-other:nth-child(n+5) {
     display: block;
   }
-
   .categoryBlock .postCard-other:nth-child(n+7), .categoryLessBlock .postCard-other:nth-child(n+7) {
     display: none;
   }
-
   .categoryMoreBlock .postCard-other {
     display: block;
   }
-
   #posts > .container:not(:first-child) {
     margin-top: 20px;
   }
-
   .shadow2:hover {
     -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
             box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
   }
-
   .postCardCalc1 {
     height: calc(100% + 10px);
   }
-
   /*文章標題*/
   .postTitle-first {
     font-size: 16px;
@@ -1761,37 +1738,30 @@ textarea {
     line-height: 1.5;
     letter-spacing: 1.5px;
   }
-
   .metaBlock {
     position: static;
     display: inline-block;
   }
-
   .saveBlock {
     display: inline-block;
     right: 0px;
     bottom: initial;
   }
-
   .collectionSaveBlock {
     right: 10px;
   }
-
   .postCard-first .saveBlock {
     right: 9px;
   }
-
   #youtubepost .metaBlock {
     position: absolute;
     bottom: 20px;
     left: 0;
   }
-
   .meta {
     font-size: 12px;
     margin-bottom: 0;
   }
-
   /*文章內頁*/
   .postContentImage {
     margin: 0 0 30px;
@@ -1799,16 +1769,13 @@ textarea {
   .postContentImage iframe {
     height: 250px;
   }
-
   .postContentTitleBlock {
     margin: 0 10px 10px;
   }
-
   /*互動按鈕*/
   .postContentInteractive {
     text-align: left;
   }
-
   .likeButton, .commentButton, .saveButton, .shareButton {
     font-size: 14px;
     padding: 5px 10px;
@@ -1823,12 +1790,10 @@ textarea {
     height: 11px;
     margin-right: 5px;
   }
-
   .shareButton {
     position: absolute;
     right: 10px;
   }
-
   /*社群分享*/
   #shareModal .copyLink, #shareModal .copyLinkBtn, #memberInvite .copyLink, #memberInvite .copyLinkBtn {
     width: 100%;
@@ -1836,7 +1801,6 @@ textarea {
   #shareModal .copyLinkBtn, #memberInvite .copyLinkBtn {
     margin-top: 8px;
   }
-
   /*作者區塊*/
   .postAuthorBlock {
     display: -webkit-box;
@@ -1854,18 +1818,15 @@ textarea {
     flex-direction: column;
     padding: 20px 15px;
   }
-
   .postAuthorImageBlock {
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
-
   .postAuthorImage {
     width: 160px;
     height: 160px;
   }
-
   .postAuthorContent {
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
@@ -1873,36 +1834,29 @@ textarea {
     margin-left: 0px;
     text-align: center;
   }
-
   .postAuthorTitle {
     margin-top: 20px;
   }
-
   /*留言區塊*/
   .commentSection {
     margin-bottom: 20px;
   }
-
   .commentImage {
     height: 50px;
     width: 50px;
   }
-
   .commentLine:before {
     height: calc(100% - 50px);
     left: 25px;
     top: 60px;
   }
-
   .commentUser {
     margin-left: 10px;
     width: calc(100% - 50px);
   }
-
   .commentAuthorName {
     font-size: 18px;
   }
-
   .commentReplySection {
     margin-top: 15px;
   }
@@ -1919,53 +1873,47 @@ textarea {
   .commentReplySection .commentTime {
     padding-bottom: 10px;
   }
-
   .commentbtn {
     margin-top: 10px;
   }
   .commentbtn:before, .commentbtn:after {
     width: 38%;
   }
-
   .commentEdit {
     top: -5px;
   }
-
   .commentFormControl {
     margin-top: 10px;
   }
-
   .btnEdit {
     width: 100%;
   }
-
   /*查看更多按鈕*/
   .postbtn:before, .postbtn:after {
     width: 38%;
   }
-
   /*廣告區塊*/
   .advertiseBlock {
     margin-top: 20px;
   }
+  .advertiseBlock .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .advertiseBlock img {
     width: 100%;
   }
-
   .postAdvertise {
     display: none;
   }
-
   .mt0 {
     margin-top: 0px;
   }
-
   /*表單*/
   .formBlock {
     background-color: #E5E5E5;
     padding: 60px 10px 100px;
   }
-
   .formContent {
     width: 100%;
     padding: 0 10px 15px;
@@ -1975,36 +1923,29 @@ textarea {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     background-color: #fff;
   }
-
   .loginOther .container.containerForm {
     margin-top: 30px;
   }
-
   /*搜尋頁面*/
   .searchTitle {
     font-size: 24px;
     margin-bottom: 10px;
   }
-
   .searchFailBlock .searchFailEng {
     font-size: 80px;
     margin: 60px 0;
   }
-
   /*會員頁面*/
   .profileBlock {
     padding: 145px 10px 100px;
   }
-
   .profileContent {
     padding: 100px 15px 15px;
   }
-
   .profileBlock .editProfile button.btn, .profileBlock .logout button.btn {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-
   .profileEditContent .pcmenu {
     display: none;
   }
@@ -2051,21 +1992,17 @@ textarea {
     background-color: #fff;
     color: #836fff;
   }
-
   .passwordSendIcon {
     width: 50%;
     display: block;
     margin: 20px auto 15px;
   }
-
   .searchFailSubTilte {
     line-height: 1.4;
   }
-
   .editBlock {
     margin-top: 10px;
   }
-
   /*條款頁面*/
   #terms #bannersection .termsContain {
     height: 300px;
