@@ -291,6 +291,15 @@
 			}
 		},
 		{
+			"file": "pug/social-post.pug",
+			"settings":
+			{
+				"buffer_size": 33034,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "pug/edit-profile.pug",
 			"settings":
 			{
@@ -303,7 +312,16 @@
 			"file": "sass/style.sass",
 			"settings":
 			{
-				"buffer_size": 33423,
+				"buffer_size": 33492,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 40100,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -433,10 +451,13 @@
 	"expanded_folders":
 	[
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit",
+		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/css",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug"
 	],
 	"file_history":
 	[
+		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/account.html",
+		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/collectionlist.html",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/navbar.html",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/pug/navbar.pug",
 		"/C/Users/sans/桌面/升活商務顧問有限公司/20210803_Togayther/01_Website/05_Code/Edit/edit-profile.html",
@@ -562,9 +583,7 @@
 		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Edit/my-couponlist.html",
 		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Slasher/Web-End/Code/Edit/coupon-detail.html",
 		"/C/Users/sans/Downloads/style-social.css",
-		"/C/Users/sans/AppData/Local/Temp/Rar$DIa22828.14136/style-social.css",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Slasher/Web-End/Code/Edit/css/style-social.css",
-		"/G/我的雲端硬碟/02_SansDesign/04_公司作品 Work/20200706_升活商務顧問有限公司/05_20210803_Togayther/01_Website/05_Code/Stage03/Edit/social-post.html"
+		"/C/Users/sans/AppData/Local/Temp/Rar$DIa22828.14136/style-social.css"
 	],
 	"find":
 	{
@@ -582,6 +601,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".advertiseBlock",
 			"-web",
 			"button",
 			"container",
@@ -708,8 +728,7 @@
 			"需要限制只能使用小寫英文/數字/底線/英文句點",
 			"/-/_/.",
 			"<div class=\"edit-social-personal-page-user-data-block\">",
-			"edit-social-personal-page-user-data-block",
-			"//20220517 新增placeholder"
+			"edit-social-personal-page-user-data-block"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -727,7 +746,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -743,8 +762,8 @@
 						"selection":
 						[
 							[
-								57589,
-								57589
+								1446,
+								1446
 							]
 						],
 						"settings":
@@ -756,10 +775,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 20595.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -788,10 +807,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12598.0,
+						"translation.y": 76.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -820,14 +839,46 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5700.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "pug/social-post.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12095.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "pug/edit-profile.pug",
 					"semi_transient": false,
 					"settings":
@@ -855,30 +906,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "sass/style.sass",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 33423,
+						"buffer_size": 33492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12098,
-								12074
+								31297,
+								31297
 							]
 						],
 						"settings":
@@ -967,14 +1018,46 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12521.0,
+						"translation.y": 32802.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
+					"file": "css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 40100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1201,
+								1201
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1311.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "css/member.css",
 					"semi_transient": false,
 					"settings":
@@ -1004,11 +1087,11 @@
 						"translation.y": 12216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "sass/style-social.sass",
 					"semi_transient": false,
 					"settings":
@@ -1113,11 +1196,11 @@
 						"translation.y": 10675.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "sass/navbar.sass",
 					"semi_transient": false,
 					"settings":
@@ -1222,7 +1305,7 @@
 						"translation.y": 4590.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1232,7 +1315,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "js/social.js",
 					"semi_transient": false,
 					"settings":
@@ -1338,11 +1421,11 @@
 						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "js/navbar.js",
 					"semi_transient": false,
 					"settings":
@@ -1354,8 +1437,8 @@
 						"selection":
 						[
 							[
-								1731,
-								1438
+								1011,
+								1011
 							]
 						],
 						"settings":
@@ -1370,14 +1453,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 519.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "js/app.js",
 					"semi_transient": false,
 					"settings":
@@ -1408,11 +1491,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "js/index.js",
 					"semi_transient": false,
 					"settings":
@@ -1443,7 +1526,7 @@
 						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -1483,8 +1566,8 @@
 		"cols":
 		[
 			0.0,
-			0.200248495259,
-			0.971014492754,
+			0.575949367088,
+			0.971231300345,
 			1.0
 		],
 		"rows":
@@ -1540,7 +1623,7 @@
 		],
 		"width": 592.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1548,7 +1631,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 262.0,
+	"side_bar_width": 182.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
