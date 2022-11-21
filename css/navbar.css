@@ -477,12 +477,9 @@ p {
   .advertise-fixed-block {
     right: 24px;
     bottom: 40px;
-    width: 80px;
-    height: 110px;
   }
   .advertise-fixed {
     width: 80px;
-    height: 110px;
   }
   #advertise-fixed-close-button {
     width: 24px;
