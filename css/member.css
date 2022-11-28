@@ -344,7 +344,9 @@
 @media (max-width:992px) {
 	.coupon-list-collection img {
 		width: 100%;
-		height: 150px;
+
+		/*20221128 因客戶需求，更改成188px*/
+		height: 188px;
 		object-fit: cover;
 	}
 }
@@ -378,6 +380,13 @@
 	position: absolute;
 	top: 116px;
 	right: 0;
+}
+
+/*20221128 因客戶需求 top更改成152px*/
+@media (max-width:992px) {
+	.coupon-detail .status {
+		top: 152px;
+	}
 }
 
 
