@@ -275,7 +275,7 @@
 			"file": "all-couponlist.html",
 			"settings":
 			{
-				"buffer_size": 65503,
+				"buffer_size": 65576,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -753,7 +753,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -762,15 +762,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 65503,
+						"buffer_size": 65576,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1446,
-								1446
+								17177,
+								17182
 							]
 						],
 						"settings":
@@ -782,10 +782,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9845.33333333,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -817,7 +817,7 @@
 						"translation.y": 1406.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -849,7 +849,7 @@
 						"translation.y": 418.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -881,7 +881,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -913,7 +913,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -942,10 +942,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 512.0,
+						"translation.y": 113.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1057,10 +1057,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6801.0,
+						"translation.y": 6972.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1203,7 +1203,7 @@
 						"translation.y": 6745.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1463,7 +1463,7 @@
 						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1533,7 +1533,7 @@
 						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1573,8 +1573,8 @@
 		"cols":
 		[
 			0.0,
-			0.263056835638,
-			0.863863287251,
+			0.413481590095,
+			0.698206721594,
 			1.0
 		],
 		"rows":
@@ -1630,7 +1630,7 @@
 		],
 		"width": 592.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
