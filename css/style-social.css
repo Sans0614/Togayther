@@ -164,7 +164,6 @@
   .mb-tb-8px {
     margin-bottom: 8px !important;
   }
-
   .m-tb-0 {
     margin: 0 !important;
   }
@@ -173,11 +172,9 @@
   .mr-mb-0 {
     margin-right: 0 !important;
   }
-
   .ml-mb-0 {
     margin-left: 0 !important;
   }
-
   .px-mb-4px {
     padding-left: 4px;
     padding-right: 4px;
@@ -244,7 +241,6 @@
   .w-mb-80vw {
     width: 80vw !important;
   }
-
   .h-mb-250px {
     height: 250px !important;
   }
@@ -284,21 +280,17 @@
   .d-tb-block {
     display: block !important;
   }
-
   .d-tb-inline-block {
     display: inline-block !important;
   }
-
   .d-tb-none {
     display: none !important;
   }
-
   .d-tb-flex {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
-
   .d-tb-inline-flex {
     display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
@@ -614,7 +606,6 @@ body {
             align-items: center;
     margin-bottom: 8px;
   }
-
   .social-index-title {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -627,14 +618,12 @@ body {
     margin-bottom: 0;
     margin-left: 4px;
   }
-
   .social-index-title-line {
     height: 18px;
     width: 1px;
     margin-left: 8px;
     background-color: #FFFFFF;
   }
-
   .social-index-title-hr {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -646,65 +635,53 @@ body {
     margin: 0 4px;
     background-color: #FFFFFF;
   }
-
   /*動態文章內容區塊*/
   .social-index-grid-item {
     width: 50%;
   }
-
   .social-post-card-title {
     font-size: 14px;
   }
-
   .social-post-card-follow-block {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-
   .social-post-card-follow-pic {
     width: 12px;
     height: 12px;
   }
-
   .social-post-card-follow {
     font-size: 12px;
     padding-top: 1px;
   }
-
   .social-post-card-author-block {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     width: 70%;
   }
-
   .social-post-card-author-pic {
     width: 16px;
     height: 16px;
   }
-
   .social-post-card-author {
     font-size: 12px;
     padding-top: 3px;
   }
-
   .social-post-card-unlike-btn, .social-post-card-like-btn {
     height: 12px;
     width: 12px;
   }
-
   .social-post-card-like-count {
     font-size: 12px;
     margin-left: 2px;
   }
-
   /*新會員卡片*/
   .avatar-pic.social-post-card-member-image {
     width: 120px;
     height: 120px;
   }
-
   .social-post-card-member-name-description {
     font-size: 14px;
   }
@@ -793,7 +770,6 @@ body {
     width: 100%;
     height: 100%;
   }
-
   .social-index-featured-member-block {
     width: 60px !important;
     -webkit-box-orient: vertical;
@@ -801,13 +777,11 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
   .social-index-featured-member-img {
     width: 60px;
     height: 60px;
     border: 2px solid #FFFFFF;
   }
-
   .social-index-featured-member-name {
     font-size: 13px;
     text-overflow: ellipsis;
@@ -973,11 +947,9 @@ body {
     border-right: none;
     border-bottom: 1px solid #808080;
   }
-
   .img-social-preview {
     height: 400px;
   }
-
   .img-social-preview-bar-swiper {
     width: 50%;
   }
@@ -1190,7 +1162,6 @@ body {
     z-index: 100;
     width: 100%;
   }
-
   .modal-body-fixed-top {
     margin-top: 47px;
   }
@@ -1317,6 +1288,33 @@ body {
 @media (max-width: 767.98px) {
   .social-modal .modal-content {
     width: 80vw;
+  }
+}
+/*彈跳視窗訪客登入*/
+#social-guest-user-login-alert.social-modal label {
+  color: #FFFFFF;
+}
+#social-guest-user-login-alert.social-modal button.btn {
+  color: #1d1d1d;
+  background-color: #FFFFFF;
+}
+#social-guest-user-login-alert.social-modal button.btn:hover {
+  background-color: #727272;
+  color: #FFFFFF;
+}
+#social-guest-user-login-alert.social-modal .forgotPassWord, #social-guest-user-login-alert.social-modal .register {
+  color: #727272;
+}
+#social-guest-user-login-alert.social-modal .forgotPassWord:hover, #social-guest-user-login-alert.social-modal .register:hover {
+  color: #FFFFFF;
+}
+#social-guest-user-login-alert.social-modal .loginOther .container.containerForm {
+  margin-top: 0;
+}
+
+@media (min-width: 1199.98px) {
+  #social-guest-user-login-alert.social-modal .modal-body {
+    padding: 20px !important;
   }
 }
 /*彈跳視窗-返回按紐*/
@@ -1505,7 +1503,6 @@ body {
     border-right: 0px solid #808080;
     border-bottom: 0px solid #808080;
   }
-
   .social-post-video {
     max-width: 100%;
     height: 100%;
@@ -1554,13 +1551,11 @@ body {
     border-right: none;
     position: relative;
   }
-
   .social-post-img {
     height: auto;
     width: 100%;
     position: static;
   }
-
   .social-post-swiper-pagination {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1713,7 +1708,6 @@ body {
     font-size: 18px;
     padding-top: 0;
   }
-
   .social-post-content {
     font-size: 16px;
   }
@@ -1988,11 +1982,9 @@ body {
   .social-post-comment-input, .social-post-comment-submit, .social-post-comment-read-more {
     font-size: 16px;
   }
-
   .social-post-comment-input {
     width: 90%;
   }
-
   .social-post-comment-submit {
     width: 10%;
   }
@@ -2001,11 +1993,9 @@ body {
   .social-post-comment-input, .social-post-comment-submit, .social-post-comment-read-more {
     font-size: 16px;
   }
-
   .social-post-comment-input {
     width: 80%;
   }
-
   .social-post-comment-submit {
     width: 20%;
   }
@@ -2297,7 +2287,6 @@ body {
   .btn-social-post-report-block {
     bottom: 8px;
   }
-
   .social-post-report-options-section {
     height: calc(var(--vh, 1vh) * 66);
   }
@@ -2339,15 +2328,12 @@ body {
   .social-notify-count {
     right: 18px;
   }
-
   .social-notify-more {
     right: 10px;
   }
-
   .social-message-count {
     right: -8px;
   }
-
   .social-message-count-more {
     right: -16px;
   }
@@ -2769,7 +2755,6 @@ body {
     margin-right: 16px;
     border-bottom: 1px solid #808080;
   }
-
   .social-message-list:nth-last-child(-n+2) {
     border-bottom: 0px;
   }
@@ -3368,7 +3353,6 @@ input.social-post-report-radio[type=checkbox] {
   .social-tag-block {
     max-height: 160px;
   }
-
   .edit-social-tag-block {
     width: calc(100% - 32px);
   }
